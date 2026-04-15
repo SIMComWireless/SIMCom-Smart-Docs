@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_Thermal Introduction and Debug User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_Thermal Introduction and Debug User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_Thermal Introduction and Debug User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_Thermal Introduction and Debug User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">version history</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-thermal-configuration-and-commissioning">2 Thermal Configuration and Commissioning</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-thermal-configuration">2.1 Thermal Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-thermal-drive-codes">2.2 Thermal Drive Codes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#23-configuration-methods">2.3 Configuration methods</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#24-power-allocator-policy-configuration">2.4 Power allocator policy configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#25-temperature-control-parameter-adjustment">2.5 Temperature control parameter adjustment</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-references">3 References</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_Thermal Introduction and Debug User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_thermal-introduction-and-debug-user-guide">SIM866X_Thermal Introduction and Debug User Guide</h1>
+<h2 id="version-history"><strong>version history</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">Zhang bei</td>
+<td style="text-align: left;">2026.3.19</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>Read this document for quick Thermal configuration and debugging tips.</p>
+<h2 id="2-thermal-configuration-and-commissioning">2 Thermal Configuration and Commissioning</h2>
+<p>Thermal for SIM8666 module is a framework model defined by kernel developers that supports controlling system temperature according to a specified governor to prevent overheating of the chip.  </p>
+<p>Thermal framework is built by governor,core,cooling device and sensor driver.</p>
+<p>Thermal governor:
+Used to determine whether the cooling device needs to be reduced in frequency and to what extent. The Linux 4.4 kernel currently includes the following types of governors:</p>
+<p>Power_allocator:
+PID (proportional-integral-derivative) control is introduced to dynamically allocate power to each cooling device according to the current temperature, and convert power into frequency, so as to achieve the effect of limiting frequency according to temperature.</p>
+<p>step_wise: 
+cooling device steps down according to the current temperature. fair share: cooling devices with more frequency levels have priority in frequency reduction. userspace: unlimited frequency.</p>
+<p>Thermal core: 
+encapsulates and abstracts thermal governments and thermal drivers, and defines clear interfaces. Thermal sensor driver: sensor driver for temperature acquisition, such as tsadc.</p>
+<p>Thermal cooling device: 
+heat source or cooling device, such as CPU, GPU, DDR, etc.</p>
+<h3 id="21-thermal-configuration">2.1 Thermal Configuration</h3>
+<p>tsadc is used as a thermal sensor in temperature control to obtain temperature, which usually needs to be configured in the number of devices.</p>
+<p>Tsadc is configured in the number of devices as follows, and the path of the related device tree is: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>tsadc: tsadc@fe710000 {
+    compatible = &quot;rockchip,rk3568-tsadc&quot;;
+    reg = &lt;0x0 0xfe710000 0x0 0x100&gt;; /* Register base address and total length of register addresses */
+    interrupts = &lt;GIC_SPI 115 IRQ_TYPE_LEVEL_HIGH&gt;; /* Interrupt number and interrupt triggering method */
+    rockchip,grf = &lt;&amp;grf&gt;;  /* Referencing the grf module, some platforms require it. */
+    clocks = &lt;&amp;cru CLK_TSADC&gt;, &lt;&amp;cru PCLK_TSADC&gt;;   /* Work clock and configuration clock */
+    clock-names = &quot;tsadc&quot;, &quot;apb_pclk&quot;;
+    assigned-clocks = &lt;&amp;cru CLK_TSADC_TSEN&gt;, &lt;&amp;cru CLK_TSADC&gt;;  /* Working clock */
+    assigned-clock-rates = &lt;17000000&gt;, &lt;700000&gt;;
+    resets = &lt;&amp;cru SRST_TSADC&gt;, &lt;&amp;cru SRST_P_TSADC&gt;,    /* Reset signal */
+         &lt;&amp;cru SRST_TSADCPHY&gt;;
+    reset-names = &quot;tsadc&quot;, &quot;tsadc-apb&quot;, &quot;tsadc-phy&quot;;
+    /*
+    * The &quot;thermal sensor&quot; identifier indicates that the tsadc can be used as a thermal sensor.
+* It also specifies the number of parameters that need to be provided when referencing the tsadc node.
+* If there is only one tsadc in the SoC, set it to 0. If there are more than one, set it to 1.
+    */
+    #thermal-sensor-cells = &lt;1&gt;;
+    rockchip,hw-tshut-temp = &lt;120000&gt;;  /* Over-temperature restart threshold: 120 degrees Celsius */
+    rockchip,hw-tshut-mode = &lt;0&gt;; /* Shutdown mode 0: CRU 1: GPIO Select whether to reset through CRU or GPIO */
+    rockchip,hw-tshut-polarity = &lt;0&gt;; /* tshut polarity 0:LOW 1:HIGH Low-level reset or high-level reset */
+    pinctrl-names = &quot;gpio&quot;, &quot;otpout&quot;;   /* The configuration of the TSADC output pins supports two modes: GPIO and OTPOUT. */
+    pinctrl-0 = &lt;&amp;tsadc_gpio_func&gt;;
+    pinctrl-1 = &lt;&amp;tsadc_shutorg&gt;;
+    status = &quot;disabled&quot;;
+};
+</code></pre>
+<p>IO port configuration in the device tree is as follows, the relevant device tree path: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568-pinctrl.dtsi</p>
+<pre><code>pinctrl: pinctrl {
+......
+    tsadc {
+    ......
+        /omit-if-no-ref/ /* Configure to over temperature protection mode */
+        tsadc_shutorg: tsadc-shutorg {
+            rockchip,pins =
+                /* tsadc_shutorg */
+                &lt;0 RK_PA1 2 &amp;pcfg_pull_none&gt;;
+        };
+    };
+......
+    gpio-func { /* Confgure to GPIO mode */
+        /omit-if-no-ref/
+        tsadc_gpio_func: tsadc-gpio-func {
+            rockchip,pins =
+                &lt;0 RK_PA1 RK_FUNC_GPIO &amp;pcfg_pull_none&gt;;
+        };
+    };
+};
+</code></pre>
+<p>The configuration to enable Tsadc in DTSI is as follows, the relevant device tree path: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568-pinctrl.dtsi</p>
+<pre><code>&amp;tsadc {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h3 id="22-thermal-drive-codes">2.2 Thermal Drive Codes</h3>
+<p>Governor-related codes:</p>
+<pre><code>RK356X_A11/kernel/drivers/thermal/power_allocator.c     /* Power Allocator Temperature Control Strategy*/
+RK356X_A11/kernel/drivers/thermal/step_wise.c           /* Stepwise temperature control strategy */
+RK356X_A11/kernel/drivers/thermal/fair_share.c          /* fair share temperature control strategy */
+RK356X_A11/kernel/drivers/thermal/user_space.c          /* userspace temperature control strategy */
+</code></pre>
+<p>Cooling device related codes:</p>
+<pre><code>RK356X_A11/kernel/drivers/thermal/devfreq_cooling.c
+RK356X_A11/kernel/drivers/thermal/cpu_cooling.c
+</code></pre>
+<p>Core related code:</p>
+<pre><code>RK356X_A11/kernel/drivers/thermal/thermal_core.c
+</code></pre>
+<p>Driver related code:</p>
+<pre><code>RK356X_A11/kernel/drivers/thermal/rockchip_thermal.c    /* The tsadc driver for other platforms except RK3368 */
+RK356X_A11/kernel/drivers/thermal/rk3368_thermal.c      /* RK3368 platform TSADC driver */
+</code></pre>
+<h3 id="23-configuration-methods">2.3 Configuration methods</h3>
+<p>Usually, the Thermal function has been enabled, the specific configuration is as follows, the relevant configuration file path: RK356X_A11/kernel/arch/arm64/configs/rockchip_defconfig</p>
+<pre><code>CONFIG_THERMAL=y
+CONFIG_THERMAL_WRITABLE_TRIPS=y
+CONFIG_THERMAL_DEFAULT_GOV_POWER_ALLOCATOR=y
+CONFIG_THERMAL_GOV_FAIR_SHARE=y
+CONFIG_THERMAL_GOV_STEP_WISE=y
+CONFIG_THERMAL_GOV_USER_SPACE=y
+CONFIG_CPU_THERMAL=y
+CONFIG_DEVFREQ_THERMAL=y
+CONFIG_ROCKCHIP_THERMAL=y
+CONFIG_RK3368_THERMAL=y
+</code></pre>
+<h3 id="24-power-allocator-policy-configuration">2.4 Power allocator policy configuration</h3>
+<p>Power allocator temperature control strategy introduces PID (proportional-integral-derivative) control, according to the current temperature, dynamically distribute power to each cooling device, when the temperature is low, the power that can be distributed is relatively large, that is, the frequency that can be operated is high, with the temperature rising, the power that can be distributed gradually decreases, and the frequency that can be operated gradually decreases, so as to achieve the frequency limit according to the temperature.  </p>
+<h4 id="241-cpu">2.4.1 CPU配置</h4>
+<p>CPU is used as cooling device in temperature control, and the node needs to contain #cooling-cells and dynamic-power-coefficient attributes. Related device tree path: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>cpu_l0: cpu@0 {
+    device_type = &quot;cpu&quot;;
+    compatible = &quot;arm,cortex-a53&quot;, &quot;arm,armv8&quot;;
+    reg = &lt;0x0 0x0&gt;;
+    enable-method = &quot;psci&quot;;
+    clocks = &lt;&amp;cru ARMCLKL&gt;;
+    next-level-cache = &lt;&amp;cluster0_l2&gt;;
+    operating-points-v2 = &lt;&amp;cluster0_opp&gt;;
+    sched-energy-costs = &lt;&amp;RK3368_CPU_COST_0 &amp;RK3368_CLUSTER_COST_0&gt;;
+    /* cooling device，indicates that this device can be used as a cooling device */
+    #cooling-cells = &lt;2&gt;; /* min followed by max */ 
+    dynamic-power-coefficient = &lt;149&gt;;  /* Parameters used for calculating dynamic power consumption */
+};
+......
+cpu_b0: cpu@100 {
+    device_type = &quot;cpu&quot;;
+    compatible = &quot;arm,cortex-a53&quot;, &quot;arm,armv8&quot;;
+    reg = &lt;0x0 0x100&gt;;
+    enable-method = &quot;psci&quot;;
+    clocks = &lt;&amp;cru ARMCLKB&gt;;
+    next-level-cache = &lt;&amp;cluster1_l2&gt;;
+    operating-points-v2 = &lt;&amp;cluster1_opp&gt;;
+    sched-energy-costs = &lt;&amp;RK3368_CPU_COST_1 &amp;RK3368_CLUSTER_COST_1&gt;;
+    /* cooling device indicates that this device can be used as a cooling device */
+    #cooling-cells = &lt;2&gt;; /* min followed by max */
+    dynamic-power-coefficient = &lt;160&gt;;  /* Parameters used for calculating dynamic power consumption */
+};
+</code></pre>
+<h4 id="242-gpu-configuration">2.4.2 GPU Configuration</h4>
+<p>GPU is used as cooling device in temperature control, and the node needs to contain #cooling-cells attribute and power_model child node.  Related device tree path: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>gpu: rogue-g6110@ffa30000 {
+    compatible = &quot;arm,rogue-G6110&quot;, &quot;arm,rk3368-gpu&quot;;
+    reg = &lt;0x0 0xffa30000 0x0 0x10000&gt;;
+    clocks =
+        &lt;&amp;cru SCLK_GPU_CORE&gt;,
+        &lt;&amp;cru ACLK_GPU_MEM&gt;,
+        &lt;&amp;cru ACLK_GPU_CFG&gt;;
+    clock-names =
+        &quot;sclk_gpu_core&quot;,
+        &quot;aclk_gpu_mem&quot;,
+        &quot;aclk_gpu_cfg&quot;;
+    interrupts = &lt;GIC_SPI 8 IRQ_TYPE_LEVEL_HIGH&gt;;
+    interrupt-names = &quot;rogue-g6110-irq&quot;;
+    power-domains = &lt;&amp;power RK3368_PD_GPU_1&gt;;
+    operating-points-v2 = &lt;&amp;gpu_opp_table&gt;;
+    /* cooling device indicates that this device can be used as a cooling device */
+    #cooling-cells = &lt;2&gt;; /* min followed by max */
+    gpu_power_model: power_model {
+        compatible = &quot;arm,mali-simple-power-model&quot;;
+        voltage = &lt;900&gt;;
+        frequency = &lt;500&gt;;
+        static-power = &lt;300&gt;;           /* Parameters used for calculating static power consumption */
+        dynamic-power = &lt;396&gt;;          /* Parameters used for calculating static power consumption */
+        ts = &lt;32000 4700 (-80) 2&gt;;      /* Parameters used for calculating static power consumption */
+        thermal-zone = &quot;gpu-thermal&quot;;   /* Obtain the temperature from gpu-thermal and use it to calculate the static power consumption. */
+    };
+};
+</code></pre>
+<h4 id="243-thermal-zone-configuration">2.4.3 Thermal Zone Configuration</h4>
+<p>Termal zone node is mainly used to configure parameters related to temperature control policy and generate corresponding user mode interface.  Related device tree path: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>thermal_zones: thermal-zones {
+    /* One node corresponds to one thermal zone and contains parameters related to the temperature control strategy. */
+    soc_thermal: soc-thermal {
+        /* When the temperature is higher than the value specified by &quot;trip-point-0&quot;, the temperature is retrieved every 20 milliseconds. */
+        polling-delay-passive = &lt;200&gt;; /* milliseconds */
+        /* When the temperature is lower than the value specified by &quot;trip-point-0&quot;, the temperature is retrieved every 1000 milliseconds. */
+        polling-delay = &lt;200&gt;; /* milliseconds */
+        /* When the temperature equals the value specified by &quot;trip-point-1&quot;, the energy allocated by the system to the cooling device */
+        sustainable-power = &lt;600&gt;; /* milliwatts */
+        /* The current thermal zone obtains the temperature through tsadc0. */
+        thermal-sensors = &lt;&amp;tsadc 0&gt;;
+        /* The &quot;trips&quot; feature includes various temperature thresholds and different temperature control strategies, and the configurations may not be the same. */
+        trips {
+            /*
+            * 温控阀值，超过该值温控策略开始工作，但不一定马上限制频率，
+            * power小到一定程度才开始限制频率
+            */
+            threshold: trip-point-0 {
+                /* 超过70摄氏度，温控策略开始工作，并且70摄氏度也是tsadc触发中断的一个阀值 */
+                temperature = &lt;70000&gt;; /* millicelsius */
+                /* 温度低于temperature-hysteresis时触发中断，当前未实现，但是框架要求必须填 */
+                hysteresis = &lt;2000&gt;; /* millicelsius */
+                /* 表示超过该温度值时，使用polling-delay-passive */
+                type = &quot;passive&quot;;
+            };
+            /* 温控目标温度，期望通过降频使得芯片不超过该值 */
+            target: trip-point-1 {
+                /* 期望通过降频使得芯片不超过85摄氏度，并且85摄氏度也是tsadc触发中断的一个阀值 */
+                temperature = &lt;80000&gt;; /* millicelsius */
+                /* 温度低于temperature-hysteresis时触发中断，当前未实现，但是框架要求必须填 */
+                hysteresis = &lt;2000&gt;; /* millicelsius */
+                type = &quot;passive&quot;; /* 表示超过该温度值时，使用polling-delay-passive */
+            };
+            /* 过温保护阀值，如果降频后温度仍然上升，那么超过该值后，让系统重启 */
+            soc_crit: soc-crit {
+                /* 超过115摄氏度重启，并且115摄氏度也是tsadc触发中断的一个阀值 */
+                temperature = &lt;115000&gt;; /* millicelsius */
+                /* 温度低于temperature-hysteresis时触发中断，当前未实现，但是框架要求必须填 */
+                hysteresis = &lt;2000&gt;; /* millicelsius */
+                type = &quot;critical&quot;; /* 表示超过该温度值时，重启 */
+            };
+        };
+        /* cooling device配置节点，每个子节点代表一个cooling device */
+        cooling-maps {
+            map0 {
+                /*
+                * 表示在target trip下，该cooling device才起作用，
+                * 对于power allocater策略必须填target
+                */
+                trip = &lt;&amp;target&gt;;
+                /* A53做为cooloing device， THERMAL_NO_LIMIT不起作用，但必须填 */
+                cooling-device =
+                &lt;&amp;cpu_l0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT&gt;;
+                contribution = &lt;1024&gt;; /* 计算功耗时乘以4096/1024倍，用于调整降频顺序和尺度 */
+            };
+            map1 {
+                /*
+                * It indicates that this cooling device only comes into effect under the &quot;target trip&quot; condition.
+                * For the power allocator strategy, the &quot;target&quot; must be filled in.
+                */
+                trip = &lt;&amp;target&gt;;
+                /* As a cooling device, A53 does not function properly when using THERMAL_NO_LIMIT, but it must be filled in. */
+                cooling-device =
+                &lt;&amp;cpu_b0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT&gt;;
+                contribution = &lt;1024&gt;; /* When calculating power consumption, multiply by 4096/1024 to adjust the frequency reduction sequence and scale. */
+            };
+            map2 {
+                /*
+                * It indicates that this cooling device only comes into effect under the &quot;target trip&quot; condition.
+                * For the power allocator strategy, the &quot;target&quot; must be filled in.
+                */
+                trip = &lt;&amp;target&gt;;
+                /* As a cooling device, the GPU does not respond to THERMAL_NO_LIMIT, but it must be filled in. */
+                cooling-device =
+                &lt;&amp;gpu THERMAL_NO_LIMIT THERMAL_NO_LIMIT&gt;;
+                contribution = &lt;1024&gt;; /* When calculating power consumption, multiply by 4096/1024 to adjust the frequency reduction sequence and scale. */
+            };
+        };
+    };
+    /* One node corresponds to one thermal zone and contains parameters related to the temperature control strategy. The current thermal zone is only used to obtain the temperature. */
+    gpu_thermal: gpu-thermal {
+        /* It only takes effect when the temperature control strategy configuration is included. The framework requires that it must be filled in. */
+        polling-delay-passive = &lt;200&gt;; /* milliseconds */
+        /* Obtain the temperature every 200 milliseconds. */
+        polling-delay = &lt;200&gt;; /* milliseconds */
+        /* Currently, the thermal zone obtains the temperature through tsadc1. */
+        thermal-sensors = &lt;&amp;tsadc 1&gt;;
+    };
+};
+</code></pre>
+<h3 id="25-temperature-control-parameter-adjustment">2.5 Temperature control parameter adjustment</h3>
+<p>Temperature control parameters are related to the chip and generally do not need to be modified.
+Some parameters can be adjusted according to the actual situation of the product. For specific adjustment methods, please refer to the chapter "Temperature Control Parameter Adjustment" in Rockchip_Development_Guide_Thermal_CN.pdf, which will not be described here.</p>
+<h4 id="251-getting-the-current-temperature">2.5.1 Getting the current temperature</h4>
+<p>You can directly view the temp node under the user mode interface thermal_zone0 or thermal_zone1 directory.<br />
+Enter the following command in the serial port:</p>
+<pre><code># Obtain the CPU temperature
+cat /sys/class/thermal/thermal_zone0/temp
+# Obtain the GPU temperature
+cat /sys/class/thermal/thermal_zone1/temp
+</code></pre>
+<h4 id="252-turn-off-temperature-control">2.5.2 Turn off temperature control</h4>
+<p>First, switch the temperature control policy to user_space, that is, change the policy node in the user mode interface to user_space; or set the mode to disabled state; then, remove the frequency limit, that is, set the cur_state of all cdev in the user mode interface to 0.  </p>
+<p>Enter the following command on the serial port:</p>
+<pre><code># Switch the strategy to user_space
+echo user_space &gt; /sys/class/thermal/thermal_zone0/policy
+# Or set the mode to the &quot;disabled&quot; state
+echo disabled &gt; /sys/class/thermal/thermal_zone0/mode
+# Then, remove the frequency restrictions.
+# How many cdevs are there exactly? Please modify as per the actual situation.
+echo 0 &gt; /sys/class/thermal/thermal_zone0/cdev0/cur_state
+echo 0 &gt; /sys/class/thermal/thermal_zone0/cdev1/cur_state
+echo 0 &gt; /sys/class/thermal/thermal_zone0/cdev2/cur_state
+</code></pre>
+<h2 id="3-references">3 References</h2>
+<p>Refer to debugging documentation Please refer to:
+    RKDocs/common/Thermal/Rockchip_Developer_Guide_Thermal_CN.pdf</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_SENSOR Migration Documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_USB%20Development%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_USB Development User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_USB%20Development%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

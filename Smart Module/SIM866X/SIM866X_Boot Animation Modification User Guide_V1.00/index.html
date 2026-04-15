@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_Boot Animation Modification User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_Boot Animation Modification User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_Boot Animation Modification User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_Boot Animation Modification User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-custom-boot-animation">2 Custom boot animation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-boot-animation-package-analysis">2.1 Boot animation package analysis</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-modify-the-boot-animation">3 Modify the boot animation</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#how-to-convert-images-from-other-formats-to-bmp">How to convert images from other formats to bmp</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_Boot Animation Modification User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_boot-animation-modification-user-guide">SIM866X_Boot Animation Modification User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.03.24</td>
+<td style="text-align: left;">Gong Anna</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This document introduces how to add boot animation to Android 11 system of SIM866x module by taking EVB development board of SIM866x as an example. With reference to this application documentation, users can quickly customize boot animations.</p>
+<h2 id="2-custom-boot-animation">2 Custom boot animation</h2>
+<p>Boot animation is essentially formed by a group of pictures played continuously.</p>
+<p>Root privileges are required to modify boot animation. (Prerequisite, must)</p>
+<p>The general practice is to replace the SIM 866x device system/media/bootanimation.zip file.</p>
+<h3 id="21-boot-animation-package-analysis">2.1 Boot animation package analysis</h3>
+<p>The animation package is called bootanimation.zip, and after decompression, the content is as follows:</p>
+<p><img alt="alt text" src="../resource/bootanimation_1.png" /></p>
+<p>The part0 ~ part 1 directory stores the pictures to be played. It is recommended that the picture resolution be consistent with the screen resolution.</p>
+<p>The format of the image is.png, which needs to be named sequentially.</p>
+<p>part0:</p>
+<p><img alt="alt text" src="../resource/bootanimation_2.png" /></p>
+<p>part1:</p>
+<p><img alt="alt text" src="../resource/bootanimation_3.png" /></p>
+<p>desc.txt: reads as follows</p>
+<p><img alt="alt text" src="../resource/bootanimation_4.png" /></p>
+<p>The first row of data represents the resolution and frame rate of the display: width (720)* height (1280), 6 represents the number of frames displayed in one second</p>
+<p>The first character is fixed (currently only 'p' and 'c'). 'c' indicates that the segment cannot be interrupted during playback, while 'p' indicates that it can be interrupted. 
+The second value represents the number of times this segment is played. 1 indicates one playback, while 0 indicates looping playback. 
+The third represents the time interval (in frames) between this segment and the next one. 
+The fourth one indicates the location of the image within this segment.</p>
+<h4 id="22-creating-animation-packages">2.2 Creating animation packages</h4>
+<p>(1)Create a folder called bootanimation to store animation resources, modeled on the above</p>
+<p>(2)Enter the bootanimation directory in the ubuntu terminal and perform compression == zip -0 -r../ bootanimation.zip .**==</p>
+<p>(3)At this point in the bootanimation level directory will create the animation package we need</p>
+<h4 id="23-put-the-animation-package-into-the-system-source-code">2.3 Put the animation package into the system source code</h4>
+<p>Prepare bootanimation.zip animation package that has been done,put it under sunsea/common/bootanimation,in the location shown in the following picture.</p>
+<p><img alt="alt text" src="../resource/bootanimation_5.png" /></p>
+<h4 id="24-adding-copy-command-to-script-to-make-animation-package-effective">2.4 Adding copy command to script to make animation package effective</h4>
+<p>mkdir -p ../ out/target/product/rk3566_r/system/media
+cp ./ common/bootanimation/bootanimation.zip ../ out/target/product/rk3566_r/system/media</p>
+<p><img alt="alt text" src="../resource/bootanimation_6.png" /></p>
+<h2 id="3-modify-the-boot-animation">3 Modify the boot animation</h2>
+<p>Android system comes with a boot animation is a white "android" text flashing</p>
+<p>We can change this animation to the animation we want. </p>
+<p>Remove android-logo-mask.png images from/frameworks/base/core/res/assets/images and add images to replace them. </p>
+<p>Background default is gradient effect can be replaced according to requirements android-logo-shine.png is the desired background effect picture</p>
+<p>Note: Customizing boot animation and modifying default animation are mutually exclusive. The above are two ways to modify boot animation. Users can choose one according to their needs.</p>
+<h3 id="how-to-convert-images-from-other-formats-to-bmp">How to convert images from other formats to bmp</h3>
+<p>You can use ps to open the picture and select File-&gt; Save as</p>
+<p><img alt="alt text" src="../resource/bootanimation_7.png" /></p>
+<p>Select bmp format-&gt; Save</p>
+<p><img alt="alt text" src="../resource/bootanimation_8.png" /></p>
+<p>Select file format and bit depth, click OK</p>
+<p><img alt="alt text" src="../resource/bootanimation_9.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_BOOT Start Speed Optimization User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_Boot logo User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

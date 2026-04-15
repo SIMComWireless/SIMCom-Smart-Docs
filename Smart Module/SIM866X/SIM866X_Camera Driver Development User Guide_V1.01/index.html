@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_Camera Driver Development Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_Camera Driver Development Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_Camera Driver Development User Guide_V1.01.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_Camera Driver Development Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-camera-module-placement-position">2 Camera module placement position</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-hardware-circuit-schematic-diagram">3 Hardware circuit schematic diagram</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-add-drivers-and-effects">4 Add drivers and effects</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-configuring-hardware-circuit-connections">4.1 Configuring Hardware Circuit Connections</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#42-adding-sensor-drivers">4.2 Adding Sensor Drivers</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#43-effect-parameter-configuration">4.3 Effect Parameter Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#44-profilesxml-file-configuration">4.4 Profiles.xml file configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#45-hal-layer-configuration-of-multichannel-ahd-to-mipi">4.5 Hal Layer Configuration of Multichannel AHD to MIPI</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-debug">5 DEBUG</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#51-raw-sensor-and-soc-sensor">5.1 RAW SENSOR AND SOC SENSOR</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#52-multi-channel-ahd-to-mipi">5.2 Multi-channel AHD to MIPI</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_Camera Driver Development Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_camera-driver-development-guide">SIM866X_Camera Driver Development Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">Li Chengyi</td>
+<td style="text-align: left;">2026.3.4</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.01</td>
+<td style="text-align: left;">Luo Bingkang</td>
+<td style="text-align: left;">2026.03.11</td>
+<td style="text-align: left;">Add multi-channel AHD to MIPI correlation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This document takes the camera IMX415 on the EVB development board of SIM866X as an example to introduce how to light up the camera module on SIM 866x module Android 11 system.</p>
+<p>Multi-channel AHD to MIPI This document takes tp2815 as an example</p>
+<h2 id="2-camera-module-placement-position">2 Camera module placement position</h2>
+<p>When designing the placement position of the camera module, it is necessary to pay attention to the positional relationship between the placement of the camera module and the display direction of the screen. In order to ensure that the preview image of the camera can be displayed normally on the screen (no image stretching), the long side of the photosensitive chip in the camera module should always face the long side of the display screen (the foot corresponding to the small person image in the figure always faces the long side of the display screen), as shown in the following figure:</p>
+<p>If the display screen is vertical display, the installation direction of the camera module and the relative position of the display screen are as follows:</p>
+<p><img alt="2 -Camera module placement position" src="../resource/2-%E6%91%84%E5%83%8F%E5%A4%B4%E6%A8%A1%E7%BB%84%E6%91%86%E6%94%BE%E4%BD%8D%E7%BD%AE--img-20260311134229379.png" /></p>
+<p>If the display screen is horizontal display, the installation direction of the camera module and the relative position of the display screen are as follows:</p>
+<p><img alt="" src="../resource/2-%E6%91%84%E5%83%8F%E5%A4%B4%E6%A8%A1%E7%BB%84%E6%91%86%E6%94%BE%E4%BD%8D%E7%BD%AE--img-20260311134448879.png" /></p>
+<p>Note that if the camera module is not placed according to the above rules, the image display problem cannot be completely solved by software rotation angle, and the adjusted image will be cropped or stretched.</p>
+<h2 id="3-hardware-circuit-schematic-diagram">3 Hardware circuit schematic diagram</h2>
+<p><img alt="" src="../resource/3-%E7%A1%AC%E4%BB%B6%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E5%9B%BE--img-20260311134717664.png" /></p>
+<p>camera signal: camera power (dovdd dvdd avdd), clk, pwdn, rst, mipi</p>
+<p>Some camera sensors may not have pwdn, subject to the camera sensor's datasheet;</p>
+<p>Take the imx415 module as an example, only need to supply 5v, clk also uses the crystal oscillator that comes with the camera module; note, according to the camera hardware circuit connection schematic diagram and datasheet power-on timing configuration completed power, clock, reset, powerdown signal, you can read the sensor id through i2c.</p>
+<h2 id="4-add-drivers-and-effects">4 Add drivers and effects</h2>
+<p>The path of the camera configuration file is as follows</p>
+<ol>
+<li>
+<p>Camera sensor drive path: kernel/drivers/media/i2c/imx415_back.c</p>
+</li>
+<li>
+<p>Camera sensor effect parameter file path: external/camera_engine_rkaiq/iqfiles/isp21/imx415_back_TongJu_CHT842-MD.json</p>
+</li>
+<li>
+<p>Profile.xml file path: hardware/rockchip/camera/etc/camera/camera3_profiles_rk356x.xml</p>
+</li>
+<li>
+<p>Hardware dts-related configuration path: kernel/arch/arm64/boot/dts/rockchip/simcom/camera.dtsi</p>
+</li>
+</ol>
+<h3 id="41-configuring-hardware-circuit-connections">4.1 Configuring Hardware Circuit Connections</h3>
+<p>Taking imx415 as an example, this section focuses on how to configure power, reset, pwdn, clock and other signals according to the schematic diagram. The requested URL/boot/dts/rockchip/simcom/camera.dtsi was not found on this server.</p>
+<pre><code class="language-c">imx415_back: imx415_back@1a {
+    status = &quot;okay&quot;;
+    //It needs to be consistent with the matching string in the driver.
+    compatible = &quot;sony,imx415_back&quot;;
+    // Sensor I2C device address, 7 bits
+    reg = &lt;0x1a&gt;;
+    // Sensor MCLK source configuration
+    clocks = &lt;&amp;cru CLK_CAM0_OUT&gt;;
+    clock-names = &quot;xvclk&quot;;
+    //Enabling of the sensor-related power domain
+    power-domains = &lt;&amp;power RK3568_PD_VI&gt;
+    //Sensor MCLK Pinctl Settings
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;cam_clkout0&gt;;
+    // Reset pin allocation and valid level
+    reset-gpios = &lt;&amp;gpio3 RK_PC7 GPIO_ACTIVE_LOW&gt;;
+    // Powerdown pin allocation and valid level
+    pwdn-gpios = &lt;&amp;gpio3 RK_PC6 GPIO_ACTIVE_HIGH&gt;;
+    // Module number. This number must not be repeated.
+    rockchip,camera-module-index = &lt;0&gt;;
+    //The module orientation includes &quot;back&quot; and &quot;front&quot;.
+    rockchip,camera-module-facing = &quot;back&quot;;
+    // Moduel Name
+    rockchip,camera-module-name = &quot;TongJu&quot;;
+    // lens name
+    rockchip,camera-module-lens-name = &quot;CHT842-MD&quot;;
+    port {
+        imx415_back_out: endpoint {
+            // The port name of the Csi2 Dphy end
+            remote-endpoint = &lt;&amp;dphy1_in&gt;;
+            // CSI2 DPHY lane count, 1 lane is &lt;1&gt;, 4 lanes are &lt;1 2 3 4&gt;
+            data-lanes = &lt;1 2&gt;;
+        };
+    };
+};
+
+</code></pre>
+<p>Camera Sensor Power Configuration:</p>
+<p>As mentioned above, IMX415 module only needs a 5v power supply; but usually sensor driver generally implements avdd/dvdd/dovdd three power supply operations, this time you need to add the following configuration to dts</p>
+<pre><code class="language-c">avdd-supply = &lt;&amp;vcc_avdd&gt;; 
+dovdd-supply = &lt;&amp;vcc_dovdd&gt;; 
+dvdd-supply = &lt;&amp;vcc_dvdd&gt;;
+</code></pre>
+<p>If an external power supply such as LDO is used, the enable pin is controlled by gpio. You can configure vcc_camera_back as a power supply node by referring to the configuration method shown in the figure below. It is suitable for multiple devices to use the same power supply. It is recommended that dvdd power supply be supplied separately when multiple cameras are taken, avdd/dovdd can be shared, and when dvdd is shared, if the power is relatively large, there may be instantaneous insufficient supply, power collapse, affecting image quality, or even not showing.</p>
+<pre><code class="language-c">/ {
+    vcc_camera_back: vcc-camera-back-regulator {
+        compatible = &quot;regulator-fixed&quot;;
+        gpio = &lt;&amp;gpio4 RK_PC0 GPIO_ACTIVE_HIGH&gt;;
+        pinctrl-names = &quot;default&quot;;
+        pinctrl-0 = &lt;&amp;camera_back_pwr&gt;;
+        regulator-name = &quot;vcc_camera_back&quot;;
+        enable-active-high;
+    };
+};
+
+&amp;pinctrl {
+    cam {
+        camera_back_pwr: camera-back-pwr {
+            rockchip,pins =
+                /* camera power en */
+                &lt;4 RK_PC0 RK_FUNC_GPIO &amp;pcfg_pull_none&gt;;
+        };
+};
+</code></pre>
+<h3 id="42-adding-sensor-drivers">4.2 Adding Sensor Drivers</h3>
+<h4 id="421-raw-sensor">4.2.1 raw sensor</h4>
+<p>For IMX415, add drivers to this path: kernel/drivers/media/i2c/</p>
+<pre><code class="language-c">imx415_back.c
+</code></pre>
+<p>Configure the Kconfig file, file path: kernel/drivers/media/i2c/Kconfig</p>
+<pre><code class="language-c">config VIDEO_IMX415_BACK
+    tristate &quot;Sony IMX415 sensor support&quot;
+    depends on I2C &amp;&amp; VIDEO_V4L2 &amp;&amp; VIDEO_V4L2_SUBDEV_API
+    depends on MEDIA_CAMERA_SUPPORT
+    help
+      This is a Video4Linux2 sensor driver for the Sony
+      IMX415 camera.
+
+      To compile this driver as a module, choose M here: the
+      module will be called imx415.
+</code></pre>
+<p>Configuration Makefile file, file path kernel/drivers/media/i2c/Makefile</p>
+<pre><code class="language-c">obj-$(CONFIG_VIDEO_IMX415_BACK) += imx415_back.o
+</code></pre>
+<hr />
+<h4 id="422-multichannel-ahd-to-mipi">4.2.2 Multichannel AHD to MIPI</h4>
+<p>Take tp2815 as an example, add drivers to this path: kernel/drivers/media/i2c/</p>
+<pre><code class="language-c">└── techpoint
+   ├── Makefile
+   ├── techpoint_common.h
+   ├── techpoint_dev.c
+   ├── techpoint_dev.h
+   ├── techpoint_tp2815.h
+   ├── techpoint_tp2855.c
+   ├── techpoint_tp2855.h
+   └── techpoint_v4l2.c
+</code></pre>
+<p>Configure the Kconfig file, file path: kernel/drivers/media/i2c/Kconfig</p>
+<pre><code class="language-c">config VIDEO_TECHPOINT
+    tristate &quot;TechPoint decoder&quot;
+    depends on I2C &amp;&amp; VIDEO_V4L2 &amp;&amp; VIDEO_V4L2_SUBDEV_API
+    depends on MEDIA_CAMERA_SUPPORT
+    help
+      Support for the TechPoint Multichannel digital decode to
+      MIPI CSI-2 bridge.
+
+      To compile this driver as a module, choose M here: the
+      module will be called TechPoint.
+</code></pre>
+<p>Configuration Makefile file, file path kernel/drivers/media/i2c/Makefile</p>
+<pre><code class="language-c">obj-$(CONFIG_VIDEO_TECHPOINT) += techpoint/
+</code></pre>
+<h3 id="43-effect-parameter-configuration">4.3 Effect Parameter Configuration</h3>
+<p>== Note: Multi-channel AHD to MIPI, no effect file required, this column is only applicable to raw sensor==</p>
+<h4 id="431-modifying-json-files">4.3.1 Modifying json files</h4>
+<p>For IMX415, add the effects file to this path: external/camera_engine_rkaiq/iqfiles/isp21/imx415_back_TongJu_CHT842-MD.json</p>
+<p>If there is no effect file, you can modify other effect files to replace, here only provides a simple way to make 3a run up to modify the effect file, good results need special debugging, IMX415 effect file is modified in accordance with this method.</p>
+<p>Take imx415_back_TongJu_CHT842-MD.json as an example:</p>
+<p>Note file naming rules: sensor model_<em>module name</em>_lens name.json;</p>
+<p>The specific model and module name can be obtained in the dts:</p>
+<pre><code class="language-dtsi">rockchip,camera-module-name = &quot;TongJu&quot;;
+rockchip,camera-module-lens-name = &quot;CHT842-MD&quot;;
+</code></pre>
+<p>If the actual resolution of the current module is not consistent with the resolution in the modified Json file, the following changes need to be made. If it is consistent, you only need to change the file name.</p>
+<p>For example, change the resolution from 3840 x 2160 to 1920 x 1080.</p>
+<ol>
+<li>Change the beginning of json file to correspond to width and height 1920x1080</li>
+</ol>
+<pre><code class="language-c">        &quot;resolution&quot;:   {
+            &quot;width&quot;:    3840,
+            &quot;height&quot;:   2160
+        },
+</code></pre>
+<ol>
+<li>
+<p>Replace all 3840 x 2160 directly with 1920 x 1080</p>
+</li>
+<li>
+<p>Change the lsc close:enable attribute to 0</p>
+</li>
+</ol>
+<pre><code class="language-c">&quot;lsc_v2&quot;:   {
+    &quot;common&quot;:   {
+        &quot;enable&quot;:   0,
+</code></pre>
+<h3 id="44-profilesxml-file-configuration">4.4 Profiles.xml file configuration</h3>
+<p>Take IMX415 as an example, profile.xml file path: hardware/rockchip/camera/etc/camera/camera3_profiles_rk356x.xml</p>
+<p>camera3_profiles_rk356x.xml contains multiple Profiles nodes, which contain a complete list of camera properties. If you connect several sensors, you need to configure several Profiles nodes.</p>
+<h4 id="441-configuring-primary-nodes">4.4.1 Configuring Primary Nodes</h4>
+<p>The Profiles node contains the following four child nodes.</p>
+<pre><code class="language-c">&lt;Profiles cameraId=&quot;0&quot; name=&quot;imx415_back&quot; moduleId=&quot;m00&quot;&gt;
+    &lt;Supported_hardware&gt;
+    &lt;/Supported_hardware&gt;
+
+    &lt;Android_metadata&gt;
+    &lt;/Android_metadata&gt;
+&lt;!-- ******************PSL specific section start **************************************************************--&gt;
+    &lt;Hal_tuning_RKISP1&gt;
+    &lt;/Hal_tuning_RKISP1&gt;
+
+    &lt;Sensor_info_RKISP1&gt;
+    &lt;/Sensor_info_RKISP1&gt;
+&lt;!-- ******************PSL specific section end **************************************************************--&gt;
+&lt;/Profiles&gt;
+</code></pre>
+<p>The RK platform has provided a reference xml configuration file. In addition, camera3_profiles_default.xml provides a reference configuration for RAW sensor and SOC sensor (single-channel yuv sensor). Before configuration, confirm whether it is SOC or RAW sensor, and then configure it according to the corresponding reference configuration.</p>
+<p>cameraId //is no longer a key item, configurable 0 or 1&#x20;</p>
+<p>name //needs to be consistent with the driver name, pay attention to case difference&#x20;</p>
+<p>moduleId key configuration item, value format is "mxx", where "m" is the abbreviation of "module","xx" is decimal number, indicating the unique number of camera, moduleId needs to be consistent with the configuration in the driver DTS, otherwise it will not load normally. In addition, when configuring multiple cameras, moduleId of multiple cameras need to be arranged in ascending order. as follow:</p>
+<pre><code class="language-xml">&lt;Profiles cameraId=&quot;0&quot; name=&quot;imx415_back&quot; moduleId=&quot;m00&quot;&gt;
+...
+&lt;/Profiles&gt;
+&lt;Profiles cameraId=&quot;1&quot; name=&quot;imx415_front&quot; moduleId=&quot;m01&quot;&gt;
+...
+&lt;/Profiles&gt;
+</code></pre>
+<p>For details, please refer to the relevant documents in RKDocs/common/camera/HAL3/directory</p>
+<h4 id="442-direction-of-rotation">4.4.2 Direction of rotation</h4>
+<ul>
+<li>For SENSOR_TYPE_RAW and SENSOR_TYPE_SOC camera rotation direction, you can modify here</li>
+</ul>
+<pre><code class="language-c">&lt;sensor.orientation value=&quot;90&quot;/&gt;
+</code></pre>
+<p>Note: For multi-channel AHD to MIPI and USB camera only works in/device/rockchip/common/external_camera_config.xml</p>
+<pre><code class="language-c">&lt;!-- orientation --&gt;
+&lt;Orientation  degree=&quot;180&quot;/&gt;
+</code></pre>
+<h3 id="45-hal-layer-configuration-of-multichannel-ahd-to-mipi">4.5 Hal Layer Configuration of Multichannel AHD to MIPI</h3>
+<p>To use multi-channel AHD to MIPI, you need to use Android usb camera hal: you need to add the following configuration to/sunsea/project_sunsea/SIM8666_XXX/ProjectConfig.mk</p>
+<pre><code class="language-C">CONFIG_USB_CAMERA_TEST=y
+</code></pre>
+<h2 id="5-debug">5 DEBUG</h2>
+<h3 id="51-raw-sensor-and-soc-sensor">5.1 RAW SENSOR AND SOC SENSOR</h3>
+<p>Under normal circumstances, as long as the clk, power supply, rst, pwdn pins are correct, and the i2c address is correct, then there is no problem with i2c communication, and the sensor id can be obtained. If it's not normal, you need to measure the waveform. The most common is that there is no ack, which needs to check all the relevant contents mentioned above. If there is no i2c signal coming out (rarely), then pay attention to i2c iomux multiplexing and whether it is pulled dead by the rest of the peripherals.</p>
+<p>Check imx415 registration success,Detected imx415 id 0000e0 Description i2c communication success</p>
+<pre><code class="language-c">[    2.375864] imx415_back 2-001a: driver version: 00.01.08
+[    2.376341] imx415_back 2-001a:  Get hdr mode failed! no hdr default
+[    2.376903] imx415_back 2-001a:  Get data lanes failed! 4 lanes default
+[    2.377486] imx415_back 2-001a: detect imx415 lane 2
+[    2.377957] imx415_back 2-001a: Failed to get power-gpios
+[    2.378460] imx415_back 2-001a: no pinctrl
+[    2.378864] imx415_back 2-001a: 2-001a supply dvdd not found, using dummy regulator
+[    2.379594] imx415_back 2-001a: Linked as a consumer to regulator.0
+[    2.380155] imx415_back 2-001a: 2-001a supply dovdd not found, using dummy regulator
+[    2.380866] imx415_back 2-001a: 2-001a supply avdd not found, using dummy regulator
+[    2.386125] vendor storage:20190527 ret = 0
+[    2.452871] imx415_back 2-001a: Detected imx415 id 0000e0
+</code></pre>
+<h3 id="52-multi-channel-ahd-to-mipi">5.2 Multi-channel AHD to MIPI</h3>
+<p>Check if tp2815 is registered successfully,<code>chip_id_h:0x28 chip_id_l:0x55</code> Description: able to obtain chip id i2c communication success</p>
+<pre><code class="language-c">E techpoint 2-0044: techpoint-&gt;reset_gpio
+E techpoint 2-0044: techpoint-&gt;reset_gpio out
+E techpoint 2-0044: techpoint_initialize_devices:140
+E techpoint 2-0044: chip_id_h:0x28 chip_id_l:0x55
+I techpoint 2-0044: techpoint check chip id CHIP_TP2855 !
+E techpoint 2-0044: tp2855_initialize:210
+E techpoint 2-0044: tp2855_initialize
+E techpoint 2-0044: techpoint_initialize_controls:171
+</code></pre>
+<p>Print in case of failure</p>
+<pre><code class="language-c">[    1.926007] techpoint 2-0044: chip_id_h:0xff chip_id_l:0xff
+</code></pre>
+<p>dump yuv command</p>
+<pre><code class="language-shell">v4l2-ctl -d /dev/video0 --set-fmt-video=width=1280,height=720,pixelformat=NV12 --stream-mmap=3 --stream-skip=30 --stream-to=/mnt/output_1.yuv --stream-count=1 --stream-poll
+</code></pre>
+<p>View link topology:</p>
+<pre><code class="language-shell">media-ctl -d /dev/media0 -p
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_Boot logo User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/" class="btn btn-neutral float-right" title="SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

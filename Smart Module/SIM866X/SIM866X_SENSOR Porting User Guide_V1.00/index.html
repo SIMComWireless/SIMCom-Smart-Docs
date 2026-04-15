@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_SENSOR Migration Documentation - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_SENSOR Migration Documentation";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_SENSOR Porting User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_SENSOR Migration Documentation</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-android-sensors-architecture">2 Android sensors architecture</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-overall-architecture-of-android-sensor-system">2.1 Overall architecture of Android sensor system</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-sensor-kernel-driver-interaction-model">2.2 Sensor kernel-driver interaction model</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-rockchip-sensors-hal">3 Rockchip sensors HAL</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-introduction-to-rockchip-sensors-kernel-driver">4 Introduction to Rockchip sensors kernel driver</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-add-a-sensor-driver-process">5 Add a sensor driver process</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#51-adding-sensor-id">5.1 Adding sensor id</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#52-add-gsensor-chip-driver">5.2 Add gsensor chip driver</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#53-modify-gsensor-range-and-report-data-conversion">5.3 Modify gsensor range and report data conversion</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#54-modify-gsensor-layout-direction">5.4 Modify gsensor layout direction</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#55-meaning-of-other-values-in-dts">5.5 Meaning of other values in dts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#56-sensor-related-macro-configuration-in-android">5.6 Sensor-related macro configuration in Android</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-faq">6 FAQ</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#61-gsensor-function-unavailable">6.1 Gsensor function unavailable</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#62-wrong-direction">6.2 Wrong direction</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_SENSOR Migration Documentation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_sensor-migration-documentation">SIM866X_SENSOR Migration Documentation</h1>
+<h2 id="version-history">Version History</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.3.16</td>
+<td style="text-align: left;">Liu Yi</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This article mainly introduces the architecture and basic configuration of rockchip sensors; the latest kernel 4.4 has made some modifications to the architecture of sensors to meet the requirements of android cts and vts testing; adding a new sensor driver requires some adaptation work.</p>
+<h2 id="2-android-sensors-architecture">2 Android sensors architecture</h2>
+<h3 id="21-overall-architecture-of-android-sensor-system">2.1 Overall architecture of Android sensor system</h3>
+<p>The complete hierarchical call process of sensor data in Android system from hardware to application is divided into 5 layers from top to bottom:</p>
+<p><strong>APPLICATIONS</strong></p>
+<ul>
+<li>The top layer is the specific<strong>Application</strong> (such as step-counting, compass and other apps), which is directly oriented to the user and realizes functions through sensors.</li>
+</ul>
+<p><strong>APPLICATION FRAMEWORK</strong></p>
+<ul>
+<li><strong>SensorManager</strong>: The entry class for the application to acquire sensor services, responsible for managing all sensors, registering/deregistering listening, and acquiring sensor data.</li>
+<li><strong>Sensor JNI</strong>: Bridge between Java layer and underlying Native layer, converting Java calls to C/C++ implementations.</li>
+</ul>
+<p><strong>LIBRARIES</strong></p>
+<ul>
+<li><strong>Sensor Manager (Native)</strong>: The underlying implementation of JNI, interacting with system services.</li>
+<li><strong>Sensor Service</strong>: System-level service that manages the status, permissions, and data distribution of all sensors in a unified manner.</li>
+<li><strong>Sensor HAL (Hardware Abstraction Layer)</strong>: A hardware abstraction layer that isolates the Linux kernel from upper layer services and provides standardized interfaces so that the upper layer does not need to care about specific hardware driver details.</li>
+</ul>
+<p><strong>LINUX KERNEL (Linux kernel layer)</strong></p>
+<ul>
+<li><strong>Input Subsystem</strong>: Linux input subsystem, unified processing of events for various input devices (including sensors).</li>
+<li><strong>Event Dev</strong>: Event device node that exposes sensor event interfaces to upper layers.</li>
+<li><strong>Accelerometer Driver</strong>: Driver for specific sensors such as accelerometers.</li>
+<li><strong>I2C driver</strong>: I2C bus driver responsible for communicating with sensor hardware.</li>
+</ul>
+<p><strong>HARDWARE (Hardware Layer)</strong></p>
+<ul>
+<li><strong>Accelerometer</strong>: Accelerometer sensor hardware, responsible for collecting physical data.</li>
+<li><strong>I2C Controller</strong>: I2C controller that communicates with sensor chips as bus master.</li>
+</ul>
+<h3 id="22-sensor-kernel-driver-interaction-model">2.2 Sensor kernel-driver interaction model</h3>
+<p><strong>Upper Control Instruction Flow (Down)</strong></p>
+<p>The upper layer sends control commands to Sensor-dev via the ioctl system call:</p>
+<ul>
+<li><code>active</code>: Activates/hibernates sensors.</li>
+<li><code>Batch/setdelay</code>: Sets the data batch mode or sampling delay.</li>
+<li>When<code>Sensor-dev</code>receives the command, it calls<code>Sensor-chip driver</code>via<code>Ctl_ops</code> perform hardware configuration.</li>
+</ul>
+<p><strong>Bottom Data Reporting Flow (Up)</strong></p>
+<ul>
+<li><code>Sensor-chip driver</code>obtains the raw data collected by the hardware through<code>Interrupt</code> or<code>poll</code>.</li>
+<li>The driver encapsulates the data as an<strong>Input event</strong>and submits it to<code>Sensor-dev</code>.</li>
+<li>The upper layer listens to<code>Sensor-dev</code>through<code>poll</code>system call to read sensor event data.</li>
+</ul>
+<p><strong>Driver registration</strong></p>
+<ul>
+<li><code>Sensor-chip driver</code>registers itself with<code>Sensor-dev</code> through<code>register</code>interface when starting, completing device initialization and function exposure.</li>
+</ul>
+<h2 id="3-rockchip-sensors-hal">3 Rockchip sensors HAL</h2>
+<p>Code path: hardware/rockchip/sensor/st, supports the latest SENSORS_DEVICE_API_VERSION_1_3 android sensors hal API interface.</p>
+<p>The interfaces implemented include:</p>
+<ul>
+<li>get_sensors_list -Returns a list of all sensors</li>
+<li>activate -starts or stops the sensor</li>
+<li>batch -Sets sensor parameters such as sample rate and maximum report delay</li>
+<li>setDelay -For version 1.0 of HAL only, sets the sample rate of the specified sensor</li>
+<li>flush -Flushes the FIFO of the specified sensor and reports a flush completion event upon completion</li>
+<li>poll -Returns available sensor events</li>
+</ul>
+<p>The flush interface is not really implemented, because it has to be specific to hardware fifo support, because we support
+There are many sensor models, so it is impossible to achieve a unified interface implementation, so here is just a bypass, directly return
+META_DATA_FLUSH_COMPLETE type data.</p>
+<h2 id="4-introduction-to-rockchip-sensors-kernel-driver">4 Introduction to Rockchip sensors kernel driver</h2>
+<p>Code path: kernel/drivers/input/sensors, where sensor-dev.c is the core code, integration
+There are different types of sensors, including accel, gyro, lsensor, psensor, compass, etc.</p>
+<h2 id="5-add-a-sensor-driver-process">5 Add a sensor driver process</h2>
+<p>Here, for example, add one of the most commonly used gsensors, similar to other types of sensors. Android hal does not need any modification, hal is configured according to +-2G Gsensor range, adc 16bit, that is, the corresponding value of 1G is 16384; so the driver layer adds gsensor driver, and the reported value needs to be adapted according to the range and adc accuracy. The steps are as follows, taking mpu6500 acc as an example:</p>
+<h3 id="51-adding-sensor-id">5.1 Adding sensor id</h3>
+<p>Add sensor_id to sensor-dev.c, where the "mpu6500_acc" field corresponds to the compatible field in dts (old version mode)</p>
+<p>For example:</p>
+<pre><code class="language-c">static const struct i2c_device_id sensor_id[] = {
+    /*angle*/
+    {&quot;angle_kxtik&quot;, ANGLE_ID_KXTIK},
+    {&quot;angle_lis3dh&quot;, ANGLE_ID_LIS3DH},
+    /*gsensor*/
+    {&quot;gsensor&quot;, ACCEL_ID_ALL},
+    {&quot;gs_mma8452&quot;, ACCEL_ID_MMA845X},
+    {&quot;gs_kxtik&quot;, ACCEL_ID_KXTIK},
+    {&quot;gs_kxtj9&quot;, ACCEL_ID_KXTJ9},
+    {&quot;gs_lis3dh&quot;, ACCEL_ID_LIS3DH},
+    {&quot;gs_mma7660&quot;, ACCEL_ID_MMA7660},
+    {&quot;gs_mxc6225&quot;, ACCEL_ID_MXC6225},
+    {&quot;gs_dmard10&quot;, ACCEL_ID_DMARD10},
+    {&quot;gs_lsm303d&quot;, ACCEL_ID_LSM303D},
+    {&quot;gs_mc3230&quot;, ACCEL_ID_MC3230},
+    {&quot;mpu6880_acc&quot;, ACCEL_ID_MPU6880},
+    {&quot;mpu6500_acc&quot;, ACCEL_ID_MPU6500}, // Add new sensor_id
+    {&quot;lsm330_acc&quot;, ACCEL_ID_LSM330},
+    {&quot;bma2xx_acc&quot;, ACCEL_ID_BMA2XX},
+    {&quot;gs_stk8baxx&quot;, ACCEL_ID_STK8BAXX},
+    /*compass*/
+    {&quot;compass&quot;, COMPASS_ID_ALL},
+    {&quot;ak8975&quot;, COMPASS_ID_AK8975},
+    {&quot;ak8963&quot;, COMPASS_ID_AK8963},
+    {&quot;ak09911&quot;, COMPASS_ID_AK09911},
+    {&quot;mmc314x&quot;, COMPASS_ID_MMC314X},
+    // ...
+};
+</code></pre>
+<p>This method is the same as in older versions of RK code. The new version code has been updated to place i2c_device_id in the sensor driver declaration and release the registration function interface by calling sensor-dev.c</p>
+<pre><code class="language-c">EXPORT_SYMBOL(sensor_register_device);
+</code></pre>
+<p>Realize sensor registration. Related implementations are as follows</p>
+<pre><code class="language-c">// 声明与定义
+static const struct i2c_device_id accl_mpu6500_id[] = {
+    {&quot;mpu6500_acc&quot;, ACCEL_ID_MPU6500},  // When there is no compatible option, the secondary method for binding the device via I2C driver is ACCEL_ID_MPU6500, which is the device identification number.
+    {}
+};
+
+static int accl_mpu6500_probe(struct i2c_client* client,
+    const struct i2c_device_id* devid)
+{
+    return sensor_register_device(client, NULL, devid, &amp;accl_mpu6500_ops);
+}
+</code></pre>
+<p>ACCEL_ID_MPU6500 is defined in include/linux/sensor-dev.h:</p>
+<pre><code class="language-c">enum sensor_id {
+    ID_INVALID = 0,
+    ...
+    ACCEL_ID_MPU6500, // Newly added &quot;sensor_id&quot;, corresponding to other sensors, simply add the corresponding id. The general naming format is &quot;SENSOR_TYPE_ID_SENSOR_NAME&quot;.
+    ...
+    SENSOR_NUM_ID,
+};
+</code></pre>
+<h3 id="52-add-gsensor-chip-driver">5.2 Add gsensor chip driver</h3>
+<p>The requested URL/input/sensors/accel/was not found on this server.</p>
+<p>1) Implementation of gsensor_mpu6500_ops Example:</p>
+<pre><code class="language-c">struct sensor_operate gsensor_mpu6500_ops = {
+    .name = &quot;mpu6500_acc&quot;, //Consistent with the names defined in sensor-dev.c/i2c_device_id
+    .type = SENSOR_TYPE_ACCEL, //The type of sensor is gsensor.
+    .id_i2c = ACCEL_ID_MPU6500, // Defined in include/linux/sensor-dev.h
+    .read_reg = MPU6500_ACCEL_XOUT_H, //The starting register address for reading gsensor data
+    .read_len = 6, //The number of bytes of gsensor data that need to be read
+    .id_reg         = MPU6500_WHOAMI, //Chip Unique ID Register
+    .id_data        = MPU6500_DEVICE_ID, //Chip Unique ID
+    .precision       = MPU6500_PRECISION, //The number of bits for sampling the gsensor data by the ADC
+    .ctrl_reg = MPU6500_PWR_MGMT_2, //The register address used to enable the gsensor
+    .int_status_reg   = MPU6500_INT_STATUS, //Interrupt status register address
+    .range               = {-32768, 32768}, //Range: Here, it indicates that the reported range is ±2G.
+    .trig = IRQF_TRIGGER_HIGH |IRQF_ONESHOT, // IRQ Type
+    .active               = sensor_active, //Used for controlling the gsensor
+    .init                 = sensor_init, //Used for initializing the gsensor
+    .report = sensor_report_value, //Used for reporting gsensor data
+};
+</code></pre>
+<p>2) Register sensor driver to sensor-dev.c (old version scheme)</p>
+<pre><code class="language-c">static struct sensor_operate *gsensor_get_ops(void)
+{
+    return &amp;gsensor_mpu6500_ops;
+}
+static int __init gsensor_mpu6500_init(void)
+{
+    struct sensor_operate *ops = gsensor_get_ops();
+    int type = ops-&gt;type;
+    return sensor_register_slave(type, NULL, NULL, gsensor_get_ops);
+}
+static void __exit gsensor_mpu6500_exit(void)
+{
+    struct sensor_operate *ops = gsensor_get_ops();
+    int type = ops-&gt;type;
+    sensor_unregister_slave(type, NULL, NULL, gsensor_get_ops);
+}
+
+Kernel driver install:
+
+module_init(gsensor_mpu6500_init);
+module_exit(gsensor_mpu6500_exit);
+</code></pre>
+<p>The new version has a separate sensor device driver, which is registered by calling the interface provided by sensor-dev.c, so in fact we only need to port the sensor driver into the code</p>
+<pre><code class="language-c">// Driver Migration:
+1. Place the driver in the specified path: kernel/drivers/input/sensors/. RK will create folders based on the type of the sensor driver and simply place the corresponding driver in the folder.
+2. Add compilation options
+Makefile: obj-$(CONFIG_MPU6500_ACC) += mpu6500_acc.o
+Kconfig: config MPU6500_ACC
+tristate &quot;Sensor mpu6500_acc&quot;
+default n // Set to 'y' when enabled help
+To have support for your specific gsesnor you will have to
+select the proper drivers which depend on this option.
+3. Add the compilation switch in sunsea/project_sunsea/SIM8666/ProjectConfig.mk
+CONFIG_MPU6500_ACC=n // By default, it is not loaded. Change it to y for loading. This is the recommended method.
+</code></pre>
+<h3 id="53-modify-gsensor-range-and-report-data-conversion">5.3 Modify gsensor range and report data conversion</h3>
+<p>Different manufacturers of gsensor will have differences in range and accuracy, in order to be compatible with different manufacturers of gsensor chips, while not modifying the android hal layer code, only modifying the driver, to simplify customer development purposes, we must convert different ranges, different precision gsensor data into a unified standard report to hal layer code. As mentioned in the previous section, the HAL layer reports gsensor data with a range of +-2G, adc 16bit, and different gsensors with this standard need to be adapted. Examples are as follows:</p>
+<p>1）mpu6500   +- 2G   16bit adc</p>
+<p>Mpu6500 adc bit number is 16 bits, the initialization time set range is +-2G, then the register read out the value range is: +-32768, and match with the upper hal layer, so as long as the register read out the value can be reported directly;</p>
+<pre><code class="language-c">struct sensor_operate gsensor_mpu6500_ops = {
+    .name                           = &quot;mpu6500_acc&quot;,
+    .type                           = SENSOR_TYPE_ACCEL,
+    .id_i2c                       = ACCEL_ID_MPU6500,
+    .read_reg                       = MPU6500_ACCEL_XOUT_H,
+    .read_len                       = 6,
+    .id_reg                         = MPU6500_WHOAMI,
+    .id_data                        = MPU6500_DEVICE_ID,
+    .precision                      = MPU6500_PRECISION,
+    .ctrl_reg                       = MPU6500_PWR_MGMT_2,
+    .int_status_reg                 = MPU6500_INT_STATUS,
+    .range                          = {-32768, 32768},
+    .trig                           = IRQF_TRIGGER_HIGH|IRQF_ONESHOT,
+    .active                         = sensor_active,
+    .init                           = sensor_init,
+    .report                         = sensor_report_value,
+};
+</code></pre>
+<p>2) If the range and adc accuracy of gsensor are not +-2G and 16bit, corresponding conversion is required.</p>
+<pre><code class="language-c">Assuming the measurement range is ±XG, and ADC is Ybit, the conversion relationship is as follows:
+#define XXX_RANGE        16384*X
+#define XXX_PRECISION    Y
+#define XXX_BOUNDARY     (0x1 &lt;&lt; (XXX_PRECISION - 1))
+#define XXX_GRAVITY_STEP (XXX_RANGE / XXX_BOUNDARY)
+
+struct sensor_operate gsensor_xxx_ops = {
+    .name                           = &quot;xxx_acc&quot;,
+    .type                           = SENSOR_TYPE_ACCEL,
+    .id_i2c                         = ACCEL_ID_XXX,
+    .read_reg                       = XXX_ACCEL_XOUT_H,
+    .read_len                       = 6,
+    .id_reg                         = XXX_WHOAMI,
+    .id_data                        = XXX_DEVICE_ID,
+    .precision                      = Y,
+    .ctrl_reg                       = XXX_PWR_MGMT_2,
+    .int_status_reg                 = XXX_INT_STATUS,
+    .range                          = {-16384*X, +16384*X},
+    .trig                           = (IRQF_TRIGGER_LOW | IRQF_ONESHOT),
+    .active                         = sensor_active,
+    .init                           = sensor_init,
+    .report                         = sensor_report_value,
+};
+</code></pre>
+<p>Report value conversion: report_data = read_data* XXX_GRAVITY_STEP; //read_data is the value read from the actual register, and report_data is the value that can be reported to the hal layer after conversion</p>
+<h3 id="54-modify-gsensor-layout-direction">5.4 Modify gsensor layout direction</h3>
+<p>For the definition of coordinate axis in Android system, refer to RK official document:<em>Rockchip_Developer_Guide_Sensors_CN.pdf</em> Chapter 6.4</p>
+<p>Sensor-dev.c defines the layout value, corresponding to different matrices, you can see the sensor-dev.c code query, so, the adaptation direction can be modified by modifying the layout value in the dts to select the corresponding conversion matrix, to achieve the direction change, to adapt to the requirements of android.</p>
+<p>as follow:</p>
+<pre><code class="language-c">lsm330_accel@1e {
+    status = &quot;disabled&quot;;
+    compatible = &quot;lsm330_acc&quot;;
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;lsm330a_irq_gpio&gt;;
+    reg = &lt;0x1e&gt;;
+    irq-gpio = &lt;&amp;gpio1 22 IRQ_TYPE_EDGE_RISING&gt;; //gpio1 c6
+    type = &lt;SENSOR_TYPE_ACCEL&gt;;
+    irq_enable = &lt;1&gt;;
+    poll_delay_ms = &lt;30&gt;;
+    power-off-in-suspend = &lt;1&gt;;
+    layout = &lt;4&gt;;
+};
+</code></pre>
+<h3 id="55-meaning-of-other-values-in-dts">5.5 Meaning of other values in dts</h3>
+<pre><code class="language-c">lsm330_accel@1e {
+    status = &quot;disabled&quot;;
+    compatible = &quot;lsm330_acc&quot;; // Match with the definition of sensor_id in sensor-dev.c
+    pinctrl-names = &quot;default&quot;; //The relevant pinctrl definitions, here mainly define the interrupt pins.
+    pinctrl-0 = &lt;&amp;lsm330a_irq_gpio&gt;;
+    reg = &lt;0x1e&gt;;  // i2c address
+    irq-gpio = &lt;&amp;gpio1 22 IRQ_TYPE_EDGE_RISING&gt;;  // IRQ pin and type
+    type = &lt;SENSOR_TYPE_ACCEL&gt;;  // The type of sensor must not be mistaken.
+    /* Whether to use interrupt mode or not. If you want to use CTS or VTS, it is recommended to use polling. The polling mode in sensor-dev.c can already meet the requirements of CTS testing. If using interrupt mode, the gsensor chip driver needs to configure the sampling rate properly.*/
+    irq_enable = &lt;1&gt;;
+    poll_delay_ms = &lt;30&gt;;
+    layout = &lt;4&gt;;
+    reprobe_en = &lt;1&gt;;  // If this value is 1, it indicates that after the sensor driver loading fails, the sensor driver will be attempted to be reloaded multiple times (the number of attempts is defined in the code).
+};
+</code></pre>
+<h3 id="56-sensor-related-macro-configuration-in-android">5.6 Sensor-related macro configuration in Android</h3>
+<p>BoardConfig.mk www.example.com:</p>
+<pre><code class="language-c"># Sensors
+BOARD_SENSOR_ST := true
+BOARD_SENSOR_MPU_PAD := false
+</code></pre>
+<p>What types of sensors are supported? If not, configure false, otherwise the vts and cts tests will fail:</p>
+<pre><code class="language-c">BOARD_GRAVITY_SENSOR_SUPPORT := true
+BOARD_COMPASS_SENSOR_SUPPORT := false
+BOARD_GYROSCOPE_SENSOR_SUPPORT := false
+BOARD_PROXIMITY_SENSOR_SUPPORT := false
+BOARD_LIGHT_SENSOR_SUPPORT := true
+BOARD_PRESSURE_SENSOR_SUPPORT := false
+BOARD_TEMPERATURE_SENSOR_SUPPORT := false
+</code></pre>
+<p>6 Calibration of Gsensor and gyro</p>
+<p>Gsensor and gyro calibration can be done through the command line, pcba test can also be calibrated, specific check
+Look at the PCBA configuration.
+Command line calibration method: Keep the machine level and still, enter the following command calibration:</p>
+<pre><code class="language-c">Gsensor: echo 1 &gt; /sys/class/sensor_class/accel_calibration
+GYRO : echo 1 &gt; /sys/class/sensor_class/gyro_calibration
+</code></pre>
+<p>View calibration values:</p>
+<pre><code class="language-c">cat /sys/class/sensor_class/accel_calibration
+cat /sys/class/sensor_class/gyro_calibration
+</code></pre>
+<p>If calibration values cannot be viewed, calibration failed, and the kernel log can be printed to determine the cause of failure. After successful calibration, the calibration value will be saved to the vendor storage of nand or emmc, and will not be erased. It will take effect automatically after startup.</p>
+<h2 id="6-faq">6 FAQ</h2>
+<h3 id="61-gsensor-function-unavailable">6.1 Gsensor function unavailable</h3>
+<h4 id="611-getevent-view-g-sensor-no-data-reported">6.1.1 getevent View g-sensor no data reported</h4>
+<p>Investigation method:</p>
+<ol>
+<li>Confirm whether the driver is registered, you can check whether there is an input device named gsensor through getevent; if not, you need to see why it is not registered, it may be a dts configuration problem, driver problem, i2c failure at the same time, chip id mismatch and other possible reasons, check the kernel log, specific analysis of the problem; if there is registration, go down.</li>
+<li>Confirm whether the android layer related macro is open;</li>
+<li>Confirm whether hal layer code works normally; print logcat after booting, search sensor field to view related log.</li>
+</ol>
+<h4 id="612-data-values-are-incorrect">6.1.2 Data values are incorrect</h4>
+<p>Getevent has data reported, the screen does not rotate or rotates irregularly;</p>
+<p>In addition to checking whether the value is correct through the apk of sensor, you can also check whether the gsensor data reported by android is correct through commands:
+        setprop sensor.debug.level 2</p>
+<p>The command takes effect when the screen is manually closed and dormant. You can view the gsensor value reported by hal through logcat-s SensorsHal; when it is placed horizontally, the theoretically correct value should be +9.8 or-9.8 for one axis and 0 for the other two axes;</p>
+<p>If the values are incorrect, verify that the data reporting conversion described in the previous section is correct.</p>
+<h3 id="62-wrong-direction">6.2 Wrong direction</h3>
+<p>If the direction is wrong, please refer to section 5.4 above by modifying the layout value of dts.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/" class="btn btn-neutral float-left" title="SIM866X_SDK download instructions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_Thermal Introduction and Debug User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

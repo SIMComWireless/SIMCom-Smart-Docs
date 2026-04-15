@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_OTA Upgrade User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_OTA Upgrade User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_OTA Upgrade User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_OTA Upgrade User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#11-purpose-of-this-article">1.1 Purpose of this article</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#12-references">1.2 References</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#13terminology-and-abbreviations">1.3Terminology and abbreviations</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-change-ota-package-name-and-version-number">2 Change OTA package name and version number</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-compile-to-generate-ota-package">3 Compile to generate OTA package</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-differential-packet-making">4 Differential packet making</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-ota-package-or-differential-package-upgrade-steps">5 OTA package or differential package upgrade steps</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#51-method-1-update-via-sd-card">5.1 Method 1: Update via SD card</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#52-method-2-upgrade-and-update-via-sd-card">5.2 Method 2 Upgrade and update via SD card</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#53-method-3-update-via-adb">5.3 Method 3: Update via ADB</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#54-method-4-support-third-party-fota-application-upgrade">5.4 Method 4: Support third-party FOTA application upgrade</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_OTA Upgrade User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_ota-upgrade-user-guide">SIM866X_OTA Upgrade User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>versions</strong></th>
+<th><strong>date</strong></th>
+<th><strong>author</strong></th>
+<th><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.00</td>
+<td>2026.03.04</td>
+<td>Yang Huakun</td>
+<td>The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<h3 id="11-purpose-of-this-article">1.1 Purpose of this article</h3>
+<p>This article is based on the Android 11 system of SIM866X platform, focusing on the OTA upgrade implementation method under<strong>the non-AB partition architecture</strong>, the upgrade package production process and the actual upgrade operation steps.</p>
+<p>Through this document, developers can:</p>
+<ul>
+<li>Understand the application scenarios of OTA full volume packet and differential packet</li>
+<li>Master the compilation and generation methods of OTA upgrade packages</li>
+<li>Familiarity with Recovery based multiple local upgrade methods (SD card/ ADB)</li>
+<li>Quickly complete OTA function debugging and problem positioning in the project</li>
+</ul>
+<h3 id="12-references">1.2 References</h3>
+<p>[1]Ruixin Micro Platform Related Code</p>
+<p>[2]Android Developer Documentation</p>
+<h3 id="13terminology-and-abbreviations"><strong>1.3</strong>Terminology and abbreviations</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">type</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">full package</td>
+<td>An OTA full package is an upgrade package that includes the complete new version. It contains all the files and data that need to be updated, whether new or modified, will be included in the full package. Compared with differential packet, full packet has larger file size and longer transmission time. When the device receives the full package, it completely replaces the old version with the new version.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Subcontract</td>
+<td>An OTA differential package is an upgrade package that contains only the differences between the new version and the old version. It contains only a portion of the file or data that needs to be updated, and the differential packet is smaller in size and faster than the full packet. After the device receives the differential package, it will update incrementally based on the old version, updating only the difference part, thus achieving the upgrade.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-change-ota-package-name-and-version-number">2 Change OTA package name and version number</h2>
+<p>Edit the build/make/core/version_defaults.mk file.</p>
+<pre><code class="language-makefile">286 HAS_BUILD_NUMBER := true
+287 ifndef BUILD_NUMBER
+288   # BUILD_NUMBER should be set to the source control value that
+289   # represents the current state of the source code.  E.g., a
+290   # perforce changelist number or a git hash.  Can be an arbitrary string
+291   # (to allow for source control that uses something other than numbers),
+292   # but must be a single word and a valid file name.
+293   #
+294   # If no BUILD_NUMBER is set, create a useful &quot;I am an engineering build
+295   # from this date/time&quot; value.  Make it start with a non-digit so that
+296   # anyone trying to parse it as an integer will probably get &quot;0&quot;.
+297   BUILD_NUMBER := eng.$(shell echo $${BUILD_USERNAME:0:6}).$(shell $(DATE) +%Y%m%d.%H%M%S)
+298   HAS_BUILD_NUMBER := false
+299 endif
+300 .KATI_READONLY := BUILD_NUMBER HAS_BUILD_NUMBER
+</code></pre>
+<p>such as modifying</p>
+<pre><code class="language-makefile">```
+BUILD_NUMBER := eng.$(shell echo $${BUILD_USERNAME:0:6}).$(shell $(DATE) +%Y%m%d.%H%M%S)
+```
+</code></pre>
+<p>is the required version number</p>
+<p>SIM8666_B01V01</p>
+<h2 id="3-compile-to-generate-ota-package">3 Compile to generate OTA package</h2>
+<p>Go to sunsea directory and execute compilation</p>
+<p>format:  ./ make_build_ap.sh [PROJECT] [MODULE] [userdebug/user] [thread_number]</p>
+<p>example: ./ make_build_ap.sh SIM8666 all userdebug 16</p>
+<p>After the above command is executed successfully, the OTA upgrade package will be generated in the out/dist directory and finally copied to the rockdev/Image-rk3566_r directory.</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>package name keyword</th>
+<th>build directory</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full package</td>
+<td>-<em>ota</em>.zip</td>
+<td>rockdev/Image-rk3566_r</td>
+<td>The full package can be used directly as an upgrade package for upgrades.</td>
+</tr>
+<tr>
+<td>differential resource package</td>
+<td>*-target_files.zip</td>
+<td>rockdev/Image-rk3566_r</td>
+<td>Take two different differential resource packages and make the generated differential package, which can be used as an upgrade package for upgrading.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-differential-packet-making">4 Differential packet making</h2>
+<p>Say it before:</p>
+<p><strong><em>Source of*source.zip* </em></strong>and<strong><em>*target.zip*</em></strong>:</p>
+<table>
+<thead>
+<tr>
+<th>type</th>
+<th>package name keyword</th>
+<th>build directory</th>
+<th>remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><em>*source.zip*</em></strong></td>
+<td>previous version of-target_files.zip</td>
+<td>out/dist</td>
+<td>*<strong><em>source.zip*</em></strong> Name can be modified without special characters</td>
+</tr>
+<tr>
+<td><strong><em>*target.zip*</em></strong></td>
+<td>Current version of-target_files.zip</td>
+<td>out/dist</td>
+<td>*<strong><em>target.zip*</em></strong> Name can be modified without special characters</td>
+</tr>
+</tbody>
+</table>
+<p>Where<strong><em>*source.zip* </em></strong>refers to the differential resource package of the previous version,<strong><em>*target.zip*</em></strong> refers to the differential resource package of this version, and update.zip is the name of the generated differential package.</p>
+<p>Take the Android11 userdebug version as an example:</p>
+<p>Open a new command window and execute the following command:</p>
+<pre><code class="language-bash">$ source build/envsetup.sh
+$ lunch &lt;product&gt;-&lt;variant&gt;
+$./build/make/tools/releasetools/ota_from_target_files -v --block -k build/target/product/security/testkey -p out/host/linux-x86/ -i &lt;source.zip资源包路径&gt; &lt;target.zip资源包路径&gt; &lt;update.zip差分包的生成路径&gt;
+</code></pre>
+<p>Analysis of key parameters:</p>
+<ul>
+<li>
+<p>lunch<product>-<variant>   For example, lunch rk3566_r-userdebug <code>用于选择编译目标，其中</code>rk3566_r is the device configuration and userdebug is the compilation type.</p>
+</li>
+<li>
+<p>out/host/linux-x86/bin/ota_from_target_files is a python script generated by the compilation environment. Before using it, you must execute source build/envsetup.sh and lunch qssi-userdebug.</p>
+</li>
+<li>-v Display log of execution process;</li>
+<li>-k The key to sign the upgrade package. By default, it is build/target/product/security/testkey. If it is changed to a custom release key later, please use build/target/product/security/release when generating the difference package.</li>
+</ul>
+<p>Other: Command execution common error reasons: </p>
+<p>1) The above "-" is in English format. Please note that when copying, it will automatically become "-" in Chinese, so the command will report an error;</p>
+<p>2) The resource package path is incorrect;</p>
+<p>3) Python 2.7 and other tool environments are not configured well</p>
+<h2 id="5-ota-package-or-differential-package-upgrade-steps">5 OTA package or differential package upgrade steps</h2>
+<p>Say it before:</p>
+<p>As mentioned above, both OTA full volume packages and OTA differential packages can be upgraded as OTA upgrade packages.</p>
+<p>Note 1: Mode 1, 2, 3 and 4 are all local OTA upgrades;</p>
+<p>Note 2: The current system is<strong>non-AB partition</strong>, and can be upgraded by using Mode 1, Mode 2 and Mode 3;</p>
+<h3 id="51-method-1-update-via-sd-card">5.1 Method 1: Update via SD card</h3>
+<p>Step 1: Change the OTA upgrade package to update.zip, put it in the SD card root directory, and then insert the SD card into the target device.</p>
+<p>Step 2: When the device recognizes that update.zip compressed package exists in SD card root directory, an upgrade pop-up box pops up, as follows</p>
+<p><img alt="" src="../resource/%E5%9B%BE5-1FirmwareUpdating%E5%AE%89%E8%A3%85%E6%8F%90%E7%A4%BA%E6%A1%86.jpg" /></p>
+<p>Select Install.</p>
+<p>Step 3: Wait for the upgrade to succeed.</p>
+<p><img alt="" src="../resource/%E5%9B%BE5-2FirmwareUpdating%E9%87%8D%E5%90%AF%E6%8F%90%E7%A4%BA%E6%A1%86.jpg" /></p>
+<p>Step 4: wait for 1-2 minutes, upgrade successfully, prompt as follows, click "yes", delete the upgrade package in sd card.</p>
+<p><img alt="" src="../resource/%E5%9B%BE5-2FirmwareUpdating%E9%87%8D%E5%90%AF%E6%8F%90%E7%A4%BA%E6%A1%86.jpg" /></p>
+<h3 id="52-method-2-upgrade-and-update-via-sd-card">5.2 Method 2 Upgrade and update via SD card</h3>
+<p>Step 1: Put the OTA upgrade package into the SD card, and then insert the SD card into the target device;</p>
+<p>Step 2: After booting the device, enter adb reboot recovery to enter recovery mode and select "Apply update from SD card";</p>
+<p>Step 3: Wait for the upgrade to succeed.</p>
+<h3 id="53-method-3-update-via-adb">5.3 Method 3: Update via ADB</h3>
+<p>Step 1: After booting the device, execute adb reboot recovery and select "Apply update from ADB";</p>
+<p>Step 2: input adb sideload upgrade package on computer terminal, wait for upgrade to succeed.</p>
+<h3 id="54-method-4-support-third-party-fota-application-upgrade">5.4 Method 4: Support third-party FOTA application upgrade</h3>
+<p>For details, please contact FOTA supplier, who will provide relevant FOTA upgrade function system integration configuration information and FOTA upgrade management platform related accounts.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_PANEL Migration User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

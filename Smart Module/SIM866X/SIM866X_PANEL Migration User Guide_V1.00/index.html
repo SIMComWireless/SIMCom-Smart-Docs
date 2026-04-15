@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_PANEL Migration User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_PANEL Migration User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_PANEL Migration User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_PANEL Migration User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#11-purpose-of-this-article">1.1 Purpose of this article</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#12-references">1.2 References</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#13-terminology-and-abbreviations">1.3 Terminology and abbreviations</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_PANEL Migration User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_panel-migration-user-guide">SIM866X_PANEL Migration User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.3.16</td>
+<td style="text-align: left;">Liu Yi</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<h2 id="11-purpose-of-this-article">1.1 Purpose of this article</h2>
+<p>This article mainly describes the display driver guide for HDMI, EDP, MIPI, LVDS and other interfaces on the SIM 866X module based on the linux platform. It is divided into two parts: Uboot and kernel. This article will take the default display on SIM8668 EVB (RK3568) board as an example, and introduce the display software function configuration in detail from the software level.</p>
+<h2 id="12-references">1.2 References</h2>
+<p>【1】Rockchip_Developer_Guide_DRM_Panel_Porting_CN.pdf</p>
+<p>【2】Rockchip_Developer_Guide_HDMI_CN.pdf</p>
+<p>【3】Rockchip_Developer_Guide_MIPI_DSI2_CN.pdf</p>
+<p>【4】Rockchip_Developer_Guide_LVDS_CN.pdf</p>
+<p>【5】Rockchip_Developer_Guide_eDP_CN.pdf</p>
+<h2 id="13-terminology-and-abbreviations">1.3 Terminology and abbreviations</h2>
+<p>VOP：Video Output </p>
+<h1 id="2-information-needed-for-debugging-screens">2 Information needed for debugging screens</h1>
+<h2 id="21-vendor-supplied-parts">2.1 Vendor Supplied Parts</h2>
+<ol>
+<li>
+<p>Screen specifications, which need to be provided by the screen factory;</p>
+</li>
+<li>
+<p>If the screen supports reading edid, this item is ignored. Screen related width, height, hsync, hfp, hbp, vsync, vfp,</p>
+</li>
+</ol>
+<p>vbp, fps, lane_umber, pixel format, reset timing requirements, de-active, hsync-active, vsynv-active and other parameters;</p>
+<ol>
+<li>Schematic diagram related to screen and module connection;</li>
+</ol>
+<h2 id="22-code-catalogue">2.2 Code catalogue</h2>
+<p>The following is an example of evb screen to describe the location of the relevant configuration in the code:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/u-boot/drivers/video/drm/</p>
+<p>├── rockchip_display.c</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/u-boot/common/</p>
+<p>├── edid.c</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/</p>
+<p>└── lcd.dtsi</p>
+<p>└── hdmi.dtsi</p>
+<p>└── simcom.dtsi</p>
+<p>└── mipi_open.dtsi</p>
+<h2 id="23-vop-configuration">2.3 VOP configuration</h2>
+<p>The RK3568 chip is equipped with a VOP controller and has three ports for output, supporting HDMI 2.0 TX/MPI DSI.</p>
+<p>TX1/LVDS TX0/LVDS TX1/eDP TX/RGB/BT1120/BT656 video interface output.</p>
+<h1 id="3-hdmi-configuration">3 HDMI configuration</h1>
+<p>The configuration of RK platform hdmi in uboot stage is also obtained through dtsi, and no additional modifications are required.</p>
+<p>The path to the dtsi configuration file for the kernel section is as follows:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/hdmi.dtsi</p>
+<p>For attributes and attribute descriptions, refer to document:</p>
+<p>RK356X_A11/kernel/Documentation/devicetree/bindings/display/rockchip/dw_hdmi-rockchip.txt</p>
+<h2 id="31-enable-hdmi">3.1 Enable HDMI</h2>
+<p>Code Path:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/hdmi.dtsi</p>
+<pre><code class="language-c">&amp;hdmi {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="32-binding-vop">3.2 Binding VOP</h2>
+<ul>
+<li>
+<p>In each platform of RK, the image data output by various display interfaces (HDMI, MIPI, etc.) comes from VOP;</p>
+</li>
+<li>
+<p>As can be seen from the VOP configuration diagram in Section 2.3, HDMI can be tied to VP0 or VP1. It is suggested that binding VP0 can support 4K output;</p>
+</li>
+<li>
+<p>When the display device node in dts is open, the ports corresponding to VP0 and VP1 of the display interface will be open, so you need to close the port corresponding to the VOP that is not needed;</p>
+</li>
+</ul>
+<p>```c</p>
+<p>&amp;hdmi_in_vp0 {
+      status = "okay";
+  };
+  &amp;hdmi_in_vpl {
+      status = "disabled";
+  };
+  ```</p>
+<h2 id="33-turn-on-the-logo">3.3 Turn on the logo</h2>
+<ul>
+<li>If the u-boot logo is not turned on, the kernel stage cannot display the boot logo, and you can only wait until the system boots to see the image displayed by the application. Turn on route_hdmi enable in dts to support u-boot logo display;</li>
+<li>On this platform (supporting three VOPs), it is necessary to note that the VOP specified by connect in the code configuration below must be consistent with the VOP bound to HDMI, otherwise problems such as color screen may occur;</li>
+</ul>
+<pre><code class="language-c">&amp;route_hdmi {
+    status = &quot;okay&quot;;
+    connect = &lt;&amp;vp0_out_hdmi&gt;;
+};
+</code></pre>
+<h2 id="34-vop-bound-pll">3.4 vop bound PLL</h2>
+<ul>
+<li>RK3568 HDMI bound VP dclk must be mounted on HPLL;</li>
+</ul>
+<pre><code class="language-c">&amp;vop {
+    assigned-clocks = &lt;&amp;cru DCLK_VOP0&gt;, &lt;&amp;cru DCLK_VOP1&gt;, &lt;&amp;cru DCLK_VOP2&gt;;
+    assigned-clock-parents = &lt;&amp;pmucru PLL_HPLL&gt;, &lt;&amp;cru PLL_VPLL&gt;, &lt;&amp;cru PLL_VPLL&gt;;
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="35-hdmi-debug">3.5 HDMI DEBUG</h2>
+<p>The following is a brief introduction to several analysis points that need to be noted when the screen is not lit:</p>
+<ol>
+<li>Confirm current connection status:</li>
+</ol>
+<pre><code class="language-c">root@rk3568-yocto:/# cat /sys/class/drm/card0-HDMI-A-1/status
+connected
+root@rk3568-yocto:/#
+</code></pre>
+<p>If status is disconnected, it may be a monitor connection or software configuration problem.</p>
+<p>First, make sure that both ends of the HDMI cable (development board and display) are firmly inserted, confirm that the display itself is working properly, and has been switched to the appropriate input source. At the same time, ensure that the development board has sufficient power supply. Unstable power supply may also affect HDMI output.</p>
+<ol>
+<li>Check available modes:</li>
+</ol>
+<p>Execute the cat /sys/class/drm/card0-HDMI-A-1/modes command. If this file exists and several resolutions are listed inside, it usually means that the driver is basically normal, but no display is currently detected. If the file is missing or empty, it may indicate a deeper problem at the driver or hardware level.</p>
+<ol>
+<li>View kernel logs:</li>
+</ol>
+<p>Run dmesg| grep -i hdmi, check the HDMI logs during kernel startup and operation, especially if there are failed to get EDID information or error messages related to the physical layer (PHY).</p>
+<ol>
+<li>The logo is not displayed during startup:</li>
+</ol>
+<p>Confirm that the HDMI 5V path is normal, that is to say, the power supply of HDMI 5V is normal. Corresponding power supply can be configured in uboot;</p>
+<p>You can view the corresponding hdmi log in the boot log. If it is successful, there will be the following log information:</p>
+<pre><code class="language-c">hdmi@fe0a0000: detailed mode clock 148500 kHz, flags[5]
+H: 1920 2008 2052 2200 V:1080 1084 1089 1125 bus_format: 2025
+VOP update mode to: 1920x1080p60, type: HDMI0 for VP0
+VP0 set crtc clock to 148500KHz
+VOP VP0 enable Smart1[654x270-&gt;654x270@633x405] fmt[0] addr[0x7df00000]
+CEA mode used vic=16
+final pixclk = 148500000 tmdsclk = 148500000
+</code></pre>
+<ol>
+<li>Confirm the current status of the displayed route:</li>
+</ol>
+<pre><code class="language-c">root@rk3568-yocto:/sys/kernel/debug/dri/0# cat summary
+Video Port0: ACTIVE
+ Connector:HDMI-A-1  Encoder: TMDS-175
+    bus_format[2025]: YUV8_1X24
+    overlay_mode[1]  output_mode[f]  color_space[3], eotf:0
+    Display mode: 1920x1080p60
+    clk[148500] real_clk[148500] type[48] flag[5]
+    H: 1920 2008 2052 2200
+    V: 1080 1084 1089 1125
+Smart1-win0: ACTIVE
+    win_id: 1
+    format: XR24 little-endian (0x343225258) SDR[0] color_space[0] glb_alpha[0xff]
+    rotate: xmirror: 0  ymirror: 0  rotate_90: 0  rotate_270: 0
+    csc: y2r[0] r2y[1] csc_mode[1]
+    zpos: 0
+    src: pos[0, 0] rect[1024 x 600]
+    dst: pos[38, 0] rect[1844 x 1080]
+    buf[0]: addr: 0x000000007e84b000 pitch: 4096 offset: 0
+</code></pre>
+<p>You can view information about the resolution of the screen.</p>
+<ol>
+<li>After checking the above points, if it is still abnormal, you need to grasp the complete log for analysis, and export the fdt of the board for analysis to see if the current screen configuration is effective.</li>
+</ol>
+<h1 id="4-mipi-configuration">4 MIPI configuration</h1>
+<p>The configuration of RK platform dsi in uboot stage is also obtained through dtsi, and no additional modification is required. The path to the dtsi configuration file for the kernel section is as follows:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/mipi_open.dtsi</p>
+<p>For attributes and attribute descriptions, refer to document:</p>
+<p>RK356X_A11/kernel/Documentation/devicetree/bindings/display/rockchip/dw_mipi_dsi_rockchip.txt</p>
+<h2 id="41-schematic-confirmation">4.1 Schematic confirmation</h2>
+<p>It is generally necessary to confirm whether the power supply of MIPI, pin connection, RST pin and backlight control part are correct through schematic diagram, which are used for subsequent configuration, and whether the connection of each lane is correct.</p>
+<h2 id="42-enable-mipi">4.2 Enable MIPI</h2>
+<p>According to the schematic diagram of SIM8668, MIPI screen is connected to DSI1, so it is necessary to open dsi1 and close dsi0;</p>
+<p>Code Path:</p>
+<pre><code class="language-c">&amp;dsi0 {
+    status = &quot;disabled&quot;;
+};
+&amp;dsil {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="43-binding-vop">4.3 Binding VOP</h2>
+<ul>
+<li>In each platform of RK, the image data output by various display interfaces (HDMI, MIPI, etc.) comes from VOP;</li>
+<li>As can be seen from the VOP configuration diagram in Section 2.3, MIPI DSI1 can be bound to VP0 or VP1. On the SIM8668 project, we have previously bound HDMI to VP0, so we need to bind MIPI to VP1;</li>
+<li>When the display device node in dts is open, the ports corresponding to VP0 and VP1 of the display interface will be open, so you need to close the port corresponding to the VOP that is not needed;</li>
+</ul>
+<pre><code class="language-c">&amp;dsi0_in_vp0 {
+    status = &quot;disabled&quot;;
+};
+&amp;dsi0_in_vpl {
+    status = &quot;disabled&quot;;
+};
+&amp;dsil_in_vp0 {
+    status = &quot;disabled&quot;;
+};
+&amp;dsil_in_vpl {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="44-open-the-boot-logo">4.4 Open the boot logo</h2>
+<ul>
+<li>If the u-boot logo is not turned on, the kernel stage cannot display the boot logo, and you can only wait until the system boots to see the image displayed by the application. Enable route_dsi1 in dts to support u-boot logo display; at the same time, you need to turn off the currently unused route_dsi0.</li>
+<li>On this platform (supporting three VOPs), it is necessary to note that the VOP specified by connect in the code configuration below must be consistent with the VOP bound to MIPI DSI1, otherwise problems such as flower screen may occur;</li>
+</ul>
+<pre><code class="language-c">&amp;route_dsi0 {
+    status = &quot;disabled&quot;;
+};
+&amp;route_dsil {
+    status = &quot;okay&quot;;
+    connect = &lt;&amp;vpl_out_dsil&gt;;
+};
+</code></pre>
+<h2 id="45-configuration-phy">4.5 Configuration phy</h2>
+<ul>
+<li>It can be obtained from the current configuration of dsi1 that the phys configuration is video_phy1, so video_phy1 needs to be enabled;</li>
+</ul>
+<pre><code class="language-c">&amp;video_phyl {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="46-configuring-panel">4.6 Configuring PANEL</h2>
+<ul>
+<li>The main parameters of PANEL are configured as follows:</li>
+</ul>
+<pre><code class="language-c">&amp;dsi1 {
+    status = &quot;okay&quot;;
+    dsi1_panel: panel@0 {
+        status = &quot;okay&quot;;
+        compatible = &quot;simple-panel-dsi&quot;;
+        reg = &lt;0&gt;;
+        backlight = &lt;&amp;backlight1&gt;;
+        reset-gpios = &lt;&amp;gpio3 17 GPIO_ACTIVE_LOW&gt;;
+        power-supply = &lt;&amp;vcc3v3_lcd0_n&gt;;
+        reset-delay-ms = &lt;60&gt;;
+        enable-delay-ms = &lt;60&gt;;
+        prepare-delay-ms = &lt;60&gt;;
+        unprepare-delay-ms = &lt;60&gt;;
+        disable-delay-ms = &lt;60&gt;;
+        dsi,flags = &lt;(MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_BURST | MIPI_DSI_MODE_LPM)&gt;;
+        dsi,format = &lt;MIPI_DSI_FMT_RGB888&gt;;
+        dsi,lanes = &lt;4&gt;;
+        panel-init-sequence = [
+            29 00 04 FF 98 81 03
+            23 00 02 38 3C
+            05 78 01 11
+            05 78 01 29
+        ];
+        panel-exit-sequence = [
+            05 00 01 28
+            05 00 01 10
+        ];
+    };
+};
+</code></pre>
+<p>Parameter Description:</p>
+<p>dsi,flags Description:</p>
+<ul>
+<li>MIPI_DSI_MODE_VIDEO MIPI_DSI_MODE_VIDEO_BURST indicates Video Burst Mode;</li>
+<li>MIPI_DSI_MODE_LPM indicates that initialization sequence is sent in LP mode by default;</li>
+<li>MIPI_DSI_MODE_EOT_PACKET indicates that EOTP feature is turned off;</li>
+</ul>
+<p>dsi,format:Pixel Format</p>
+<p>dsi,lanes: Lane Number(1~8), greater than 4 indicates Dual-channel MIPI-DSI Panel;</p>
+<p>panel-init-sequence: power-on initialization sequence of the screen, refer to command description below for specific parameter configuration mode;</p>
+<p>panel-exit-sequence: power-down initialization sequence of the screen, refer to command description below for specific parameter configuration mode;</p>
+<p>backlight: backlight selection;</p>
+<p>reset-gpio: Reset gpio;</p>
+<p>power-supply: power supply configuration of the screen;</p>
+<pre><code class="language-c">disp_timings1: display-timings {
+    native-mode = &lt;&amp;dsi1_timing0&gt;;
+    dsi1_timing0: timing0 {
+        clock-frequency = &lt;71750160&gt;;
+        hactive = &lt;800&gt;;
+        vactive = &lt;1280&gt;;
+        hfront-porch = &lt;52&gt;;
+        hsync-len = &lt;8&gt;;
+        hback-porch = &lt;48&gt;;
+        vfront-porch = &lt;15&gt;;
+        vsync-len = &lt;6&gt;;
+        vback-porch = &lt;16&gt;;
+        hsync-active = &lt;0&gt;;
+        vsync-active = &lt;0&gt;;
+        de-active = &lt;0&gt;;
+        pixelclk-active = &lt;1&gt;;
+    };
+};
+
+</code></pre>
+<p>hactive: lcd width;</p>
+<p>vactive: lcd high;</p>
+<p>clock-frequency=htotal * vtotal * fps</p>
+<p>=（hactive + hfront-porch + hsync-len + hback-porch） * （vactive + vfront-porch + vsync-len + vback-porch）* fps</p>
+<ul>
+<li>The initialization sequence command configuration description of the screen:</li>
+</ul>
+<pre><code class="language-c">
+panel-init-sequence = [
+    29 00 04 FF 98 81 03
+    ...
+    23 00 02 38 3C
+    ...
+    05 78 01 11
+    05 78 01 29
+];
+</code></pre>
+<p>Format Description: The header has 3 bytes (hexadecimal), representing Data Type, Delay, Payload Length respectively.</p>
+<p>The data starting with the fourth byte represents a Payload of Length.</p>
+<p>The first command parses as follows:</p>
+<pre><code class="language-c">29 00 04 FF 98 81 03
+</code></pre>
+<p>Data Type：0x29 (DCS Long Write)</p>
+<p>Delay：0x00 (0 ms)</p>
+<p>Payload Length：0x04 (4 Bytes)</p>
+<p>Payload：0xff 0x98 0x81 0x03</p>
+<p>The final command parses as follows:</p>
+<pre><code class="language-c">05 78 01 29
+</code></pre>
+<p>Data Type：0x05 (DCS Short Write, no parameters)</p>
+<p>Delay：0x78 (120 ms)</p>
+<p>Payload Length：0x01 (1 Bytes)</p>
+<p>Payload：0x29</p>
+<p>Some common Data types are:</p>
+<pre><code class="language-c">0x03: Binary encoding 00 0011, instruction type is Generic Short WRITE without parameters, data type is Short
+‌0x13: Binary encoding 01 0011, instruction type is Generic Short WRITE with 1 parameter, data type is Short
+‌0x23: Binary encoding 10 0011, instruction type is Generic Short WRITE with 2 parameters, data type is Short
+‌0x29: Binary encoding 10 1001, instruction type is Generic Long Write, data type is Long
+</code></pre>
+<h2 id="47-faq">4.7 FAQ</h2>
+<ol>
+<li>How to enable EOTP (EoT packet) features:</li>
+</ol>
+<p>DSI driver determines whether EOTP is enabled according to MIPI_DSI_MODE_EOT_PACKET, if flags are not</p>
+<p>Configure MIPI_DSI_MODE_EOT_PACKET, enable EOTP feature, if flags are configured</p>
+<p>MIPI_DSI_MODE_EOT_PACKET, turn off EOTP feature.</p>
+<ol>
+<li>How do I enable discontinuous clocks?</li>
+</ol>
+<p>DSI driver judges whether to enable discontinuous clock according to MIPI_DSI_CLOCK_NON_CONTINUOUS. If flags is not configured with MIPI_DSI_CLOCK_NON_CONTINUOUS, it indicates continuous clock. If flags is configured with MIPI_DSI_MODE_EOT_PACKET, it indicates discontinuous clock.</p>
+<ol>
+<li>
+<p>If the mipi screen cannot be displayed, first check the backlight configuration, then confirm the lcd power supply, check the initialization parameter </p>
+</li>
+<li>
+<p>After checking the above points, if it is still abnormal, you need to grasp the complete log for analysis, and export the fdt of the board for analysis to see if the current screen configuration is effective.</p>
+</li>
+</ol>
+<h1 id="5-lvds-configuration">5 LVDS configuration</h1>
+<p>The configuration of RK platform lvds in uboot stage is also obtained through dtsi, and no additional modifications are required. The path to the dtsi configuration file for the kernel section is as follows:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/lvds.dtsi</p>
+<p>For attributes and attribute descriptions, refer to document:</p>
+<p>RK356X_A11/kernel/Documentation/devicetree/bindings/display/rockchip/rockchip-lvds.txt</p>
+<h2 id="51-schematic-confirmation">5.1 Schematic confirmation</h2>
+<p>Generally, it is necessary to confirm whether the power supply of lvds screen, pin connection, RST pin and backlight control part are correct through schematic diagram, which are used for subsequent configuration, and confirm whether the connection of each lane is correct.</p>
+<h2 id="52-enable-lvds">5.2 Enable LVDS</h2>
+<p>Code path: RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/lvds.dtsi</p>
+<pre><code class="language-c">&amp;lvds {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="53-binding-vop">5.3 Binding VOP</h2>
+<ol>
+<li>In each platform of RK, the image data output by various display interfaces (HDMI, MIPI, etc.) comes from VOP;</li>
+<li>As can be seen from the VOP configuration diagram in Section 2.3, LVDS can be tied to VP1 or VP2. On the SIM8668 project, we have previously bound HDMI to VP0 and MIPI to VP1, so LVDS can only be bound to VP2 for the time being;</li>
+<li>When the display device node in dts is open, the ports corresponding to VP1 and VP2 of the display interface will be open, so you need to close the port corresponding to the VOP that is not needed;</li>
+</ol>
+<pre><code class="language-c">&amp;lvds_in_vp2 {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="54-open-the-boot-logo">5.4 Open the boot logo</h2>
+<ul>
+<li>If the u-boot logo is not turned on, the kernel stage cannot display the boot logo, and you can only wait until the system boots to see the image displayed by the application. Enable route_lvds1 in dts to support u-boot logo display;</li>
+<li>On this platform (supporting three VOPs), it should be noted that the VOP specified by connect in the code configuration below must be consistent with the VOP bound to LVDS, otherwise problems such as color screen may occur;</li>
+</ul>
+<pre><code class="language-c">&amp;route_lvds {
+    connect = &lt;&amp;vp2_out_lvds&gt;;
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="55-configuration-phy">5.5 Configuration phy</h2>
+<ul>
+<li>You can get from the current configuration of lvds, phys configuration is video_phy0, so you need to enable video_phy0;</li>
+</ul>
+<pre><code class="language-c">&amp;video_phy0 {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="56-configuring-panel">5.6 Configuring PANEL</h2>
+<ul>
+<li>The main parameters of PANEL are configured as follows:</li>
+</ul>
+<pre><code class="language-c">/ {
+    panel: panel {
+        compatible = &quot;simple-panel&quot;;
+        backlight = &lt;&amp;backlight2&gt;;
+        power-supply = &lt;&amp;vdd_lcd0_1v8&gt;;
+        enable-delay-ms = &lt;20&gt;;
+        prepare-delay-ms = &lt;20&gt;;
+        unprepare-delay-ms = &lt;20&gt;;
+        disable-delay-ms = &lt;20&gt;;
+        bus-format = &lt;MEDIA_BUS_FMT_RGB888_1X7X4_SPWG&gt;;
+        width-mm = &lt;164&gt;;
+        height-mm = &lt;100&gt;;
+        reset-gpios = &lt;&amp;gpio0 16 GPIO_ACTIVE_LOW&gt;;
+
+        display-timings {
+            native-mode = &lt;&amp;timing0&gt;;
+
+            timing0: timing0 {
+                clock-frequency = &lt;50834000&gt;;
+                hactive = &lt;1024&gt;;
+                vactive = &lt;600&gt;;
+                hback-porch = &lt;160&gt;;
+                hfront-porch = &lt;24&gt;;
+                vback-porch = &lt;24&gt;;
+                vfront-porch = &lt;5&gt;;
+                hsync-len = &lt;136&gt;;
+                vsync-len = &lt;6&gt;;
+                hsync-active = &lt;0&gt;;
+                vsync-active = &lt;0&gt;;
+                de-active = &lt;0&gt;;
+                pixelclk-active = &lt;0&gt;;
+            }; 
+        }; 
+    }; 
+}; 
+</code></pre>
+<p>Parameter Description:</p>
+<p>bus,format: Data mapping method of LVDS signal</p>
+<ul>
+<li>MEDIA_BUS_FMT_RGB666_1X7X3_SPWG：“vesa-18”</li>
+<li>MEDIA_BUS_FMT_RGB888_1X7X4_SPWG：“vesa-24”</li>
+<li>MEDIA_BUS_FMT_RGB888_1X7X4_JEIDA：“jeida-24”</li>
+<li>MEDIA_BUS_FMT_RGB888_1X7X3_JEIDA：“jeida-18”</li>
+</ul>
+<p>backlight: backlight selection;</p>
+<p>reset-gpio: Reset gpio;</p>
+<p>power-supply: power supply configuration of the screen;</p>
+<p>hactive: lcd width;</p>
+<p>vactive: lcd high;</p>
+<p>clock-frequency=htotal * vtotal * fps</p>
+<p>=（hactive + hfront-porch + hsync-len + hback-porch） * （vactive         + vfront-porch + vsync-len + vback-porch）* fps</p>
+<h1 id="6-edp-configuration">6 EDP Configuration</h1>
+<p>The configuration of RK platform edp in uboot stage is also obtained through dtsi, and no additional modifications are required. The path to the dtsi configuration file for the kernel section is as follows:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/edp.dtsi</p>
+<p>For attributes and attribute descriptions, refer to document:</p>
+<p>RK356X_A11/kernel/Documentation/devicetree/bindings/display/rockchip/analogix_dp-rockchip.txt</p>
+<h2 id="61-schematic-confirmation">6.1 Schematic confirmation</h2>
+<p>Generally, it is necessary to confirm the power supply, reset pin and backlight control part of edp through schematic diagram, which are used for subsequent configuration, and confirm whether the connection of each lane is correct.</p>
+<h2 id="62-uboot-configuration-modify-power-supply">6.2 uboot configuration, modify power supply</h2>
+<p>Code Path:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/u-boot/drivers/video/drm/rockchip_display.c</p>
+<p>rockchip_show_logo function Enable power before displaying logo.</p>
+<pre><code class="language-c">
+int rockchip_show_logo(void)
+{
+    struct display_state *s;
+    int ret = 0;
+    struct gpio_desc edp_enable;
+
+    /* usbl GPIO0_C5 is gpio21 */
+    ret = dm_gpio_lookup_name(&quot;21&quot;, &amp;edp_enable);
+    if (!ret) {
+        dm_gpio_request(&amp;edp_enable, &quot;edp_power_en&quot;);
+        dm_gpio_set_dir_flags(&amp;edp_enable, GPIOD_IS_OUT);
+        dm_gpio_set_value(&amp;edp_enable, 1);
+        printf(&quot;power en edp_power_en\n&quot;);
+    } else {
+        printf(&quot;power en edp_power_en fail\n&quot;);
+    }
+
+    msleep(500);
+    list_for_each_entry(s, &amp;rockchip_display_list, head) {
+        s-&gt;logo.mode = s-&gt;logo.mode;
+</code></pre>
+<h2 id="63-enable-lvds">6.3 Enable LVDS</h2>
+<p>Code Path:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/edp.dtsi</p>
+<pre><code class="language-c">&amp;edp {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="64-binding-vop">6.4 Binding VOP</h2>
+<ul>
+<li>In each platform of RK, the image data output by various display interfaces (HDMI, MIPI, etc.) comes from VOP;</li>
+<li>As can be seen from the VOP configuration diagram in Section 2.3, EDP can be bound to VP0 or VP1. On the SIM8668 project, according to the project requirements, we have a version of HDMI+EDP+LVDS, so EDP can only be bound to VP1 temporarily;</li>
+<li>When the display device node in dts is open, the ports corresponding to VP1 and VP2 of the display interface will be open, so you need to close the port corresponding to the VOP that is not needed;</li>
+</ul>
+<pre><code class="language-c">&amp;edp_in_vp0 {
+    status = &quot;disabled&quot;;
+};
+
+&amp;edp_in_vp1 {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="65-open-the-boot-logo">6.5 Open the boot logo</h2>
+<ul>
+<li>If the u-boot logo is not turned on, the kernel stage cannot display the boot logo, and you can only wait until the system boots to see the image displayed by the application. Turn route_edp on in dts to support u-boot logo display;</li>
+<li>On this platform (supporting three VOPs), it should be noted that the VOP specified by connect in the code configuration below must be consistent with the VOP bound to LVDS, otherwise problems such as color screen may occur;</li>
+</ul>
+<pre><code class="language-c">&amp;route_edp {
+    connect = &lt;&amp;vpl_out_edp&gt;;
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="66-configuration-phy">6.6 Configuration phy</h2>
+<ul>
+<li>You can get from the current configuration of lvds, phys configuration is video_phy0, so you need to enable video_phy0;</li>
+</ul>
+<pre><code class="language-c">&amp;edp_phy {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="67-configuring-panel">6.7 Configuring PANEL</h2>
+<ul>
+<li>The main parameters of PANEL are configured as follows:</li>
+</ul>
+<pre><code class="language-c">edp_panel {
+    compatible = &quot;simple-panel&quot;;
+    backlight = &lt;&amp;backlight&gt;;
+    power-supply = &lt;&amp;vcc3v_led1_n&gt;;
+    prepare-delay-ms = &lt;1&gt;;
+    enable-delay-ms = &lt;12&gt;;
+    unprepare-delay-ms = &lt;120&gt;;
+    disable-delay-ms = &lt;12&gt;;
+    display_timings {
+        native-mode = &lt;&amp;edp_timing&gt;;
+
+        edp_timing: timing0 {
+            clock-frequency = &lt;152560000&gt;;
+            hactive = &lt;1020&gt;;
+            vactive = &lt;1000&gt;;
+            hfront-porch = &lt;40&gt;;
+            hsync-len = &lt;144&gt;;
+            hback-porch = &lt;80&gt;;
+            vfront-porch = &lt;3&gt;;
+            vsync-len = &lt;68&gt;;
+            vback-porch = &lt;9&gt;;
+            hsync-active = &lt;0&gt;;
+            vsync-active = &lt;0&gt;;
+            de-active = &lt;0&gt;;
+            pixelclk-active = &lt;0&gt;;
+        };
+    };
+
+    port {
+        panel_in_edp: endpoint {
+            remote-endpoint = &lt;&amp;edp_out_panel&gt;;
+        };
+    };
+};
+</code></pre>
+<p>Parameter Description:</p>
+<p>backlight: backlight selection;</p>
+<p>power-supply: power supply configuration of the screen;</p>
+<p>hactive: lcd width;</p>
+<p>vactive: lcd high;</p>
+<p>clock-frequency=htotal * vtotal * fps</p>
+<p>=（hactive + hfront-porch + hsync-len + hback-porch） * （vactive + vfront-porch + vsync-len + vback-porch）* fps</p>
+<p>The remote-endpoint attribute under the panel_in_edp node points to the specific endpoint of the edp phy. At the same time, the panel_in_edp node is also referenced by the remote-endpoint attribute of the corresponding edp phy, so that it can be mapped one by one.</p>
+<h2 id="68-configuring-backlighting">6.8 Configuring Backlighting</h2>
+<p>At present, the edp screen of evb uses pwm2 backlight, and the configuration is as follows:</p>
+<pre><code class="language-c">&amp;pwm2 {
+    status = &quot;okay&quot;;
+};
+
+&amp;backlight {
+    pwms = &lt;&amp;pwm2 0 250000 0&gt;;
+};
+</code></pre>
+<h2 id="69-is-hot-plug-supported">6.9 Is hot plug supported?</h2>
+<ul>
+<li>If the edp screen supports hot plug, you need to configure hot plug detection gpio, which is configured through the attribute hpd-gpios; if it does not support hot plug, you need to delete this attribute and configure it as force-hpd.</li>
+</ul>
+<h2 id="610-edp-debug">6.10 EDP DEBUG</h2>
+<ul>
+<li>Enable panel self-test mode</li>
+</ul>
+<p>If the above two checks are completed, aux can obtain relevant information, but it is still not displayed, you need to enable the self-test mode of the screen.</p>
+<pre><code class="language-c">&amp;edp {
+    force-hpd;
+    status = &quot;okay&quot;;
+    //delete - property hpd - gpios;
+    panel - self - test;
+    port {
+        reg = &lt;1&gt;;
+        edp_out_panel: endpoint@0 {
+            remote - endpoint = &lt;&amp;panel_in_edp&gt;;
+        };
+    };
+};
+
+</code></pre>
+<p>If the panel can be displayed after enabling the panel self-test mode, then the panel has been working normally, aux can be positive</p>
+<p>Frequent correspondence.</p>
+<ul>
+<li>Enable edp self-test mode</li>
+</ul>
+<pre><code class="language-c">&amp;edp {
+    force-hpd;
+    status = &quot;okay&quot;;
+    //delete - property hpd - gpios;
+    analogix,video - bist - enable;
+    ports {
+        port@1 {
+            reg = &lt;1&gt;;
+            edp_out_panel: endpoint@0 {
+                remote - endpoint = &lt;&amp;panel_in_edp&gt;;
+            };
+        };
+    };
+};
+</code></pre>
+<p>If the panel can be displayed after enabling edp self-test mode, it means that the panel has worked normally, aux can communicate normally, and edp main link is normal.</p>
+<ul>
+<li>Confirm current connection status:</li>
+</ul>
+<pre><code class="language-c">rk3568_r:/# cat /sys/class/drm/card0-eDP-1/status
+connected
+</code></pre>
+<p>If status is disconnected, either hpd is low or aux cannot communicate.</p>
+<p>If edp display log is supported, check whether the corresponding aux communication is successful in the boot log. If successful, the following log information will appear.</p>
+<pre><code class="language-c">Maximum visible display size: 34 cm x 19 cm
+Power management features: active off, suspend, standby
+Estabilished timings:
+Standard timings:
+        1920x1080       59 Hz(detailed)
+Monitor ID:HKC MY
+Monitor ID:PC156CS01'1
+edpefe0c0000: detailed mode clock 152560 kHz, flags[a]
+    H:1920 1968 2000 2192
+    V:1080 1083 1089 1160
+bus_format:100e
+VOP update mode to:1920x1080p0, type:eDPO for VPl
+
+</code></pre>
+<p>If Aux communication fails, it is generally due to the equipment not working properly or the screen line problem, resulting in no response. The equipment should be checked.</p>
+<p>Whether the power supply of the terminal is normal and the cable is arranged.</p>
+<ul>
+<li>Confirm the current status of the displayed route:</li>
+</ul>
+<pre><code class="language-c">r3568_r:/ # cat /d/dri/0/summary
+Video Port0: DISABLED
+Video Port1: ACTIVE
+  Connector: eDP-1
+    bus_format[100a]: RGB888_1X24
+    overlay_mode[0] output_mode[f] color_space[0]
+  Display mode: 1024x768p60
+    clk[65000] real_clk[65000] type[40] flag[a]
+    H: 1024 1048 1184 1344
+    V: 768 771 777 806
+  Esmart0-win0: ACTIVE
+    win_id: 3
+    format: AB24 little-endian (0x34324241) SDR[0] color_space[0] glb_alpha[0xff]
+    rotate: xmirror: 0 ymirror: 0 rotate_90: 0 rotate_270: 0
+    csc: y2r[0] r2y[0] csc mode[0]
+    zpos: 2
+    src: pos[0, 0] rect[1024 x 48]
+    dst: pos[0, 84] rect[1024 x 48]
+    buf[0]: addr: 0x0000000000e04000 pitch: 4096 offset: 0
+  Esmart0-win1: ACTIVE
+    win_id: 3
+    format: AB24 little-endian (0x34324241) SDR[0] color_space[0] glb_alpha[0xff]
+    rotate: xmirror: 0 ymirror: 0 rotate_90: 0 rotate_270: 0
+    csc: y2r[0] r2y[0] csc mode[0]
+    zpos: 2
+    src: pos[0, 0] rect[1024 x 96]
+    dst: pos[0, 588] rect[1024 x 96]
+    buf[0]: addr: 0x0000000000d14000 pitch: 4096 offset: 0
+  Cluster0-win0: ACTIVE
+    win_id: 4
+    format: XB24 little-endian (0x34324258) [AFBC] SDR[0] color_space[0] glb_alpha[0xff]
+    rotate: xmirror: 0 ymirror: 0 rotate_90: 0 rotate_270: 0
+    csc: y2r[0] r2y[0] csc mode[0]
+    zpos: 0
+    src: pos[0, 265] rect[1280 x 750]
+    dst: pos[0, 84] rect[1024 x 600]
+    buf[0]: addr: 0x0000000000e64000 pitch: 5120 offset: 0
+  Cluster0-win1: ACTIVE
+    win_id: 5
+    format: AB24 little-endian (0x34324241) [AFBC] SDR[0] color_space[0] glb_alpha[0xff]
+    rotate: xmirror: 0 ymirror: 0 rotate_90: 0 rotate_270: 0
+    csc: y2r[0] r2y[0] csc mode[0]
+    zpos: 1
+</code></pre>
+<p>You can view information about the resolution of the screen.</p>
+<ul>
+<li>After checking the above points, if it is still abnormal, you need to grasp the complete log for analysis, and export the fdt of the board for analysis to see if the current screen configuration is effective.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_OTA Upgrade User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_PCIE_SATA_RGMII Development User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_PCIE_SATA_RGMII Development User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_PCIE_SATA_RGMII Development User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_PCIE_SATA_RGMII Development User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-sim866x-pcie-interface">2 SIM866X PCIE interface</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-pcie-debugging-skills">2.1 PCIE debugging skills</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-sim866x-evb-rmii-interface">3 SIM866X EVB RMII interface</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-rmii-debugging-techniques">3.1 RMII debugging techniques</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-sim8668-evb-sata-interface">4 SIM8668 EVB SATA interface</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_PCIE_SATA_RGMII Development User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_pcie_sata_rgmii-development-user-guide">SIM866X_PCIE_SATA_RGMII Development User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.3.17</td>
+<td style="text-align: left;">Ge Zhengyang</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>With this document you can quickly understand PCIE, SATA, RMII interface configuration and related debugging skills.</p>
+<h2 id="2-sim866x-pcie-interface">2 SIM866X PCIE interface</h2>
+<p><code>Note: The PCIE20 and STAT2 interfaces of RK356X are shared. SIMCOM defaults to using this interface as PCIE RC.</code></p>
+<p>SIM8666 PCIE Interface Reference Configuration Table</p>
+<table>
+<thead>
+<tr>
+<th>interface name</th>
+<th>PCIE Type</th>
+<th>Number of parallels (Lan)</th>
+<th>RST Feet</th>
+<th>function description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCIE20</td>
+<td>PCIE 2.0</td>
+<td>1</td>
+<td>GPIO1_PB2</td>
+<td>RTL8111H Gigabit Ethernet</td>
+</tr>
+</tbody>
+</table>
+<p>The SIM866X module supports only one PCI E2.0 x1 bus at 5Gbps.</p>
+<p>The file path of the related device tree is: RK356X_A11/sunsearch/project_sunsearch/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<p>The PCIE original device tree configuration for the SIM8666 EVB is as follows:</p>
+<pre><code>/* PCIE2.0 x 1Lan */
+&amp;combphy2_psq {
+    status = &quot;okay&quot;;
+};
+
+&amp;vcc3v3_pcie {
+    vin-supply = &lt;&amp;dc_12v&gt;;
+    /delete-property/ enable-active-high;
+    /delete-property/ gpio;
+    /delete-property/ startup-delay-us;
+};
+
+&amp;pcie2x1 {
+    reset-gpios = &lt;&amp;gpio1 RK_PB2 GPIO_ACTIVE_HIGH&gt;;
+    vpcie3v3-supply = &lt;&amp;vcc3v3_pcie&gt;;
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<p>SIM8668 EVB Reference Configuration Table</p>
+<table>
+<thead>
+<tr>
+<th>interface name</th>
+<th>PCIE Type</th>
+<th>Number of parallels (Lan)</th>
+<th>RST Feet</th>
+<th>function description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PCIE20</td>
+<td>PCIE 2.0</td>
+<td>1</td>
+<td>GPIO1_PB2</td>
+<td>RTL8111H Gigabit Ethernet</td>
+</tr>
+<tr>
+<td>PCIE30</td>
+<td>PCIE 3.0</td>
+<td>2(default) or 1+1</td>
+<td>GPIO2_PD6</td>
+<td>M. 2 interface</td>
+</tr>
+</tbody>
+</table>
+<p>SIM8668 supports one PCIE2.0 x1, bus rate 5Gbps; one PCIE3.0 x2, total rate 20Gbps.</p>
+<p>The file path of the related device tree is: RK356X_A11/sunsearch/project_sunsearch/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<p>The PCIE original device tree configuration for the SIM8668 EVB is as follows:</p>
+<pre><code>/* PCIE3.0 x 2Lan */
+&amp;pcie30phy {
+    status = &quot;okay&quot;;
+};
+
+&amp;pcie3x2 {
+    reset-gpios = &lt;&amp;gpio2 RK_PD6 GPIO_ACTIVE_HIGH&gt;;
+    vpcie3v3-supply = &lt;&amp;vcc3v3_pcie&gt;;
+    status = &quot;okay&quot;;
+};
+
+/* PCIE2.0 x 1Lan */
+&amp;combphy2_psq {
+    status = &quot;okay&quot;;
+};
+
+&amp;pcie2x1 {
+    reset-gpios = &lt;&amp;gpio1 RK_PB2 GPIO_ACTIVE_HIGH&gt;;
+    vpcie3v3-supply = &lt;&amp;vcc3v3_pcie2&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;vcc3v3_pcie2 {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h3 id="21-pcie-debugging-skills">2.1 PCIE debugging skills</h3>
+<p>Query PCIE Device using<code>lspci</code> command</p>
+<p>For other PCIE debugging documentation, please refer to RKDocs/common/PCIe/Rockchip_Development_Guide_PCIe_CN.pdf</p>
+<h2 id="3-sim866x-evb-rmii-interface">3 SIM866X EVB RMII interface</h2>
+<p><code>Note: Due to the interface reusability relationship of the RK platform, the SIM866X series platform is by default only capable of supporting one RGMII interface.</code></p>
+<p>SIM866X EVB Reference Configuration Table</p>
+<table>
+<thead>
+<tr>
+<th>interface name</th>
+<th>type</th>
+<th>support type</th>
+<th>RST Feet</th>
+<th>function description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RGMII1</td>
+<td>GMAC</td>
+<td>10/100/1000 Mbps Ethernet port</td>
+<td>GPIO4_PC2</td>
+<td>RTL8211F Gigabit Ethernet</td>
+</tr>
+</tbody>
+</table>
+<p>SIM866X RMII device tree related configuration</p>
+<p>Related equipment tree file path in:</p>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<pre><code>/* Ethnet RGMII PHT configurations */
+&amp;gmac1 {
+    snps,reset-active-low;
+    phy-supply = &lt;&amp;gmac_3v3_reg&gt;;
+    snps,reset-gpio = &lt;&amp;gpio4 RK_PC2 GPIO_ACTIVE_LOW&gt;;
+    pinctrl-0 = &lt;&amp;gmac1m0_rst
+                &amp;gmac1m0_miim
+                &amp;gmac1m0_tx_bus2_level3
+                &amp;gmac1m0_rx_bus2
+                &amp;gmac1m0_rgmii_bus_level3
+                &amp;gmac1m0_rgmii_clk_level2&gt;;
+
+    tx_delay = &lt;0x41&gt;;
+    rx_delay = &lt;0x2e&gt;;
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<p>RK356X_A11/sunsea/project_sunsea/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<pre><code>/* Ethnet RGMII PHY configurations */
+&amp;gmac0 {
+    /* not used */
+    status = &quot;disabled&quot;;
+};
+
+&amp;gmac1 {
+    snps,reset-active-low;
+    phy-supply = &lt;&amp;gmac_3v3_reg&gt;;
+    snps,reset-gpio = &lt;&amp;gpio4 RK_PC2 GPIO_ACTIVE_LOW&gt;;
+    pinctrl-0 = &lt;&amp;gmac1m0_rst
+                &amp;gmac1m0_miim
+                &amp;gmac1m0_tx_bus2_level3
+                &amp;gmac1m0_rx_bus2
+                &amp;gmac1m0_rgmii_clk_level2
+                &amp;gmac1m0_rgmii_bus_level3&gt;;
+
+    tx_delay = &lt;0x41&gt;;
+    rx_delay = &lt;0x2e&gt;;
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h3 id="31-rmii-debugging-techniques">3.1 RMII debugging techniques</h3>
+<p>Query Ethernet devices using the<code>ifconfig -a</code> command</p>
+<p>Refer to RKDocs/common/GMAC/Rockchip_Developer_Guide_Ethernet_CN.pdf for additional RMII debugging documentation.</p>
+<h2 id="4-sim8668-evb-sata-interface">4 SIM8668 EVB SATA interface</h2>
+<p><code>Note: Due to the interface reuse relationship of the RK platform, only the SIM8668 platform is by default supported to have 1 SATA interface. The SIM8666 platform does not support SATA.</code></p>
+<p>SIM8668 EVB Reference Configuration Table</p>
+<table>
+<thead>
+<tr>
+<th>interface name</th>
+<th>type</th>
+<th>rate</th>
+<th>12V &amp; 5V power supply enable</th>
+<th>function description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SATA0</td>
+<td>STAT3.0</td>
+<td>6Gbps</td>
+<td>GPIO3_PA0</td>
+<td>SATA hard disk interface</td>
+</tr>
+</tbody>
+</table>
+<p>For additional SATA debug documentation, please refer to RKDocs/common/NVM/Rockchip_Development_Guide_SATA_CN.pdf</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_PANEL Migration User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_Preset APK User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
