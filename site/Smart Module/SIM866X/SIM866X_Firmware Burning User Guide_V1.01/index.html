@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_Firmware Burning Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_Firmware Burning Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_Firmware Burning User Guide_V1.01.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_Firmware Burning Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-download-tools">2 Download tools</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-operating-environment">2.1 Operating environment</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-rkdevtool-tools-and-drivers">2.2 RKDevTool Tools and Drivers</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#23-fastboot-tools-and-drivers">2.3 Fastboot Tools and Drivers</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-target-device-status">3 Target device status</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-download-mode">3.1 Download mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-normal-startup-mode">3.2 Normal startup mode</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-brush-firmware-using-rkdevtool">4 Brush firmware using RKDevTool</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-start-rkdevtool">4.1 Start RKDevTool</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#42-import-the-whole-package-burning-firmware">4.2 Import the whole package burning firmware</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#43-start-downloading">4.3 Start downloading</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#44-end-of-download">4.4 End of download</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-firmware-description">5 firmware description</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#51-compile-and-generate-firmware">5.1 Compile and generate firmware</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#52-firmware-details">5.2 Firmware Details</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-fastboot-burn-dynamic-partition">6 fastboot Burn Dynamic Partition</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#61-burning-dynamic-partitions">6.1 Burning dynamic partitions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#62-burning-non-dynamic-partitions">6.2 Burning non-dynamic partitions</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_Firmware Burning Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_firmware-burning-guide">SIM866X_Firmware Burning Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>versions</strong></th>
+<th><strong>date</strong></th>
+<th><strong>author</strong></th>
+<th><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.00</td>
+<td>2025.08.29</td>
+<td>Zhu Qingyi</td>
+<td>The first version</td>
+</tr>
+<tr>
+<td>1.01</td>
+<td>2026.03.17</td>
+<td>Yang Huakun</td>
+<td>Second edition, docx to markdown documentation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This document is mainly used to guide the firmware burning process of SIM866X Android 11 platform module, covering the preparation of burning tools, driver installation, device mode description and the burning method of complete firmware and partition level firmware.</p>
+<p>This document is intended for R&amp;D\testing and FAE personnel and focuses on common burning methods based on Rockchip platform, including:</p>
+<ul>
+<li>Use RKDevTool to burn firmware (update.img)</li>
+<li>Use fastboot / fastbootd for dynamic partition burning</li>
+<li>Access methods and applicable scenarios for different device startup modes (MaskROM / Loader / Normal)</li>
+</ul>
+<p>With this guide, users can:</p>
+<ul>
+<li>Quickly build burning environment (tools + drivers)</li>
+<li>Correctly identify equipment connection status</li>
+<li>Perform firmware upgrade or single-partition debugging burn</li>
+<li>Handle common brush scenarios (such as brick rescue, GSI test, etc.)</li>
+</ul>
+<h2 id="2-download-tools">2 Download tools</h2>
+<p>RKDevTool is an official firmware burning tool provided by Rockchip. It is mainly used to flash, upgrade and debug firmware of RK series chip devices through USB interface on Windows platform. It is one of the most commonly used production/maintenance tools for the RK platform.</p>
+<h3 id="21-operating-environment">2.1 Operating environment</h3>
+<p>This software runs on Windows XP, Vista, Win7, Win10, Win11 platforms and requires at least one available USB port.</p>
+<h3 id="22-rkdevtool-tools-and-drivers">2.2 RKDevTool Tools and Drivers</h3>
+<p>Please contact SIMCom FAE if you do not have related tools and drivers.</p>
+<h4 id="221-rkdevtool">2.2.1 RKDevTool</h4>
+<p>Download tool path in source code:</p>
+<pre><code>RK356X_A11\RKTools\windows\AndroidTool\RKDevTool_Release_v2.93.zip
+</code></pre>
+<p><img alt="img" src="../resource/%E5%9B%BE2-1_RKDevTool%E5%B7%A5%E5%85%B7%E8%B7%AF%E5%BE%84.jpg" /> </p>
+<p>Compressed package content:</p>
+<p><img alt="img" src="../resource/%E5%9B%BE2-2_RKDevTool%E5%8E%8B%E7%BC%A9%E5%8C%85%E5%86%85%E5%AE%B9.jpg" /> </p>
+<p>Double click RKDevTool.exe to start the download tool after extracting the driver.</p>
+<h4 id="222-driverassitant">2.2.2 DriverAssitant</h4>
+<p>USB driver path in source code:</p>
+<pre><code>RK356X_A11\RKTools\windows\DriverAssitant_v5.1.1.zip
+</code></pre>
+<p><img alt="img" src="../resource/%E5%9B%BE2-3_DriverAssitant%E8%B7%AF%E5%BE%84.jpg" /> </p>
+<p>Compressed package content:</p>
+<p><img alt="img" src="../resource/%E5%9B%BE2-3_DriverAssitant%E8%B7%AF%E5%BE%84.jpg" /> </p>
+<p>After decompression, execute DriverInstall.exe installation!</p>
+<h3 id="23-fastboot-tools-and-drivers">2.3 Fastboot Tools and Drivers</h3>
+<h4 id="231-platform-tools">2.3.1 platform-tools</h4>
+<p>Please contact FAE to provide platform-tools-10039.zip.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE2-5_platform-tools%E5%8E%8B%E7%BC%A9%E5%8C%85.jpg" /> </p>
+<p>Compressed package content:</p>
+<p><img alt="img" src="../resource/%E5%9B%BE2-6_platform-tools%E5%86%85%E5%AE%B9.jpg" /> </p>
+<p>Decompress to local, add path to system variable, easy to use.</p>
+<ol>
+<li>
+<p>Right-click the desktop icon "This Computer"&gt; Properties;</p>
+</li>
+<li>
+<p>Click "Advanced System Settings" to</p>
+</li>
+</ol>
+<p><img alt="img" src="../resource/%E5%9B%BE2-7_%E7%B3%BB%E7%BB%9F%E5%B1%9E%E6%80%A7%E5%85%A5%E5%8F%A3.jpg" /> </p>
+<p>Click on "Environment variables" and</p>
+<p><img alt="img" src="../resource/%E5%9B%BE2-8_%E9%AB%98%E7%BA%A7%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE.jpg" /> </p>
+<ol>
+<li>Click "Path"</li>
+</ol>
+<p><img alt="img" src="../resource/%E5%9B%BE2-9_%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%AA%97%E5%8F%A3.jpg" /> </p>
+<ol>
+<li>Add the path you just decompressed</li>
+</ol>
+<p><img alt="img" src="../resource/%E5%9B%BE2-10_Path%E7%BC%96%E8%BE%91.jpg" /> </p>
+<ol>
+<li>
+<p>Click OK.</p>
+</li>
+<li>
+<p>Press the key combination "Win+R" and enter "CMD"</p>
+</li>
+</ol>
+<p><img alt="img" src="../resource/%E5%9B%BE2-11_%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%B7%AF%E5%BE%84.jpg" /> </p>
+<p>Enter the following command to check if the addition is successful</p>
+<pre><code class="language-bash">$ adb version
+$ fastboot --version
+</code></pre>
+<p><img alt="img" src="../resource/%E5%9B%BE2-12_CMD%E8%BF%90%E8%A1%8C%E7%AA%97%E5%8F%A3.jpg" /></p>
+<h4 id="232-usb-driver">2.3.2  usb driver</h4>
+<p>Please contact FAE to provide USB driver usb_driver_r13-windows.zip.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE2-13_adb_fastboot%E7%89%88%E6%9C%AC%E9%AA%8C%E8%AF%81.jpg" /> </p>
+<p>Compressed package content:</p>
+<p><img alt="img" src="../resource/%E5%9B%BE2-14_usb%E9%A9%B1%E5%8A%A8%E5%8E%8B%E7%BC%A9%E5%8C%85.jpg" /> </p>
+<p>If a yellow flag appears on the ADB interface in Windows Device Manager, do the following: </p>
+<ol>
+<li>
+<p>Double-click Android Composite ADB Interface and go to the Driver tab. </p>
+</li>
+<li>
+<p>Click Update Driver, select Install from a list or specific location (Advanced), and click Next. </p>
+</li>
+<li>
+<p>Click Don't search, I will choose the driver to install and click Next. </p>
+</li>
+<li>
+<p>Select My Computer and click Next. </p>
+</li>
+<li>
+<p>Click Have Disk and then Browse. Specify the inf file location as the path you just extracted.</p>
+</li>
+<li>
+<p>Click OK in the installer window, then click Next, which installs the driver for the ADB interface.</p>
+</li>
+</ol>
+<h2 id="3-target-device-status">3 Target device status</h2>
+<h3 id="31-download-mode">3.1 Download mode</h3>
+<ol>
+<li>MaskROM mode</li>
+</ol>
+<p>It is the bottom emergency mode of the chip built-in BootROM, mainly used to save bricks.</p>
+<p>Operating characteristics:</p>
+<p>Can burn firmware (full image, including Bootloader, Kernel, System and other partitions);</p>
+<p>You can operate on partitions, but usually the full amount of operation is the main, separate partition brush writing function is limited by tool support;</p>
+<p>Does not rely on Bootloader on the device, so it can rescue severely damaged equipment.</p>
+<ol>
+<li>Loader mode</li>
+</ol>
+<p>Bootloader is provided by the brush mode, located on MaskROM.</p>
+<p>Operating characteristics:</p>
+<p>Partition-level operations (individually write boot, system, recovery, userdata, etc.);</p>
+<p>Upgrade firmware or restore system, depending on Bootloader to load normally;</p>
+<p>It is usually flexible and suitable for development or production environments.</p>
+<h4 id="311-equipment-shutdown">3.1.1 Equipment shutdown</h4>
+<p>As shown in the figure below, plug in the 12V power supply and TypeC cable, press the Power key and Boot short circuit at the same time, and enter MASKROM mode.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-1_MASKROM%E6%8C%89%E9%94%AE%E8%BF%9B%E5%85%A5%E7%A4%BA%E6%84%8F.jpg" /> </p>
+<p>When the device is in MASKROM mode, the port information in the RKDevTool main window will display "Found a MASKROM device."</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-2_MASKROM%E5%B7%A5%E5%85%B7%E8%AF%86%E5%88%AB.jpg" /> </p>
+<h4 id="312-equipment-startup-status">3.1.2 Equipment startup status</h4>
+<p>In the CMD terminal window, execute:</p>
+<pre><code class="language-bash">$ adb reboot loader
+</code></pre>
+<p>, enter loader mode;</p>
+<p>When the device is in loader mode, the port information in the RKDevTool main window will display "Found a LOADER device."</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-3_LOADER%E5%B7%A5%E5%85%B7%E8%AF%86%E5%88%AB.jpg" /> </p>
+<p>Port information is displayed in Device Manager.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-4_LOADER%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E5%99%A8.jpg" /> </p>
+<h3 id="32-normal-startup-mode">3.2 Normal startup mode</h3>
+<p>In the RK(Rockchip) platform, Normal Mode / System Mode refers to the working mode in which the processor starts to execute the boot process from BootROM after the device is powered on and finally enters the complete operating system running environment.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-5_%E6%AD%A3%E5%B8%B8%E5%90%AF%E5%8A%A8%E7%B3%BB%E7%BB%9F%E7%95%8C%E9%9D%A2.jpg" /> </p>
+<p>Port information is displayed in Device Manager.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-6_%E6%AD%A3%E5%B8%B8%E5%90%AF%E5%8A%A8%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86%E5%99%A8.jpg" /> </p>
+<h2 id="4-brush-firmware-using-rkdevtool">4 Brush firmware using RKDevTool</h2>
+<h3 id="41-start-rkdevtool">4.1 Start RKDevTool</h3>
+<ol>
+<li>
+<p>Ensure QPST, QXDM Pro, J-Tag/T32, SSCOM are closed. </p>
+</li>
+<li>
+<p>Click on RKDevTool.exe and the image below shows the main RKDevTool window when no target devices are connected to the computer.</p>
+</li>
+</ol>
+<p><img alt="img" src="../resource/%E5%9B%BE4-1_RKDevTool%E4%B8%BB%E7%95%8C%E9%9D%A2.jpg" /> </p>
+<h3 id="42-import-the-whole-package-burning-firmware">4.2 Import the whole package burning firmware</h3>
+<p>Import the compiled firmware updata.img into the download tool as follows.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE4-2_%E5%AF%BC%E5%85%A5update%E9%95%9C%E5%83%8F.jpg" /> </p>
+<h3 id="43-start-downloading">4.3 Start downloading</h3>
+<p>Switch the device to MaskROM mode, click Upgrade, and the window on the right shows the firmware download progress.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE4-3_%E7%83%A7%E5%BD%95%E8%BF%9B%E5%BA%A6%E7%95%8C%E9%9D%A2.jpg" /> </p>
+<h3 id="44-end-of-download">4.4 End of download</h3>
+<p>After successful download, the window on the right shows that the firmware download is successful, the device restarts, and the device restarts successfully and is re-identified as an adb device.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE4-4_%E7%83%A7%E5%BD%95%E5%AE%8C%E6%88%90%E6%8F%90%E7%A4%BA.jpg" /> </p>
+<h2 id="5-firmware-description">5 firmware description</h2>
+<h3 id="51-compile-and-generate-firmware">5.1 Compile and generate firmware</h3>
+<p>After complete compilation, the following file will be generated, and the tool can be written as update.img.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE5-1_%E7%BC%96%E8%AF%91%E8%BE%93%E5%87%BA%E5%9B%BA%E4%BB%B6%E5%88%97%E8%A1%A8.png" /> </p>
+<h3 id="52-firmware-details">5.2 Firmware Details</h3>
+<table>
+<thead>
+<tr>
+<th>firmware</th>
+<th>explain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boot.img</td>
+<td>Ramdisk, kernel, dtb.</td>
+</tr>
+<tr>
+<td>boot-debug.img</td>
+<td>The difference with boot.img is that user firmware can burn this boot.img for root operations.</td>
+</tr>
+<tr>
+<td>dtbo.img</td>
+<td>Device Tree Overlays Refer to dtbo section below for instructions.</td>
+</tr>
+<tr>
+<td>config.cfg</td>
+<td>The configuration file of the burning tool can be directly imported into the burning tool to display the options that need to be burned.</td>
+</tr>
+<tr>
+<td>MiniLoaderAll.bin</td>
+<td>It contains a primary loader.</td>
+</tr>
+<tr>
+<td>misc.img</td>
+<td>Contains recovery-wipe boot identification information, which will be recovered after burning.</td>
+</tr>
+<tr>
+<td>parameter.txt</td>
+<td>Contains partition information.</td>
+</tr>
+<tr>
+<td>pcba_small_misc.img</td>
+<td>Contains pcba boot identification information, burned into a simple version of pcba mode.</td>
+</tr>
+<tr>
+<td>pcba_whole_misc.img</td>
+<td>Contains pcba boot identification information, burned into the full version of pcba mode.</td>
+</tr>
+<tr>
+<td>recovery.img</td>
+<td>Contains recovery-ramdisk, kernel, dtb.</td>
+</tr>
+<tr>
+<td>super.img</td>
+<td>Contains odm, product, vendor, system, system_ext partition content.</td>
+</tr>
+<tr>
+<td>trust.img</td>
+<td>Includes BL31, BL32   RK3566/RK3568 does not generate this firmware, no burn is required.</td>
+</tr>
+<tr>
+<td>uboot.img</td>
+<td>Includes uboot firmware.</td>
+</tr>
+<tr>
+<td>vbmeta.img</td>
+<td>Contains avb check information for AVB check.</td>
+</tr>
+<tr>
+<td>update.img</td>
+<td>Contains the img file that needs to be burned, which can be used to directly burn the entire firmware package.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-fastboot-burn-dynamic-partition">6 fastboot Burn Dynamic Partition</h2>
+<p>RK's new device supports dynamic partitioning. The system/vendor/odm/product/system_ext partition has been removed. Please burn super.img and system/vendor/odm separately (you can find the corresponding img file under out). You can use fastbootd to require both adb and fastboot versions to be the latest. The SDK provides compiled toolkits:</p>
+<pre><code>RKTools/linux/Linux_adb_fastboot (Linux_x86版本) 
+RKTools/windows/adb_fastboot (Windows_x86版本)
+</code></pre>
+<h3 id="61-burning-dynamic-partitions">6.1 Burning dynamic partitions</h3>
+<pre><code class="language-shell">$ adb reboot fastboot
+$ fastboot flash vendor vendor.img 
+$ fastboot flash system system.img 
+$ fastboot flash odm odm.img
+</code></pre>
+<p>After entering fastbootd mode, relevant equipment information will be displayed on the screen, as shown in the figure:</p>
+<p><img alt="img" src="../resource/%E5%9B%BE6-1_fastbootd%E6%A8%A1%E5%BC%8F%E7%95%8C%E9%9D%A2.png" /></p>
+<h3 id="62-burning-non-dynamic-partitions">6.2 Burning non-dynamic partitions</h3>
+<p>To use fastboot, go to bootloader:</p>
+<pre><code class="language-bash">$ adb reboot bootloader
+</code></pre>
+<p>How to write GSI:</p>
+<p>After confirming that the machine is unlocked, enter fastbootd, just burn system.img in GSI and misc.img in firmware, and enter recovery to restore factory settings after burning. Below is the entire burning process:</p>
+<p>Restart to bootloader, not unlocked-&gt; Machine unlocked:</p>
+<pre><code class="language-bash">$ adb reboot bootloader
+$ fastboot oem at-unlock-vboot ## 对于烧写过avb公钥的客户，请参考对应的文档解锁。
+</code></pre>
+<p>Restore factory settings, reboot to fastbootd:</p>
+<pre><code class="language-bash">$ fastboot flash misc misc.img
+$ fastboot reboot fastboot ## 此时将进入fastbootd
+</code></pre>
+<p>Start writing GSI</p>
+<pre><code class="language-bash">$ fastboot delete-logical-partition product ## (可选)对于分区空间紧张的设备，可以先执行本条命令删除product分区后再烧写GSI
+$ fastboot flash system system.img 
+$ fastboot reboot ## 烧写成功后，重启
+</code></pre>
+<p>GSI can also be written using DSU(Dynamic System Updates), which is already supported by Rockchip by default. Due to the large amount of memory consumed by this function, it is not recommended to use 1G DDR and the following devices. For the description and use of DSU, please refer to Android official website:<a href="https://source.android.com/devices/tech/ota/dynamic-system-updates">https://source.android.com/devices/tech/ota/dynamic-system-updates</a></p>
+<p>Note 1: During VTS test, it is necessary to burn the compiled boot-debug.img to boot partition at the same time; </p>
+<p>Note 2: When CTS-ON-GSI is tested, it is not necessary to burn boot-debug.img;</p>
+<p>Note 3: Please use Google's official GSI with a-signed ending when testing.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/" class="btn btn-neutral float-left" title="SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

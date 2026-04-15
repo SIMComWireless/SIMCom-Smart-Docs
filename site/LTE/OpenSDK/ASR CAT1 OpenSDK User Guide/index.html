@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>ASR CAT1 OpenSDK User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ASR CAT1 OpenSDK User Guide";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\ASR CAT1 OpenSDK User Guide.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">ASR CAT1 OpenSDK User Guide</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">ASR CAT1 OpenSDK User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="simcom_logi" src="../_htmresc/simcom_logo.png" /></p>
+<h1 style="text-align:center">A76XX OpenSDK</h1>
+
+<p>A76XX OpenSDK solution is based on A76XX CAT-1 module which allows customer to run application code inside module for smart IoT applications. All A76XX CAT-1 modules could support OpenSDK, you can get module list from <a href="https://en.simcom.com/module/4g.html">SIMCom Website</a>. For more technical support you can contact with <a href="https://en.simcom.com/service_cat-20.html">SIMCom support team</a>.</p>
+<p><a href="#opensdk-supported-features">OpenSDK Supported Features</a><br>
+<a href="#opensdk-hardware-design-manual">OpenSDK Hardware Design Manual</a><br>
+<a href="#opensdk-architecture">OpenSDK Architecture</a><br>
+<a href="#opensdk-download">OpenSDK Download</a><br>
+<a href="#opensdk-compile-and-image-update">OpenSDK Compile and Image Update</a><br>
+ - <a href="#sdk-compile-under-windows-os">SDK Compile under Windows OS</a><br>
+ - <a href="#sdk-compile-under-linux-os">SDK Compile under Linux OS</a><br>
+ - <a href="#sdk-image-update">SDK Image Update</a><br></p>
+<p><a href="#opensdk-debug">OpenSDK Debug</a><br>
+<a href="#opensdk-demo">OpenSDK Demo</a><br>
+<a href="#opensdk-examples">OpenSDK Examples</a><br>
+<a href="#qa">OpenSDK Q&amp;A</a><br></p>
+<h1 id="opensdk-supported-features">OpenSDK Supported Features</h1>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO</td>
+<td>For gpio map please find header file from sc_lib\inc\GPIO</td>
+<td>Please refer to corresponding HD for OpenSDK application, see <code>demo_gpio.c</code></td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>There is general ADC and VBAT ADC</td>
+<td>For VBAT ADC customer must follow the referrence circuit from HD, see <code>demo_gps.c</code></td>
+</tr>
+<tr>
+<td>UART</td>
+<td>UART1--Main UART<br>UART2--Dedicate for debug purpose<br>UART3--For GNSS</td>
+<td>For modules without GNSS, UART3 can be used by customer application, see <code>uart_api.c/demo_uart.c</code></td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>Support up to 400KHz</td>
+<td>Only for master role, see <code>demo_i2c.c</code></td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>There are 2 SPI interfaces, one for LCD and one for general purpose</td>
+<td>For LCD application need special MMI SDK, please contact with <a href="https://en.simcom.com/service_cat-20.html">SIMCom Support</a>, see <code>demo_spi.c</code></td>
+</tr>
+<tr>
+<td>LCD</td>
+<td>Support SPI 3/4 line LCD</td>
+<td>Driver supported on ST7735/S7789 series, see <code>demo_lcd.c</code></td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>Support Analog and Digital Audio</td>
+<td>see <code>demo_audio.c</code></td>
+</tr>
+<tr>
+<td>BT/BLE</td>
+<td>Support classic BT and BLE 4.0/5.0 (server/client)</td>
+<td>For BT only SPP profile supported, see <code>demo_ble.c/demo_bt_stack.c/demo_bt.c</code></td>
+</tr>
+<tr>
+<td>Network</td>
+<td>Network management</td>
+<td>see <code>demo_network.c</code></td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>Support FTP and FTPS (TLS1.2)</td>
+<td>see <code>demo_ftps.c/demo_ftps_test.c</code></td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>Support HTTP and HTTPS (TLS1.2)</td>
+<td>see <code>demo_https.c</code></td>
+</tr>
+<tr>
+<td>GNSS</td>
+<td>Support UC6228 and ASR5311 with different module PN</td>
+<td>see <code>demo_gps.c</code></td>
+</tr>
+<tr>
+<td>MQTT</td>
+<td>Support up to 2 connection, support MQTTS</td>
+<td>see <code>demo_mqtt.c</code></td>
+</tr>
+<tr>
+<td>NTP</td>
+<td>Update time with NTP</td>
+<td>see <code>demo_ntp.c</code></td>
+</tr>
+<tr>
+<td>RF TX/RX</td>
+<td>TX/RX power measurement</td>
+<td>see <code>demo_txrx_power.c</code></td>
+</tr>
+<tr>
+<td>Flash</td>
+<td>Direct flash read/write/erase</td>
+<td>see <code>demo_flash.c</code></td>
+</tr>
+<tr>
+<td>PWM</td>
+<td>Support up to 4 channels</td>
+<td>see <code>demo_pwm.c</code></td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Support task / semaphore / queue / mutex / flag / timer / memory management</td>
+<td>see <code>demo_system.c</code></td>
+</tr>
+<tr>
+<td>SIM Card</td>
+<td>Could support DSDS/DSSS</td>
+<td>see <code>demo_simcard.c</code></td>
+</tr>
+<tr>
+<td>SMS</td>
+<td>Short Message</td>
+<td>see <code>demo_sms.c</code></td>
+</tr>
+<tr>
+<td>SSL</td>
+<td>Support up to TLS1.3</td>
+<td>see <code>demo_ssl.c/demo_ssl_test.c/demo_mbedtls.c</code></td>
+</tr>
+<tr>
+<td>TCP/IP</td>
+<td>Support TCP client/server and UDP client</td>
+<td>see <code>demo_tcpip.c</code></td>
+</tr>
+<tr>
+<td>TTS</td>
+<td>Text to speech with local and remote</td>
+<td>Only support Chinese/English, see <code>demo_tts.c</code></td>
+</tr>
+<tr>
+<td>Voice Call</td>
+<td>Support CS/VOLTE</td>
+<td>see <code>demo_call.c</code></td>
+</tr>
+<tr>
+<td>WiFi Scan</td>
+<td>Module scan wifi AP info with cellular B140 and get SSID/RSSI which can be used for WiFi Location</td>
+<td>Only Wifi RX supported, no TX. Only specific hardware PN could support it, see <code>demo_wifi.c</code></td>
+</tr>
+<tr>
+<td>Power management</td>
+<td>Module power control</td>
+<td>see <code>demo_pm.c</code></td>
+</tr>
+<tr>
+<td>JD</td>
+<td>Jamming Detection</td>
+<td>see <code>demo_shdr.c</code></td>
+</tr>
+<tr>
+<td>LBS</td>
+<td>Location based on cellular cell scaning</td>
+<td>see <code>demo_loc.c/demo_loc_test.c</code></td>
+</tr>
+<tr>
+<td>Data Call</td>
+<td>Support IP/IPV6/IPV4V6 with different PDP</td>
+<td>PPP/RNDIS/ECM, driver support on Windows/Linux</td>
+</tr>
+<tr>
+<td>File System</td>
+<td>Support standard fs operation</td>
+<td>see <code>demo_file_system.c</code></td>
+</tr>
+<tr>
+<td>FOTA</td>
+<td>Support both SDK core and app update</td>
+<td>see <code>demo_fota.c/demo_app_download.c/demo_app_updater.c</code></td>
+</tr>
+<tr>
+<td>HTP</td>
+<td>Update time with HTTP</td>
+<td>see <code>demo_ftp.c</code></td>
+</tr>
+<tr>
+<td>PING</td>
+<td>Support IPV4/V6</td>
+<td>see <code>demo_ping.c</code></td>
+</tr>
+<tr>
+<td>RTC</td>
+<td>Support RTC alarm to wake up module from sleep mode</td>
+<td>see <code>demo_rtc.c</code></td>
+</tr>
+<tr>
+<td>USB</td>
+<td>Write/Read from USB_AT interface</td>
+<td>For OpenSDK application, as default USB_AT interface will not support AT cmd, while you can use USB_Modem port instead, see <code>cus_usb_vcom.c</code></td>
+</tr>
+<tr>
+<td>Watchdog</td>
+<td>Hardware Watchdog, support up to 60 seconds timer configuration</td>
+<td>see <code>demo_wtd.c</code></td>
+</tr>
+<tr>
+<td>Camera</td>
+<td>Camera Driver</td>
+<td>Only for MMI version of SDK and dedicate hardware, see <code>demo_cam_driver.c/demo_cam.c</code></td>
+</tr>
+<tr>
+<td>POC</td>
+<td>POC application with PCM play/record</td>
+<td>see <code>demo_poc.c</code></td>
+</tr>
+<tr>
+<td>Public lib</td>
+<td>cjson/zlib/sm2/miracl</td>
+<td>see <code>demo_zlib.c/demo_cjson.c/demo_crypto.c</code></td>
+</tr>
+<tr>
+<td>OneWire</td>
+<td>Onewire protocol for sensor like DS18B20</td>
+<td>see <code>demo_onewire.c</code></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h1 id="opensdk-hardware-design-manual">OpenSDK Hardware Design Manual</h1>
+<p><br>
+A hardware design manual is usually needed when a developer starts to evaluate the peripheral interfaces used for application. With SIMCom A76XX CAT-1 module there are 2 typical applications, Standard and OpenSDK. For standard application there is a host processor (CPU/MCU/MPU) which will comunicate with module over AT cmd via UART/USB interface, while for OpenSDK application usually there is no external host to control module and it runs application code to manage avaliable peripherals inside module. The hardware design manual (HD) for both application is different due to some IO/feature differences.</p>
+<p>You can request OpenSDK HD for specific modules from <a href="https://en.simcom.com/service_cat-20.html">SIMCom support team</a>. Here are some general OpenSDK HD files for A7672x/A7602x/A7683x/A7676x series (continue updating).</p>
+<p><a href="https://1drv.ms/f/c/1964fa2b798f638e/EjjekV7eIWFIsTU_6Qdv4NQByvkphD0XEcp4LE92QgxZiQ?e=5uMjff">OpenSDK HD</a>
+<br></p>
+<h1 id="opensdk-architecture">OpenSDK Architecture</h1>
+<p><br>
+<img alt="OpenSDK_Architecture" src="../_htmresc/OpenSDK_Architecture.png" /></p>
+<table>
+<thead>
+<tr>
+<th>File or path name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config</td>
+<td>contains compile/link script, cmake tool configuration files</td>
+</tr>
+<tr>
+<td>config\xxx.ld</td>
+<td>linking script for specific module</td>
+</tr>
+<tr>
+<td>config\Kconfig</td>
+<td>configuration file for kconfig, used for menuconfig</td>
+</tr>
+<tr>
+<td>config\.config</td>
+<td>the configuration file generated by kconfig, you can also modify it directly</td>
+</tr>
+<tr>
+<td>config\buildCusLib.mak<br>config\image.mak<br>config\package.mak<br>config\ToolChain.mak</td>
+<td>for old version of SDK (A011), now not in use</td>
+</tr>
+<tr>
+<td>config\buildOptions.cmake</td>
+<td>default module compilation switch, work together with userspaceConfig.h</td>
+</tr>
+<tr>
+<td>config\Config_APP.cmake</td>
+<td>default APP compilation switch</td>
+</tr>
+<tr>
+<td>config\make_image_16xx.mak<br>config\make_image_16xx_settings.mak</td>
+<td>script for package</td>
+</tr>
+<tr>
+<td>config\ToolChain.cmake</td>
+<td>APP compilation script toolchain and parameter configuration</td>
+</tr>
+<tr>
+<td>config\userspaceConfig.h</td>
+<td>The preset module compilation switch automatically generates header files. Generated at compile time. The code uses the preset switch and needs to include this header file</td>
+</tr>
+<tr>
+<td>config\userspaceConfig.h.in</td>
+<td>APP macro, work together with buildOptions.cmake</td>
+</tr>
+<tr>
+<td>kernel</td>
+<td>image files needed to generate burn.zip file</td>
+</tr>
+<tr>
+<td>out</td>
+<td>output folder with customer app / xx.zip / map file</td>
+</tr>
+<tr>
+<td>public_libs</td>
+<td>some public libs used, for example cjson/zlib</td>
+</tr>
+<tr>
+<td>sc_demo\examples</td>
+<td>exmples for mqtt/ssl/uart, not involved in compilation</td>
+</tr>
+<tr>
+<td>sc_demo\old_fw</td>
+<td>makefile files for old version of SDK (A011), now not in use</td>
+</tr>
+<tr>
+<td>sc_demo\V1</td>
+<td>V1 version of demo code</td>
+</tr>
+<tr>
+<td>sc_demo\V2</td>
+<td>V2 version of demo code</td>
+</tr>
+<tr>
+<td>sc_lib</td>
+<td>static libs and header files</td>
+</tr>
+<tr>
+<td>tools</td>
+<td>windows/linux compile and package tool</td>
+</tr>
+<tr>
+<td>CMakeLists.txt</td>
+<td>cmake script entry for code compilation</td>
+</tr>
+<tr>
+<td>GNUmake.exe</td>
+<td>make tool</td>
+</tr>
+<tr>
+<td>makeDepend.mak</td>
+<td>The dependency file of the Makefile</td>
+</tr>
+<tr>
+<td>Makefile</td>
+<td>entry for cmake file</td>
+</tr>
+<tr>
+<td>old_fw_Makefile</td>
+<td>make file for old version of SDK (A011), now not in use</td>
+</tr>
+<tr>
+<td>sc_application.c</td>
+<td>code entry for customer application</td>
+</tr>
+<tr>
+<td><br></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="opensdk-download">OpenSDK Download</h1>
+<p><br></p>
+<p>As the memory size / supported features / pin-map are different with SIMCom A76XX CAT-1 modules, the SDK is not the same, you need to get correct SDK according to the modules you are testing with from SIMCom FAE, or you can request from <a href="https://en.simcom.com/service_cat-20.html">SIMCom support team</a>.
+For a starter you can download SDK for <a href="https://1drv.ms/u/c/1964fa2b798f638e/Ea7ewzYUAE1FjetKI9B0BloByShniIUSHx_LJs3fYTpUEQ?e=JKU6Y9">A7672E_FASE series</a> for trail purpose.</p>
+<p><br></p>
+<h1 id="opensdk-compile-and-image-update">OpenSDK Compile and Image Update</h1>
+<p><br></p>
+<p><strong>⚠️ Note: Please make sure no non-ASICC and space character in SDK path</strong></p>
+<h2 id="sdk-compile-under-windows-os"><em>SDK Compile under Windows OS</em></h2>
+<ol>
+<li>Please copy GNUmake.exe file from SDK root path to <code>C:\Windows\System32</code> and <code>C:\Windows\SysWOW64</code> folders.</li>
+<li>
+<p>Run CMD line and check <code>gnumake -v</code> command to see if gnumake tool has been installed well. You will see following messages if gnumake is correctly installed.
+   ```cmd
+    GNU Make 3.81
+    Copyright (C) 2006  Free Software Foundation, Inc.
+    This is free software; see the source for copying conditions.
+    There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+    PARTICULAR PURPOSE.</p>
+<p>This program built for i386-pc-mingw32
+<code>``
+3. CD to \&lt;SDK\&gt;\SIMCOM_SDK_SET\ and run</code>gnumake.exe`, for first time compiling it will setup the enviroment automatically, later it will list the help info including supported module list with current SDK.</p>
+</li>
+</ol>
+<p><code>-  build method: gnumake [target]
+   -  target:[module],[clean option]
+   -
+   -  module list:
+   -      A7672E_MASA_1603_V101_OPENSDK
+   -      A7672SA_MASA_1603_V101_OPENSDK
+   -
+   -  config option list:
+   -      menuconfig            [do menuconfig for app]
+   -      guiconfig             [do guiconfig for app]
+   -      clean_config          [clean the userconfig]
+   -
+   -  clean option list:
+   -      clean                 [clean all modules]
+   -      clean_[module]        [clean a module]</code>
+4. If need visual compilation configuration for SDK, you can use Kconfig and Python plugin to configure with <code>menuconfig</code> or <code>guiconfig</code>. Need to install Python 3.8.5 or higher version, then install following plugins for Python.
+   <code>python
+   pip install windows-curses
+   pip install kconfiglib</code>
+   * <strong><em>With menuconfig</em></strong><br></p>
+<p>Run <code>gnumake menuconfig</code> to start and use 'j'/'k'/'h'/'l' on keyboard to navigate items, use space/ESC character to select/exit menu items. When finished press 'S' to save the config file.</p>
+<p><img alt="menuconfig" src="../_htmresc/menuconfig.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIMCOM PROTOCOL VERSION</td>
+<td>Choose demo code version, V1 or V2</td>
+</tr>
+<tr>
+<td>BUILD SIMCOM DEMO</td>
+<td>Choose whether need to build simcom demos</td>
+</tr>
+<tr>
+<td>API TEST</td>
+<td>For simcom internal use, default disabled</td>
+</tr>
+<tr>
+<td>DEMO UI communication port</td>
+<td>Choose which port for UI CLI, main UART or USB_AT port</td>
+</tr>
+<tr>
+<td>Demo for driver</td>
+<td>Switch for peripheral device drivers to compile</td>
+</tr>
+<tr>
+<td>Demo for modem</td>
+<td>Switch for modem services to compile</td>
+</tr>
+<tr>
+<td>Demo for application</td>
+<td>Switch for application demo to compile</td>
+</tr>
+<tr>
+<td>Third lib configurations</td>
+<td>Switch for third party lib</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong><em>With guiconfig</em></strong><br></li>
+</ul>
+<p>Run <code>gnumake guiconfig</code> to start and use mouse to select the items. When finished click "Save" to save the config file.</p>
+<pre><code>![guiconfig](_htmresc/guiconfig.png)
+</code></pre>
+<ol>
+<li>Run <code>gnumake &lt;target&gt;</code> to start compiling, the target string must be one of supported module list after running <code>gnumake</code>. For example <code>gnumake A7672E_MASA_1603_V101_OPENSDK</code>, when finished and without error, will get "build success!!" in end of cmd terminal.</li>
+</ol>
+<p><img alt="build_success" src="../_htmresc/build_success.png" /></p>
+<h2 id="sdk-compile-under-linux-os"><em>SDK Compile under Linux OS</em></h2>
+<p>Please make sure Linux has installed make and python tool, it is similar as with Windows, you need cd to \&lt;SDK&gt;\SIMCOM_SDK_SET\ and run <code>make</code>, for first time compiling it will setup the enviroment automatically, later it will list the help info including supported module list with current SDK, then run <code>make &lt;target&gt;</code> to start compiling, the target string must be one of supported module list after running <code>make</code>. For example <code>make A7672E_MASA_1603_V101_OPENSDK</code>, when finished and without error, will get "build success!!" in end of cmd terminal.</p>
+<h2 id="sdk-image-update"><em>SDK Image Update</em></h2>
+<p>After successful compiling, you will find some .zip file in out\\&lt;target&gt;\ folder, the burn.zip should be flashed to module, and the burn_factory.zip file is only used when you need to flash SDK FW with your application in SIMCom factory. To flash burn.zip file, currently only Windows tool is avaliable, need to download SIMCom MADL tool from <a href="https://1drv.ms/f/c/1964fa2b798f638e/EtW9qCYHss9Fq6iqoo_T_DkBTYLXsLHvE66XNyu6sLsgZA?e=RL3AVg">here</a>, follow the user guide inside tool package to flash image.<br><br>
+<img alt="update" src="../_htmresc/update.png" />
+<br></p>
+<h1 id="opensdk-debug">OpenSDK Debug</h1>
+<p><br></p>
+<ul>
+<li><a href="https://1drv.ms/u/c/1964fa2b798f638e/EY5jj3kr-mQggBkPbQAAAAABbmcxWfisOklt7nOkxJBmPA?e=rjUFUL">CATStudio Tool</a> could be used to take logs from module USB Diagnostics port, you can download video user guide from <a href="https://1drv.ms/v/c/1964fa2b798f638e/EY5jj3kr-mQggBmAIgAAAAAB_27O2Evml_ynFqIrV-2JnA?e=oJkPnW">CATStudio User Guide</a>, for the database file (cp_MDB.txt) which is needed to configure for CATStudio tool please get from \<SDK>SIMCOM_SDK_SET\kernel\&lt;target&gt;\cp_MDB.txt.<br>
+   The logs output with <code>sAPI_Debug</code> can be filtered from CATStudio log when you search key word "CUST" from LogViewer window (Ctrl+F).<br>
+   <img alt="CUST" src="../_htmresc/catstudio_cust.png" /> <br><br></li>
+<li>If you want to filter the PCAP file which is useful to analyze network data stream, need to export the CATStudio log and open it again with offline mode, please get <a href="https://1drv.ms/v/c/1964fa2b798f638e/EY5jj3kr-mQggBmNKQAAAAABr7cxqJ8PkCS8I1VyZcFxFg?e=pujwdg">CATStudio FIlter pcap</a>.<br></li>
+<li>For software crash issue, usually we need the dump file from module. You need to set <code>sAPI_enableDUMP</code> API to enable DUMP mode in begining of application, when crash happens, please follow <a href="https://1drv.ms/b/c/1964fa2b798f638e/EY5jj3kr-mQggBluJAAAAAABvQx546oSjTRTzfxg--GezQ?e=QVaVBN">A76XX DUMP GRAB Guide</a> to take dump file and send it to SIMCom FAE together with CATStudio logs recorded and whole files from SDK out folder which contains memory map file.<br></li>
+</ul>
+<h1 id="opensdk-demo">OpenSDK Demo</h1>
+<p>As default with SDK there will be a series of demo running with CLI (Command Line Interface) with main UART (115200, 8-bit, no priority, 1 stop-bit) or USB_AT port according to the <code>DEMO UI communication port</code> setting, you can select and input number of item to run the demos, for more details please refer to <code>simcom_demo.c</code>/<code>uart_api.c</code>/<code>demo_xx.c</code>.<br>
+   <img alt="demo" src="../_htmresc/demo.png" /><br>
+   If select to use V2 demo, you can also use UI tool for demo show, please install the tool <code>simcomDemoLinkerV2.exe</code> from tools\win32 folder and open it, the tool will automatically search the main UART or USB_AT port, later you can double click to select the demo items and click Do button to run it.<br>
+   <img alt="demo_v2" src="../_htmresc/demo_v2.png" /><br></p>
+<h1 id="opensdk-examples">OpenSDK Examples</h1>
+<p>In this repo, there will be continuous maintenance examples besides simcom demo which is useful for customers to understand how OpenSDK solution works in real application.<be></p>
+<h1 id="qa">Q&amp;A</h1>
+<ul>
+<li>
+<h3 id="what-is-the-rtos-running-inside-module-how-to-define-the-task-priority-for-my-application">What is the RTOS running inside module? How to define the task priority for my application?</h3>
+  It is ThreadX version 5.1 with 5ms as system tick, the lower task priority value is, the higher priority for task, the OS support task preemption so task with higher priority will preempt CPU when it is in ready state, tasks with same priority will follow FIFO scheduling. There are tasks with higher priority created by SIMCom R&amp;D to manage the module (we call them system tasks, priority less than 120), for these tasks they cannot be interrupted for a long time so for customer application the priority should not be defined too high, we suggest the range 150--250.<br></li>
+<li>
+<h3 id="multiple-definition-issue-for-close-api">Multiple definition issue for <code>close</code> API</h3>
+  Need to check if you have included both <code>unistd.h</code> and <code>scfw_socket.h</code>, because <code>unistd.h</code> is for Linux and we do not have such integration for<code>scfw_socket.h</code>.</li>
+<li>
+<h3 id="how-to-check-ram-size-from-current-sdk">How to check RAM size from current SDK?</h3>
+  Open corresponding ld file from \&lt;SDK&gt;SIMCOM_SDK_SET\config folder,find MEMORY tag and the LENGTH shows the RAM size for current SDK in bytes.
+  <code>MEMORY
+   {
+    ram(RW) : ORIGIN = 0x7e9d0000, LENGTH = 0x80000
+   }</code></li>
+<li>
+<h3 id="how-to-check-heap-size-from-current-sdk">How to check HEAP size from current SDK?</h3>
+  The SDK HEAP is shared with system and customer SDK application,so the size is dynamically changed,you could use <code>sAPI_getSystemInfo</code> to read current remaning heap size,also CPU usage rate.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X ADC Application User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

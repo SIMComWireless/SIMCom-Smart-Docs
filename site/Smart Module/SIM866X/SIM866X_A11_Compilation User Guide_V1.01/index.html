@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_A11_Compilation User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_A11_Compilation User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_A11_Compilation User Guide_V1.01.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_A11_Compilation User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-requires">2 Requires</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-hardware-environment-requirements">2.1 Hardware environment requirements</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-software-environmental-requirements">2.2 Software environmental requirements</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-build-a-compilation-environment">3 Build a compilation environment</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-preparing-the-startup-disk">3.1 Preparing the startup disk</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-installation-of-the-system">3.2 Installation of the system</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-package-installation">3.3 Package installation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#34-creating-an-ssh-key">3.4 Creating an ssh key</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#35-configuring-git-accounts">3.5 Configuring git accounts</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#36-configuring-bash">3.6 Configuring bash</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#37-install-make">3.7 Install make</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#38-installing-openssl">3.8 Installing openssl</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#39-installing-repo">3.9 Installing repo</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-android-build-system">4 Android build system</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-compile-source-code">4.1 Compile source code</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_A11_Compilation User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_a11_compilation-user-guide">SIM866X_A11_Compilation User Guide</h1>
+<h2 id="version-history"><strong><em>Version History</em></strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>versions</strong></th>
+<th><strong>date</strong></th>
+<th><strong>author</strong></th>
+<th><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.00</td>
+<td>2025.08.29</td>
+<td>Liu Wen</td>
+<td>The first version</td>
+</tr>
+<tr>
+<td>1.01</td>
+<td>2026.03.17</td>
+<td>Yang Huakun</td>
+<td>Second edition, docx to markdown documentation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This document aims to provide developers with a complete and clear set of instructions for building the software compilation environment of <strong>SIM866X Android 11 series modules</strong>, and to master the standard compilation process and related tools. The content covers the whole process from basic environment preparation, system installation, dependency configuration, source code compilation and product output.</p>
+<p>With this guide, the developer can quickly complete the development environment deployment, understand how to use compiled scripts, and be able to independently complete the Android 11 platform compilation work, thus improving development efficiency and reducing common problems in the environment construction process.</p>
+<h2 id="2-requires">2 Requires</h2>
+<h3 id="21-hardware-environment-requirements">2.1 Hardware environment requirements</h3>
+<ul>
+<li><strong>CPU</strong>: i5 8 core, i7 recommended</li>
+<li><strong>Memory</strong>: At least 16 GB required, 64GB recommended</li>
+<li><strong>Hard drive</strong>: 1T, SSD recommended</li>
+</ul>
+<h3 id="22-software-environmental-requirements">2.2 Software environmental requirements</h3>
+<h4 id="221-operating-system-requirements">2.2.1 Operating system requirements</h4>
+<p>Ubuntu LTS (16.04) 64-bit is recommended.</p>
+<p>To see the specific version number of Ubuntu, the command is:</p>
+<pre><code class="language-bash">lsb_release -a
+</code></pre>
+<h4 id="222-software-packages">2.2.2 Software packages</h4>
+<p>Additional software packages required include: </p>
+<ul>
+<li>
+<p>Python 2.6 - 2.7 available at python.org </p>
+</li>
+<li>
+<p>GNU Make 3.81 - 3.82 at gnu.org</p>
+</li>
+<li>
+<p>Git 1.7 or higher version at git-scm.com </p>
+</li>
+<li>
+<p>openjdk-8</p>
+</li>
+<li>
+<p>OpenSSL 1.0.1f 6 Jan 2014</p>
+</li>
+</ul>
+<p>Description:</p>
+<p>Ubuntu LTS version 16.04 or later version 18.04 is also supported, but different versions depend on slightly different compilation support tools.</p>
+<h2 id="3-build-a-compilation-environment">3 Build a compilation environment</h2>
+<h3 id="31-preparing-the-startup-disk">3.1 Preparing the startup disk</h3>
+<h4 id="311-mirrors-and-tools">3.1.1 Mirrors and Tools</h4>
+<p>iso image:</p>
+<pre><code>http://releases.ubuntu.com/xenial/ubuntu-16.04.7-desktop-amd64.iso
+</code></pre>
+<p>Production tools:</p>
+<pre><code>https://www.pendrivelinux.com/downloads/YUMI/YUMI-2.0.9.4.exe
+</code></pre>
+<h4 id="312-making-a-startup-disk">3.1.2 Making a startup disk</h4>
+<p>Insert a USB stick with at least 2GB of free space.</p>
+<p>Start YUMI</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-1_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E5%90%AF%E5%8A%A8YUMI.jpg" /> </p>
+<p>Choose I Agree</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-2_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E5%90%AF%E5%8A%A8YUMI_%E9%80%89%E6%8B%A9IAgree.jpg" /> </p>
+<p>Select U-Disk\OS Type\ISO image file</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-3_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E5%90%AF%E5%8A%A8YUMI_%E9%80%89%E5%A5%BDU%E7%9B%98%E7%B3%BB%E7%BB%9F%E7%B1%BB%E5%9E%8Biso%E9%95%9C%E5%83%8F.jpg" /> </p>
+<p>Choose Create</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-4_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E9%80%89%E6%8B%A9Create%E7%BB%93%E6%9E%9C.jpg" /> </p>
+<p>Choose <strong>*Next*</strong></p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-5_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E7%AC%AC%E4%B8%80%E4%B8%AA%E9%80%89Next%E7%BB%93%E6%9E%9C.jpg" /> </p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-6_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%80%89Next%E7%BB%93%E6%9E%9C.jpg" /> </p>
+<p>Choose Next</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-7_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E7%AC%AC%E4%BA%8C%E4%B8%AA%E9%80%89Next%E7%BB%93%E6%9E%9C.jpg" /> </p>
+<p>Choose <strong><em>*否(*</em></strong><strong><em>*N)*</em></strong></p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-8_%E5%88%B6%E4%BD%9C%E5%90%AF%E5%8A%A8%E7%9B%98_%E7%AC%AC%E5%9B%9B%E4%B8%AA%E9%80%89%E5%90%A6%E7%BB%93%E6%9E%9C.jpg" /> </p>
+<p>Done!</p>
+<h3 id="32-installation-of-the-system">3.2 Installation of the system</h3>
+<h4 id="321-hard-disk-partitioning">3.2.1 Hard Disk Partitioning</h4>
+<p>Recommendations:</p>
+<p>Allocate 50GB starting from the hard disk and install the system;</p>
+<p>Allocate 20GB (1.5 times the size of physical memory) from the end of the hard disk to configure SWAP;</p>
+<p>The rest of the space can be allocated to data areas.</p>
+<p>Description:</p>
+<p>The benefit of doing this is that even if the system fails in the future, reinstalling the system will not affect the data of other partitions</p>
+<h4 id="322-bios-settings">3.2.2 BIOS Settings</h4>
+<p>Before installation, you need to set up the computer BIOS.</p>
+<p>Press F2 after booting to enter BIOS setting interface and modify 2 configurations:</p>
+<p>Boot mode：LEGACY</p>
+<p>Secure Boot：OFF</p>
+<p>。Plug the boot disk into the computer interface, press F12 after booting, and select USB Storage Device.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-9_BIOS%E8%AE%BE%E7%BD%AE_%E9%80%89%20USB_Storage_Device.jpg" /> </p>
+<h4 id="323-start-of-installation">3.2.3 Start of installation</h4>
+<p>In the image below, the first option is to boot from hard disk and the second option is to boot from boot disk. choose the second one</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-10_%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F_%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85_%E9%80%89%E6%8B%A9%E5%90%AF%E5%8A%A8%E7%9B%98%E5%90%AF%E5%8A%A8.jpg" /> </p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-11_%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F_%E5%90%AF%E5%8A%A8%E4%B8%BB%E9%A1%B5.png" /> </p>
+<p>Select Desktop*<strong><em>Install*</em></strong><strong><em>*Ubuntu*</em></strong><strong><em>*16.04.6*</em></strong><strong><em>*LTS*</em></strong></p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-12_%E9%80%89%E6%8B%A9%E6%A1%8C%E9%9D%A2InstallUbuntu%E5%9B%BE%E6%A0%87.jpg" /></p>
+<p>Step 1: System Language, English by default.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-13_%E7%B3%BB%E7%BB%9F%E8%AF%AD%E8%A8%80%E9%BB%98%E8%AE%A4%E8%8B%B1%E6%96%87.jpg" /> </p>
+<p>Step 2: Keep the default and uncheck it.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-14_%E9%A2%84%E8%A3%85ubuntu%E9%85%8D%E7%BD%AE_%E4%BF%9D%E6%8C%81%E9%BB%98%E8%AE%A4%E4%B8%8D%E5%8B%BE%E9%80%89.jpg" /> </p>
+<p>Step 3: Installation type, it is recommended to choose the last item<strong>Something else</strong></p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-15_%E5%AE%89%E8%A3%85%E7%B1%BB%E5%9E%8B_%E5%BB%BA%E8%AE%AE%E9%80%89%E6%9C%80%E5%90%8E%E4%B8%80%E9%A1%B9Something_else.jpg" /> </p>
+<p>Step 4: Select the corresponding partition, file system format, mount node</p>
+<p><strong>System partition, format needs to be checked</strong></p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-16_%E7%B3%BB%E7%BB%9F%E5%88%86%E5%8C%BA_%E9%9C%80%E8%A6%81%E5%8B%BE%E9%80%89%E6%A0%BC%E5%BC%8F%E5%8C%96.jpg" /> </p>
+<p>The partitions after configuration</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-17_%E9%85%8D%E7%BD%AE%E5%AE%8C%E6%88%90%E5%90%8E%E7%9A%84%E5%90%84%E5%88%86%E5%8C%BA.jpg" /> </p>
+<p>Step 5: Select the system time zone Shanghai</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-18_%E9%80%89%E6%8B%A9%E7%B3%BB%E7%BB%9F%E6%97%B6%E5%8C%BAShanghai.jpg" /> </p>
+<p>Step 6: Keyboard layout, default English(US)</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-19_%E9%94%AE%E7%9B%98%E5%B8%83%E5%B1%80_%E9%BB%98%E8%AE%A4English.jpg" /> </p>
+<p>Step 7: Enter user name, host name, password (according to the needs of their own settings)</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-20_%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D_%E4%B8%BB%E6%9C%BA%E5%90%8D_%E5%AF%86%E7%A0%81.jpg" /> </p>
+<p>After installation, select Restart Now.</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-21_%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95_%E9%80%89RestartNow%E9%87%8D%E5%90%AF.png" /> </p>
+<p>Login interface, enter password to enter the system</p>
+<p><img alt="img" src="../resource/%E5%9B%BE3-22_%E7%99%BB%E5%85%A5%E7%95%8C%E9%9D%A2_%E8%BE%93%E5%85%A5%E5%AF%86%E7%A0%81%E5%8D%B3%E5%8F%AF%E8%BF%9B%E5%85%A5%E7%B3%BB%E7%BB%9F.png" /> </p>
+<h3 id="33-package-installation">3.3 Package installation</h3>
+<p>From the upper left corner of the desktop, enter Terminal to open a terminal, and enter the instructions in turn:</p>
+<pre><code class="language-bash">$ sudo apt-get update
+$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip openjdk-8-jdk libssl-dev libxml-simple-perl python-pip
+$ pip install pycrypto
+</code></pre>
+<h3 id="34-creating-an-ssh-key">3.4 Creating an ssh key</h3>
+<p>At Terminal, enter</p>
+<pre><code class="language-bash">$ ssh-keygen -t rsa -C &lt;邮箱&gt;
+</code></pre>
+<p>Press Enter to confirm (no password required)</p>
+<h3 id="35-configuring-git-accounts">3.5 Configuring git accounts</h3>
+<pre><code class="language-bash">$ git config --global user.name &lt;用户名&gt;
+$ git config --global user.email &lt;邮箱&gt;
+</code></pre>
+<h3 id="36-configuring-bash">3.6 Configuring bash</h3>
+<pre><code class="language-bash">$ sudo dpkg-reconfigure dash
+</code></pre>
+<p>Select&lt;<strong>No</strong>&gt;, Enter Confirm</p>
+<h3 id="37-install-make">3.7 Install make</h3>
+<p>Download link:</p>
+<pre><code>http://ftp.gnu.org/pub/gnu/make/make-3.81.tar.bz2
+</code></pre>
+<p>After decompression, execute the following instructions in turn:</p>
+<pre><code class="language-bash">$ ./configure
+$ make
+$ sudo make install
+$ sudo mv /usr/bin/make /usr/bin/make-4.1
+$ sudo ln -sf /usr/local/bin/make /usr/bin/make
+</code></pre>
+<h3 id="38-installing-openssl">3.8 Installing openssl</h3>
+<p>Download link:</p>
+<pre><code>https://www.openssl.org/source/old/1.0.1/openssl-1.0.1f.tar.gz
+</code></pre>
+<p>After decompression, execute the following instructions in turn:</p>
+<pre><code>$ ./config --prefix=/usr/local --openssldir=/usr/local/openssl
+$ sudo make
+$ sudo mv /usr/bin/pod2man /usr/bin/pod2man_bak
+$ sudo make install
+$ sudo mv /usr/bin/pod2man_bak /usr/bin/pod2man
+$ sudo mv /usr/bin/openssl /usr/bin/openssl.old
+$ sudo mv /usr/include/openssl /usr/include/openssl.old
+$ sudo ln -sf /usr/local/bin/openssl /usr/bin/openssl
+$ sudo ln -sf /usr/local/include/openssl/ /usr/include/openssl
+$ openssl version -a
+</code></pre>
+<h3 id="39-installing-repo">3.9 Installing repo</h3>
+<p>Download link:</p>
+<pre><code>https://nas.simcom.com:35001/sharing/4eeM03A4p
+</code></pre>
+<pre><code>$ mkdir ~/bin
+$ cp repo ~/bin/
+$ chmod 744 ~/bin/repo
+</code></pre>
+<h2 id="4-android-build-system">4 Android build system</h2>
+<h3 id="41-compile-source-code">4.1 Compile source code</h3>
+<p>Android 11 executes the following command</p>
+<pre><code class="language-bash">$ cd &lt;APPS_ROOT&gt;/sunsea/
+$ ./make_build_ap.sh SIM8666 all userdebug 16
+</code></pre>
+<pre><code class="language-bash">执行效果如下：
+RK356X_A11/sunsea$ ./make_build_ap.sh
+ERROR :parameter error
+format:  ./make_build_ap.sh [PROJECT] [MODULE] [userdebug/user] [thread_number]
+example: ./make_build_ap.sh SIM8666 all userdebug 16
+you can select below projects:
+SIM8666
+SIM8666_F
+build module:[all] [U] [CK] [A] [p] [o] [u] [d]
+No ARGS means use default build option
+       all = -AUCKuo  build all
+       U = build uboot
+       C = build kernel with Clang
+       K = build kernel
+       A = build android
+       p = will build packaging in IMAGE
+       o = build OTA package
+       u = build update.img
+       cf = generate and copy all configuration files only.
+
+</code></pre>
+<p>Android 11 source code root directory is as follows:</p>
+<pre><code>├── art
+├── bionic
+├── bootable
+├── build
+├── compatibility
+├── cts
+├── dalvik
+├── developers
+├── development
+├── device
+├── external
+├── frameworks
+├── hardware
+├── kernel
+├── libcore
+├── libnativehelper
+├── mkcombinedroot
+├── packages
+├── pdk
+├── platform_testing
+├── prebuilts
+├── rkbin
+├── RKDocs
+├── rkst
+├── RKTools
+├── rockdev
+├── sdk
+├── sunsea
+├── system
+├── test
+├── toolchain
+├── tools
+├── u-boot
+└── vendor
+</code></pre>
+<p>Build scripts in sunsea/make_build_ap.sh;</p>
+<p>After compilation, the image is generated at rockdev/Image-rk3566_r/.</p>
+<pre><code>├── boot-debug.img
+├── boot.img
+├── config.cfg
+├── dtbo.img
+├── MiniLoaderAll.bin
+├── misc.img
+├── parameter.txt
+├── pcba_small_misc.img
+├── pcba_whole_misc.img
+├── recovery.img
+├── resource.img
+├── super.img
+├── uboot.img
+├── update.img
+└── vbmeta.img
+└── vmlinux
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X ADC Application User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_AP_LOG Grab User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

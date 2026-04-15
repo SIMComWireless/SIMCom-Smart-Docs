@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_AP_LOG Grab User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_AP_LOG Grab User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_AP_LOG Grab User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_AP_LOG Grab User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-offline-logs">2 Offline logs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-sunsealog">2.1 Sunsealog</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-real-time-logs">3 Real-time logs</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-usb-port-via-device">3.1 USB port via device</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-wifi-connection-via-device">3.2 WiFi connection via device</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-capture-via-serial-port">3.3 Capture via serial port</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#34-network-problems">3.4 Network problems</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#35-exceptional-circumstances">3.5 Exceptional circumstances</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_AP_LOG Grab User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_ap_log-grab-user-guide">SIM866X_AP_LOG Grab User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.03.04</td>
+<td style="text-align: left;">Chai Yan</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This document takes the SIMCom SIM866X EVB development board as an example to introduce how to grab AP log on SIM866x module on Android 11 system.</p>
+<h2 id="2-offline-logs">2 Offline logs</h2>
+<p>Android offline logs are logs that are generated and stored locally by Android devices without connecting to a PC (independent of ADB).</p>
+<h3 id="21-sunsealog">2.1 Sunsealog</h3>
+<p>Sundialog is a set of tools developed based on EVB development board of SIM866X, which can capture android AP side log offline.</p>
+<h4 id="211-sundialog-usage-process">2.1.1 Sundialog Usage Process</h4>
+<p>Sundialog function is turned off by default after power up, you need to turn on Sundialog switch in settings first. Open method:</p>
+<p>Click on System Settings, click on the Version Number option several times in a row, open Developer Options, find the Sundialog switch in Developer Options, and set the switch to ON.</p>
+<p><img alt="alt text" src="../resource/1-open-sunsealog.png" /></p>
+<p>Wait a few seconds for Sundialog service to start, then you can start fetching logs. When you don't need to fetch logs, turn this switch off to avoid consuming system performance. Sundialog folder naming rule is "serial number_time #serial number", the previous serial number is a switch Sundialog, such as the first time to open Sundialog serial number is 00001, when Sundialog switch, or restart, the serial number plus 1, is 000002. When Sundialog is opened once, when the size of a single log folder exceeds 50M, a new folder will be regenerated. The number in front of the newly generated folder remains unchanged, and the number behind it increases by 1. The size of each log folder is 50M, and the maximum storage limit of the partition is 200M. When the log file is full of partitions, the old log folder will be deleted automatically to ensure that the new log file can continue to be stored. The deletion rule is to sort folders according to their serial numbers and delete the folder with the highest serial number.</p>
+<p>The captured log is in the sunsealog partition of the device. At this point, you can pull the log out to view it. The command is adb pull sunsealog</p>
+<p><img alt="alt text" src="../resource/2-pull-sunsealog.png" /></p>
+<h4 id="212-sundialog-upload-function">2.1.2 Sundialog upload function</h4>
+<p>This function can upload Sundialog to FTP server or transfer to USB flash drive/SD card. How to use:</p>
+<p>First, in the developer options of the settings, click the Sundialog uploader option.</p>
+<p><img alt="alt text" src="../resource/3-open-sunsealoguploader.png" /></p>
+<p>In this interface, you can set the size of each log folder, copy to SD card/USB disk, upload to FTP, etc.</p>
+<p><img alt="alt text" src="../resource/4-sunsealoguploader.png" /></p>
+<p>(1)Upload to FTP function:</p>
+<p>Click the Upload to FTP button to enter the FTP upload interface. After connecting to the network, enter the FTP address, username, password, port number and FTP storage path according to the prompts.</p>
+<p>After filling in the information, you can click the save information button, so that you can save the information the next time you enter it, you don't need to fill it again. Then select the log folder to upload, support single or multiple choices. Then click the Upload Log button to upload it. Wait for the upload progress bar to disappear, indicating that the upload is complete. At this time, you can view the corresponding sunsealog in FTP.</p>
+<p><img alt="alt text" src="../resource/5-upload-to-FTP.png" /></p>
+<p>(2)Copy to USB flash drive/SD card function:</p>
+<p>Click the Upload to USB/SD card button to enter the upload interface. This function can copy log files to USB or SD card.</p>
+<p><img alt="alt text" src="../resource/6-uploade-to-sdcard.png" /></p>
+<h2 id="3-real-time-logs">3 Real-time logs</h2>
+<p>Android real-time logging refers to a logging system that captures, displays, and processes logs instantly.</p>
+<h3 id="31-usb-port-via-device">3.1 USB port via device</h3>
+<p>When the device can be connected to a computer and has an adb port, you can directly use the adb tool to grab it in case of problems such as app flashback, error, slow system boot, stutter, and system animation.</p>
+<h4 id="311-download-adb-toolkit">3.1.1 Download adb toolkit</h4>
+<p>adb tools can be found in the platform-tools folder in Android SDK\Tools\Adb&amp;Fastboot path.</p>
+<h4 id="312-open-the-adb-tool">3.1.2 Open the adb tool</h4>
+<p>Open windows cmd tool, navigate to the folder where adb.exe is located, and enter adb command</p>
+<h4 id="313-view-connected-devices">3.1.3 View Connected Devices</h4>
+<p>Adb devices, if you press enter and a alphanumeric combination appears, it means that the device is connected successfully!</p>
+<p><img alt="alt text" src="../resource/7-adb-devices.png" /></p>
+<p>If no device is displayed, please check whether USB debugging is enabled in the device developer options and whether the USB cable is connected.</p>
+<h4 id="314-entering-the-grab-command">3.1.4 Entering the Grab Command</h4>
+<p>adb logcat -b all -v time &gt;1.txt This saves all logs to 1.txt</p>
+<p>Repeat the problem, press Ctrl+C after the problem occurs to cancel the log grab</p>
+<p>adb logcat -c</p>
+<p>Empty old logs</p>
+<p>Note: If logcat:Unexpected EOF! This log, because the final logcat process exits, and the reason for exiting is that the log buffer size is set too small, and the default size is 256KB. If your program runs for a long time and generates a large number of logs, the final log cache size must exceed the default size of 256KB.</p>
+<p><img alt="alt text" src="../resource/8-log-error.png" /></p>
+<p>At this time, you need to open the settings--about the phone--press the version number 7 times in a row to enter the developer mode</p>
+<p>Then go to System--Developer Options--Logger Buffer Size</p>
+<p>Choose the right size</p>
+<p><img alt="alt text" src="../resource/9-select-log-buffer.png" /></p>
+<p>You can also set the log cache size using the adb command:</p>
+<p>adb logcat -G 16M</p>
+<p>Set the log cache size to 16M.</p>
+<p>Kernel log grab command</p>
+<p>adb shell dmesg &gt; 1.txt</p>
+<p>You can also directly use batch files to grab all logs for developers to analyze</p>
+<p>mkdir Android_Log</p>
+<p>start cmd /c "adb logcat -b radio -v time&gt;Android_Log\radio.txt"</p>
+<p>start cmd /c "adb logcat -b events -v time&gt;Android_Log\events.txt"</p>
+<p>start cmd /c "adb logcat -b system -v time&gt;Android_Log\system.txt"</p>
+<p>start cmd /c "adb shell top&gt;Android_Log\top.txt"</p>
+<p>start cmd /c "adb shell dmesg&gt;Android_Log\kernal.txt"</p>
+<p>adb logcat -v time&gt;Android_Log\main.txt</p>
+<p>@pause</p>
+<p>This batch file is in the downloaded adb tool</p>
+<h3 id="32-wifi-connection-via-device">3.2 WiFi connection via device</h3>
+<p>When you need to debug usb function usb is occupied when you can use wifi grab</p>
+<h4 id="321-how-to-use">3.2.1 How to use</h4>
+<p>Connect usb cable input adb tcpip 5555   Switch the adb of the device to tcp mode</p>
+<p>Devices and computers are under the same local area network</p>
+<p>Unplug the usb cable and enter adb connect xxx.xx.xx.xxx:5555</p>
+<h3 id="33-capture-via-serial-port">3.3 Capture via serial port</h3>
+<p>Android through serial capture Log is mainly used for device development, system debugging, no adb environment log acquisition.</p>
+<h4 id="331-how-to-use">3.3.1 How to use</h4>
+<ol>
+<li>
+<p>Download the corresponding number of software to the local</p>
+</li>
+<li>
+<p>The download is directly an executable file named putty.exe, which can be used without installation. Double-click to open it and enter Putty's main interface.</p>
+</li>
+<li>
+<p>Connect the device with a Micro USB cable, add a recognized serial port, change the bit rate to 115200, select Serial (serial port) as the connection type, and then click open,</p>
+</li>
+</ol>
+<p>Press Enter to verify connection</p>
+<ol>
+<li>Enter logcat to grab log. Ctrl+C Stop</li>
+</ol>
+<p><img alt="alt text" src="../resource/10-putty.png" /></p>
+<h3 id="34-network-problems">3.4 Network problems</h3>
+<p>Tcpdump is a package capture tool under linux, not in android, you need to download the corresponding tool.</p>
+<p>Download address: www.androidtcpdump.com/android-tcpdump/downloads</p>
+<p>And then through adb into the corresponding directory:</p>
+<p>adb root</p>
+<p>adb push tcpdump /data/local/tmp</p>
+<p>Execute the packet capture command:</p>
+<p>adb shell chmod +x /data/local/tmp/tcpdump</p>
+<p>adb shell tcpdump -i any -p -vv -s 0 -w capture.pcap</p>
+<p>Starting capture will create a capture.pacp file in the current directory, which will increase in size as the number of network visits increases.</p>
+<p>If you want to close it, press ctrl+c to finish, and then export the file to your computer, you can use wireshark to analyze it.</p>
+<h3 id="35-exceptional-circumstances">3.5 Exceptional circumstances</h3>
+<p>Due to the complexity of fixed screen problems, more on-site information is required. For this reason, the following operations are required to confirm the on-site information:</p>
+<p>Step 1: Record the time point and operation steps of the fixed screen, and take photos.</p>
+<p>Step 2 Confirm whether adb can be connected. Enter "adb devices" on cmd command line to see if you can print out mobile phone information.</p>
+<p>Step 3: Call the tester if there is SIM card. If you hear the ring, you can judge whether the modem works normally.</p>
+<p>Step 4: Press the "power key" and the volume key 2 to 3 times within 5 minutes to see if there is any change in the screen.</p>
+<p>Step 5 If the system is still in the fixed screen state after the above operations, you need to grab sysdump log and export Log through adb shell dumpsys activity command.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/" class="btn btn-neutral float-left" title="SIM866X_A11_Compilation User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_AP_Screen Rotation Application User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

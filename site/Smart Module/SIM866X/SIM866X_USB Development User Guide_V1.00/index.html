@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_USB Development User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_USB Development User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_USB Development User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_USB Development User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">version history</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-sim8666-usb-interface-list">2 SIM8666 USB Interface List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-sim8666-usb-related-device-tree-configuration">3 SIM8666 USB-related device tree configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-sim8668-evb-usb-interface-list">4 SIM8668 EVB USB Interface List</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-sim8668-usb-related-device-tree-configuration">5 SIM8668 USB-related device tree configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-other-commissioning-instructions">6 Other commissioning instructions</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#61-forced-switching-otg-mode">6.1 Forced Switching OTG Mode</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#62-query-usb-device">6.2 Query USB Device</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#63-usb-host-eye-test">6.3 USB Host Eye Test</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#64-usb-gadget-driver-development">6.4 USB Gadget driver development</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_USB Development User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_usb-development-user-guide">SIM866X_USB Development User Guide</h1>
+<h2 id="version-history"><strong>version history</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.3.17</td>
+<td style="text-align: left;">Ge Zhengyang</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>Read this document to quickly learn about SIM866X Series USB interface configuration and related debugging tips.</p>
+<h2 id="2-sim8666-usb-interface-list">2 SIM8666 USB Interface List</h2>
+<p>SIM8666 USB Interface Configuration Reference Table</p>
+<table>
+<thead>
+<tr>
+<th>interface name</th>
+<th>USB Type</th>
+<th>USB interface</th>
+<th>VBUS enable foot</th>
+<th>function description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB0</td>
+<td>USB 2.0</td>
+<td>Type-C（OTG）</td>
+<td>GPIO0_PA5</td>
+<td>ADB firmware download</td>
+</tr>
+<tr>
+<td>USB1</td>
+<td>USB 3.0</td>
+<td>USB-A（HOST）</td>
+<td>GPIO0_PA6 (shared)</td>
+<td>connectivity peripherals</td>
+</tr>
+<tr>
+<td>USB2</td>
+<td>USB 2.0</td>
+<td>USB-A（HOST）</td>
+<td>GPIO0_PA6 (shared)</td>
+<td>connectivity peripherals</td>
+</tr>
+<tr>
+<td>USB3</td>
+<td>USB 2.0</td>
+<td>USB-A（HOST）</td>
+<td>GPIO2_PC6</td>
+<td>Connect internal HUB, HUB expands 2-way TYPE-A interface and SIM7600 external 4G module</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-sim8666-usb-related-device-tree-configuration">3 SIM8666 USB-related device tree configuration</h2>
+<p>SIM8666 supports 4-channel USB, of which USB0 supports OTG function, and the rest of USB1~3 only supports Host mode. Only USB1 supports USB 3.0 functionality.</p>
+<p>The file path of the related device tree is: RK356X_A11/sunsearch/project_sunsearch/SIM8668/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<p>The SIM8666 EVB USB original device tree configuration is as follows:</p>
+<pre><code class="language-dts">/* USB0 TYPE-C vbus regulator */
+&amp;vcc5v0_otg {
+    gpio = &lt;&amp;gpio0 RK_PA5 GPIO_ACTIVE_HIGH&gt;;
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;vcc5v0_otg_en&gt;;
+};
+
+/* HUB vbus regulator */
+&amp;vcc5v0_host {
+    gpio = &lt;&amp;gpio2 RK_PC6 GPIO_ACTIVE_HIGH&gt;;
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;vcc5v0_host_en&gt;;
+};
+
+/ {
+    /* USB2.0 HOST2 / USB3.0 HOST vbus regulator */
+    vcc5v0_host1: vcc5v0-host1-regulator {
+        compatible = &quot;regulator-fixed&quot;;
+        regulator-name = &quot;vcc5v0_host1&quot;;
+        regulator-boot-on;
+        regulator-always-on;
+        regulator-min-microvolt = &lt;5000000&gt;;
+        regulator-max-microvolt = &lt;5000000&gt;;
+        enable-active-high;
+        gpio = &lt;&amp;gpio0 RK_PA6 GPIO_ACTIVE_HIGH&gt;;
+        vin-supply = &lt;&amp;vcc5v0_usb&gt;;
+        pinctrl-names = &quot;default&quot;;
+        pinctrl-0 = &lt;&amp;vcc5v0_host1_en&gt;;
+    };
+};
+
+/* USB0 TYPE-C Port USB2.0 */
+&amp;u2phy0_otg {
+    vbus-supply = &lt;&amp;vcc5v0_otg&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy0 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usbdrd_dwc3 {
+    dr_mode = &quot;otg&quot;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usbdrd30 {
+    status = &quot;okay&quot;;
+};
+
+/* USB1 TYPE-A Port USB3.0 */
+&amp;combphy1_usq {
+    status = &quot;okay&quot;;
+};
+
+&amp;u2phy0_host {
+    phy-supply = &lt;&amp;vcc5v0_host1&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy0 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usbhost_dwc3 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usbhost30 {
+    status = &quot;okay&quot;;
+};
+
+/* USB2 TYPE-A Port USB2.0 */
+&amp;u2phy1_otg {
+    phy-supply = &lt;&amp;vcc5v0_host1&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy1 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host0_ehci {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host0_ohci {
+    status = &quot;okay&quot;;
+};
+
+/* USB3 HUB Port USB2.0 */
+&amp;u2phy1_host {
+    phy-supply = &lt;&amp;vcc5v0_host&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy1 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host1_ehci {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host1_ohci {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="4-sim8668-evb-usb-interface-list">4 SIM8668 EVB USB Interface List</h2>
+<p>SIM8668 EVB USB Interface Configuration Reference Table</p>
+<p><code>Note: The USB0 interface of RK3568 supports USB 2.0 + SATA 3.0 (default configuration) or USB 3.0 mode.</code></p>
+<table>
+<thead>
+<tr>
+<th>interface name</th>
+<th>USB Type</th>
+<th>USB interface</th>
+<th>VBUS enable pin</th>
+<th>function description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USB0</td>
+<td>USB 2.0</td>
+<td>Type-C（OTG）</td>
+<td>GPIO0_PA5</td>
+<td>ADB firmware download</td>
+</tr>
+<tr>
+<td>USB1</td>
+<td>USB 3.0</td>
+<td>USB-A（HOST）</td>
+<td>GPIO0_PA6 (shared)</td>
+<td>connectivity peripherals</td>
+</tr>
+<tr>
+<td>USB2</td>
+<td>USB 2.0</td>
+<td>USB-A（HOST）</td>
+<td>GPIO0_PA6 (shared)</td>
+<td>connectivity peripherals</td>
+</tr>
+<tr>
+<td>USB3</td>
+<td>USB 2.0</td>
+<td>USB-A（HOST）</td>
+<td>GPIO2_PC6</td>
+<td>Connect internal HUB, HUB expands 2-way TYPE-A interface and SIM7600 external 4G module</td>
+</tr>
+</tbody>
+</table>
+<p>If you need to modify USB type, please refer to <strong>"3.1.2 RK3568 OTG Configuration to USB3.0"</strong> section of RKDocs/common/usb/Rockchip_RK356X_User_Guide_USB_CN.pdf</p>
+<h2 id="5-sim8668-usb-related-device-tree-configuration">5 SIM8668 USB-related device tree configuration</h2>
+<p>SIM8666 supports 4-way USB, of which USB0 supports OTG function, and the rest of USB1~3 only supports Host mode. By default, only USB1 supports USB 3.0 functionality. For USB0 support for USB 3.0, please refer to the RK official documentation.</p>
+<p>The file path of the related device tree is: RK356X_A11/sunsearch/project_sunsearch/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<p>The SIM8668 EVB USB original device tree configuration is as follows:</p>
+<pre><code>/* USB0 TYPE-C vbus regulator */
+&amp;vcc5v0_otg {
+    gpio = &lt;&amp;gpio0 RK_PA5 GPIO_ACTIVE_HIGH&gt;;
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;vcc5v0_otg_en&gt;;
+};
+
+/* HUB vbus regulator */
+&amp;vcc5v0_host {
+    gpio = &lt;&amp;gpio2 RK_PC6 GPIO_ACTIVE_HIGH&gt;;
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;vcc5v0_host_en&gt;;
+};
+
+/ {
+    /* USB2.0 HOST2 / USB3.0 HOST vbus regulator */
+    vcc5v0_host1: vcc5v0-host1-regulator {
+        compatible = &quot;regulator-fixed&quot;;
+        regulator-name = &quot;vcc5v0_host1&quot;;
+        regulator-boot-on;
+        regulator-always-on;
+        regulator-min-microvolt = &lt;5000000&gt;;
+        regulator-max-microvolt = &lt;5000000&gt;;
+        enable-active-high;
+        gpio = &lt;&amp;gpio0 RK_PA6 GPIO_ACTIVE_HIGH&gt;;
+        vin-supply = &lt;&amp;vcc5v0_usb&gt;;
+        pinctrl-names = &quot;default&quot;;
+        pinctrl-0 = &lt;&amp;vcc5v0_host1_en&gt;;
+    };
+};
+
+/* USB0 TYPE-C Port USB2.0 */
+&amp;u2phy0_otg {
+    vbus-supply = &lt;&amp;vcc5v0_otg&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy0 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usbdrd_dwc3 {
+    dr_mode = &quot;otg&quot;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usbdrd30 {
+    status = &quot;okay&quot;;
+};
+
+/* USB1 TYPE-A Port USB3.0 */
+&amp;combphy1_usq {
+    status = &quot;okay&quot;;
+};
+
+&amp;u2phy0_host {
+    phy-supply = &lt;&amp;vcc5v0_host1&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy0 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usbhost_dwc3 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usbhost30 {
+    status = &quot;okay&quot;;
+};
+
+/* USB2 TYPE-A Port USB2.0 */
+&amp;u2phy1_otg {
+    phy-supply = &lt;&amp;vcc5v0_host1&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy1 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host0_ehci {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host0_ohci {
+    status = &quot;okay&quot;;
+};
+
+/* USB3 HUB Port USB2.0 */
+&amp;u2phy1_host {
+    phy-supply = &lt;&amp;vcc5v0_host&gt;;
+    status = &quot;okay&quot;;
+};
+
+&amp;usb2phy1 {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host1_ehci {
+    status = &quot;okay&quot;;
+};
+
+&amp;usb_host1_ohci {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<h2 id="6-other-commissioning-instructions">6 Other commissioning instructions</h2>
+<h3 id="61-forced-switching-otg-mode">6.1 Forced Switching OTG Mode</h3>
+<p>USB working mode description: In addition to USB0 support OTG, USB1/2/3 only support Host mode can not be forced to switch USB working mode.</p>
+<p>The RK 356x SDK supports software methods to force USB0 OTG to switch to Host mode or device mode, regardless of the USB hardware circuit's OTG ID level or Type-C interface.</p>
+<p>The reference instructions are as follows:</p>
+<pre><code>#1.Force host mode
+echo host &gt; /sys/devices/platform/fe8a0000.usb2-phy/otg_mode
+
+#2.Force peripheral mode
+echo peripheral &gt; /sys/devices/platform/fe8a0000.usb2-phy/otg_mode
+
+#3.Force otg mode
+echo otg &gt; /sys/devices/platform/fe8a0000.usb2-phy/otg_mode
+</code></pre>
+<p>If USB0 needs to be forced to work in a certain mode after the device is powered on, it is recommended to keep the default configuration of the device tree and then add the working mode switch command in system/core/rootdir/init.rc.</p>
+<p>The reference instructions are as follows:</p>
+<pre><code>on init
+    write /sys/devices/platform/fe8a0000.usb2-phy/otg_mode &quot;host&quot;
+</code></pre>
+<h3 id="62-query-usb-device">6.2 Query USB Device</h3>
+<p>Use<code>lsusb</code> or<code>cat /sys/kernel/debug/usb/devices</code> command to query the USB peripherals identified by the current device</p>
+<h3 id="63-usb-host-eye-test">6.3 USB Host Eye Test</h3>
+<p>RK documentation Rockchip_Developer_Guide_USB_SQ_Test_CN.pdf mentions using the<code>io -4 0xff580440 0x8000</code> command to package is not available in the current SDK.</p>
+<p>io programs need to access/dev/mem devices, but Android versions do not allow the creation of/dev/mem devices for security reasons. Forcing this device driver to open will cause compilation errors.</p>
+<p>Therefore, it is recommended to use ehset driver in combination with EHSET TEST Fixture for testing. Before testing, add<code>CONFIG_USB_EHSET_TEST_FIXTURE=y</code>to kernel defconfig, and then connect the port under test to the package board to trigger the eye diagram test signal.</p>
+<p>For eye diagram test, please contact FAE, SIMCOM provides test calibration service.</p>
+<h3 id="64-usb-gadget-driver-development">6.4 USB Gadget driver development</h3>
+<p>Refer to RK documentation: RKDocs/common/usb/Rockchip_Developer_Guide_USB_CN.pdf</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_Thermal Introduction and Debug User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

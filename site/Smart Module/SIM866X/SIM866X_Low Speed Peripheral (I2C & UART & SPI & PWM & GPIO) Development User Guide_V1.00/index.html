@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_Low Speed Peripheral (I2C \u0026amp; UART \u0026amp; SPI \u0026amp; PWM \u0026amp; GPIO) Development User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_Low Speed Peripheral (I2C \u0026 UART \u0026 SPI \u0026 PWM \u0026 GPIO) Development User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-i2c-configuration-and-debugging">2 I2C configuration and debugging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-i2c-configuration">2.1 I2C configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-configuring-i2c-peripherals">2.2 Configuring I2C peripherals</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#23-i2c-commissioning">2.3 I2C Commissioning</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#24-references">2.4 References</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-uart-configuration-and-debugging">3 UART configuration and debugging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-uart-configuration">3.1 UART configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-common-serial-port-operation-commands">3.2 Common serial port operation commands</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-configuring-uart2-as-a-normal-serial-port">3.3 Configuring UART2 as a normal serial port</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#34-references">3.4 References</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-spi-configuration-and-debugging">4 SPI configuration and debugging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-spi-configuration">4.1 SPI Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#42-enabling-spi">4.2 Enabling SPI</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#43-references">4.3 References</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-pwm-configuration-and-debugging">5 PWM configuration and debugging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#51-pwm-configuration">5.1 PWM Configuration</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#52-pwm-debugging">5.2 PWM debugging</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#53-references">5.3 References</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-gpio-configuration-and-debugging">6 GPIO configuration and debugging</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#61-gpio-number-calculation">6.1 GPIO Number Calculation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#62-controlling-io-using-gpio-sysfs-interface">6.2 Controlling I/O Using GPIO sysfs Interface</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#63-configure-and-use-gpio-and-irq-in-peripherals">6.3 Configure and use GPIO and IRQ in peripherals</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#64-references">6.4 References</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_low-speed-peripheral-i2c-uart-spi-pwm-gpio-development-user-guide">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.3.17</td>
+<td style="text-align: left;">Zhang bei</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>Read this document for a quick overview of I2C UART SPI GPIO interface configuration and related debugging tips.</p>
+<h2 id="2-i2c-configuration-and-debugging">2 I2C configuration and debugging</h2>
+<p>SIM8666 module can provide up to 4 groups of I2C interfaces, I2C only supports master mode, the highest rate is 400Kbps, and supports 7-bit and 10-bit addressing modes.   。</p>
+<p><strong>Note: I2C1, I2C2, I2C3 and I2C4 have pull-up resistors of 2.2KΩ inside the module; the IO of I2C1, I2C2 and I2C4 is 1.8V on average, and the IO level of I2C3 is 3.3V.</strong></p>
+<h3 id="21-i2c-configuration">2.1 I2C configuration</h3>
+<p>i2c DTS is configured as follows in the number of devices, and the path of the related device tree is RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>i2c1: i2c@fe5a0000 {
+    compatible = &quot;rockchip,rk3399-i2c&quot;;
+    reg = &lt;0x0 0xfe5a0000 0x0 0x1000&gt;;
+    clocks = &lt;&amp;cru CLK_I2C1&gt;, &lt;&amp;cru PCLK_I2C1&gt;;
+    clock-names = &quot;i2c&quot;, &quot;pclk&quot;;
+    interrupts = &lt;GIC_SPI 47 IRQ_TYPE_LEVEL_HIGH&gt;;
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;i2c1_xfer&gt;;
+    #address-cells = &lt;1&gt;;
+    #size-cells = &lt;0&gt;;
+    status = &quot;disabled&quot;;
+};
+</code></pre>
+<p>The file path of the device tree to open i2c is: RK356X_A11/sunsearch/project_sunsearch/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<pre><code>&amp;i2c1 {
+    status = &quot;okay&quot;;
+};
+
+&amp;i2c2{
+    status = &quot;okay&quot;;
+    pinctrl-0 = &lt;&amp;i2c2m1_xfer&gt;;
+};
+
+&amp;i2c3{
+    status = &quot;okay&quot;;
+};
+
+// sensors Light &amp; Proximity
+&amp;i2c4 {
+    status = &quot;okay&quot;;
+    hym8563: hym8563@51 {
+        compatible = &quot;haoyu,hym8563&quot;;
+        reg = &lt;0x51&gt;;
+    };
+    gc8034@37 {
+        status = &quot;disabled&quot;;
+    };
+};
+</code></pre>
+<p>I2C peripheral configurations can be added in simcom.dtsi. where status = "okay"; to enable the corresponding I2C bus or peripheral; status = "disabled"; to disable the corresponding I2C bus or peripheral.
+Main driver files:</p>
+<pre><code>RK356X_A11/kernel/drivers/i2c/busses/i2c-rk3x.c
+</code></pre>
+<h3 id="22-configuring-i2c-peripherals">2.2 Configuring I2C peripherals</h3>
+<p>Take gt9xx touch chip as an example to configure I2C peripherals.
+Configure I2C peripheral TP device resources in the device tree. The path of the device tree is RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/simcom/tp_mipi.dtsi</p>
+<pre><code>&amp;gt1x {
+    status = &quot;disabled&quot;;
+};
+
+&amp;i2c1 {
+    gt9xx: gt9xx@5d {
+        status = &quot;disabled&quot;;
+        compatible = &quot;goodix,gt9xx&quot;;
+        reg = &lt;0x5d&gt;;
+        pinctrl-names = &quot;default&quot;;
+        pinctrl-0 = &lt;&amp;tp_gpio&gt;;
+        touch-gpio = &lt;&amp;gpio0 RK_PB5 GPIO_ACTIVE_HIGH&gt;;
+        reset-gpio = &lt;&amp;gpio0 RK_PB6 GPIO_ACTIVE_HIGH&gt;;
+        touchscreen-size-x = &lt;800&gt;;
+        touchscreen-size-y = &lt;1280&gt;;
+        ......
+    };
+};
+</code></pre>
+<p>Register and operate I2C devices in TP driver files, see gt9xx Touch Chip Driver Codes for details.</p>
+<p>Driver file path: RK356X_A11/kernel/drivers/input/touchscreen/gt9xx/gt9xx.c</p>
+<h3 id="23-i2c-commissioning">2.3 I2C Commissioning</h3>
+<p>Typically, I2C devices are controlled by kernel drivers. However, all devices on the bus can also be accessed from user mode through the "/dev/i2c-%d" interface, which is described and illustrated in the Documentation/i2c/dev-interface document below the kernel.
+You can use I2C tool open source tools for I2C device debugging, you need to download it directly for cross-compilation.</p>
+<h3 id="24-references">2.4 References</h3>
+<p>Refer to debugging documentation Please refer to:
+    RKDocs/common/I2C/Rockchip_Developer_Guide_I2C_CN.pdf</p>
+<h2 id="3-uart-configuration-and-debugging">3 UART configuration and debugging</h2>
+<p>SIM8666 has 3 uarts available, of which uart2 is debug port output system debug log; uart5 is used by users;<strong>uart9 is common with CIF_D6 CIF_D7, and only one uart9 and CIF interface can be enabled</strong>.</p>
+<p>uart functions are based on the 16550A serial port standard, and the complete module supports the following functions:
+    Support 5, 6, 7, 8 bits of data.
+    Support 1, 1.5, 2 bits stop bit. Odd parity and even parity are supported, mark parity and space parity are not supported.
+    It supports receive FIFO and transmit FIFO, usually 32 bytes or 64 bytes.
+    Support up to 4M baud rate, the actual support of baud rate requires chip clock frequency division strategy. Support interrupt transfer mode and DMA transfer mode.
+    Support hardware automatic flow control, RTS+CTS.</p>
+<p>Note: The UART functions supported in the actual chip shall be described in the UART chapter in the chip manual, and some UART functions will be appropriately tailored.</p>
+<h3 id="31-uart-configuration">3.1 UART configuration</h3>
+<p>uart DTS is configured in the number of devices as follows, and the path of the related device tree is RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>uart5: serial@fe690000 {
+    compatible = &quot;rockchip,rk3568-uart&quot;, &quot;snps,dw-apb-uart&quot;;
+    reg = &lt;0x0 0xfe690000 0x0 0x100&gt;;
+    interrupts = &lt;GIC_SPI 121 IRQ_TYPE_LEVEL_HIGH&gt;;
+    clocks = &lt;&amp;cru SCLK_UART5&gt;, &lt;&amp;cru PCLK_UART5&gt;;
+    clock-names = &quot;baudclk&quot;, &quot;apb_pclk&quot;;
+    reg-shift = &lt;2&gt;;
+    reg-io-width = &lt;4&gt;;
+    dmas = &lt;&amp;dmac0 10&gt;, &lt;&amp;dmac0 11&gt;;
+    pinctrl-names = &quot;default&quot;;
+    pinctrl-0 = &lt;&amp;uart5m0_xfer&gt;;
+    status = &quot;disabled&quot;;
+};
+</code></pre>
+<p>The file path of the device tree to open uart is: RK356X_A11/sunsea/project_sunsea/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<pre><code>&amp;uart5{
+    status = &quot;okay&quot;;/* Enable uart5 */
+    pinctrl-0 = &lt;&amp;uart5m1_xfer&gt;;/*Config uart5 pin */
+};
+
+/* Conflicts with the PDM1_SDI2 pins of Audio */
+&amp;uart7{
+    status = &quot;disabled&quot;;/* Disable uart7 */
+    pinctrl-0 = &lt;&amp;uart7m2_xfer&gt;;
+};
+
+&amp;uart9{
+    status = &quot;okay&quot;;/* Enable uart9 */
+    pinctrl-0 = &lt;&amp;uart9m2_xfer&gt;;
+};
+</code></pre>
+<p>Main driver files:</p>
+<pre><code>RK356X_A11/kernel/drivers/tty/serial/8250/8250_core.c   # 8250 UART driver core
+RK356X_A11/kernel/drivers/tty/serial/8250/8250_dw.c     # Synopsis DesignWare 8250 UART driver
+RK356X_A11/kernel/drivers/tty/serial/8250/8250_dma.c    # 8250 UART DMA driver
+RK356X_A11/kernel/drivers/tty/serial/8250/8250_port.c   # 8250 UART operation API
+RK356X_A11/kernel/drivers/tty/serial/8250/8250_early.c  # 8250串口early console driver
+</code></pre>
+<h3 id="32-common-serial-port-operation-commands">3.2 Common serial port operation commands</h3>
+<p>The stty tool is commonly used to configure and debug serial ports. Examples are as follows:</p>
+<pre><code>Display the information of a certain serial port parameter: stty -F /dev/ttyS1 -a
+Set the information of a certain serial port parameter: stty -F /dev/ttyS1 speed 115200 cs7 -parenb -cstopb -echo (7-bit data, no parity check, 1 stop bit, no echo)
+Set the serial port parameters: stty -F /dev/ttyS1 ispeed 115200 ospeed 115200 cs8;
+Send data through the serial port: echo &quot;abcdefg&quot; &gt; /dev/ttyS1;
+Display the received data of the serial port: cat /dev/ttyS1;
+The main functions of several key options of the stty command are as follows:
+Option parenb enables the terminal to perform parity check, while -parenb disables the check;
+Options cs5, cs6, cs7, and cs8 respectively set the character size to 5, 6, 7, and 8 bits;
+Options 300, 600, 1200, 2400, 4800, 9600, and 19200 set the baud rate;
+cstopb and -cstopb respectively set two or one stop bits;
+tabs makes the system use tab characters instead of a sequence of spaces, thus reducing the output volume. The option -tabs only uses spaces. This option should be used when the terminal cannot correctly handle tab characters (tab).
+</code></pre>
+<p>After uart is enabled, you can burn boot and run it. Generally, you will see device files such as ttyS0 and ttyS1 under/dev/, which correspond to uart. You can use the following method to check the pairing of ttyS0 S1 and uart1 uart2 in dts: udevadm info /dev/ttyS0 command to check the serial port information. Pay attention to the output address information, which corresponds to the address defined by uart in dtsi. For example, the ttyS0 address below corresponds to fe690000 of uart5.</p>
+<pre><code>udevadm info /dev/ttyS0
+P: /devices/platform/fe690000.serial/tty/ttyS0
+N: ttyS0
+L: 0
+S: serial/by-path/platform-fe690000.serial
+E: DEVPATH=/devices/platform/fe690000.serial/tty/ttyS0
+E: DEVNAME=/dev/ttyS0
+E: MAJOR=4
+E: MINOR=64
+E: SUBSYSTEM=tty
+E: USEC_INITIALIZED=4566989
+E: ID_PATH=platform-fe690000.serial
+E: ID_PATH_TAG=platform-fe690000_serial
+E: DEVLINKS=/dev/serial/by-path/platform-fe690000.serial
+E: TAGS=:systemd
+E: CURRENT_TAGS=:systemd:
+</code></pre>
+<h3 id="33-configuring-uart2-as-a-normal-serial-port">3.3 Configuring UART2 as a normal serial port</h3>
+<p>Configure uart2 as a normal serial port by modifying it as follows
+1. Close CONSOLE macro </p>
+<pre><code>RK356X_A11/kernel/arch/arm64/configs/rockchip_defconfig
+-CONFIG_SERIAL_8250_CONSOLE=y
++CONFIG_SERIAL_8250_CONSOLE is not set 
+# Disable CONFIG_SERIAL_8250_CONSOLE
+</code></pre>
+<p>Close fiq-debugger node </p>
+<pre><code>RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568-android.dtsi 
+    fiq-debugger {
+        compatible = &quot;rockchip,fiq-debugger&quot;;
+        ......
+        pinctrl-0 = &lt;&amp;uart2m0_xfer&gt;;
+    -   status = &quot;okay&quot;;
+    +   status = &quot;disabled&quot;;
+    };
+</code></pre>
+<ol>
+<li>Open uart2</li>
+</ol>
+<pre><code>RK356X_A11/sunsea/project_sunsea/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi
++&amp;uart2 {
++       status = &quot;okay&quot;;
++};
+</code></pre>
+<p>Recompile the kernel and burn it to take effect. When it takes effect, the/dev/ttyS2 node will be generated.</p>
+<h3 id="34-references">3.4 References</h3>
+<p>Refer to debugging documentation Please refer to:
+    RKDocs/common/UART/Rockchip_Developer_Guide_UART_CN.pdf</p>
+<p>​   RKDocs/common/UART/Rockchip_Developer_Guide_UART_FAQ_CN.pdf</p>
+<h2 id="4-spi-configuration-and-debugging">4 SPI configuration and debugging</h2>
+<p>The SIM8666 module offers up to three SPI interfaces. The SIM8666 SPI interface only supports master mode, defaults to Motorola SPI protocol, supports 8-bit and 16-bit, clock frequency up to 50MHz.
+SPI and other functions multiplex pin, please refer to UART/SPI/I2C/I2S interface multiplexing function table, according to the actual situation to turn off/enable the corresponding function.</p>
+<h3 id="41-spi-configuration">4.1 SPI Configuration</h3>
+<p>SPI DTS is configured in the number of devices as follows, and the path of the related device tree is: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>spi0: spi@fe610000 {
+    compatible = &quot;rockchip,rk3066-spi&quot;;
+    reg = &lt;0x0 0xfe610000 0x0 0x1000&gt;;
+    interrupts = &lt;GIC_SPI 103 IRQ_TYPE_LEVEL_HIGH&gt;;
+    #address-cells = &lt;1&gt;;
+    #size-cells = &lt;0&gt;;
+    clocks = &lt;&amp;cru CLK_SPI0&gt;, &lt;&amp;cru PCLK_SPI0&gt;;
+    clock-names = &quot;spiclk&quot;, &quot;apb_pclk&quot;;
+    dmas = &lt;&amp;dmac0 20&gt;, &lt;&amp;dmac0 21&gt;;
+    dma-names = &quot;tx&quot;, &quot;rx&quot;;
+    pinctrl-names = &quot;default&quot;, &quot;high_speed&quot;;
+    pinctrl-0 = &lt;&amp;spi0m0_cs0 &amp;spi0m0_cs1 &amp;spi0m0_pins&gt;;
+    pinctrl-1 = &lt;&amp;spi0m0_cs0 &amp;spi0m0_cs1 &amp;spi0m0_pins_hs&gt;;/* Config spi0 pin */
+    status = &quot;disabled&quot;;/* Disable spi0 */
+};
+</code></pre>
+<p>Main driver files:</p>
+<pre><code>RK356X_A11/kernel/drivers/spi/spi.c             SPI driver framework
+RK356X_A11/kernel/drivers/spi/spi-rockchip.c    Implementation of each interface of the SPI protocol
+RK356X_A11/kernel/drivers/spi/spidev.c          Create a SPI device node for user-level use.
+RK356X_A11/kernel/drivers/spi/spi-rockchip-test.c The SPI test driver needs to be manually added to the Makefile for compilation.
+RK356X_A11/kernel/Documentation/spi/spidev_test.c User-mode SPI testing tool
+</code></pre>
+<h3 id="42-enabling-spi">4.2 Enabling SPI</h3>
+<p>SPI is enabled in dts and the relevant device tree file path: RK356X_A11/sunsearch/project_sunsearch/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<pre><code>&amp;SPI0 {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<p>Recompile the kernel to generate boot.img, burn boot.img to the device, and query pwm-related information through shell commands after the device is started.</p>
+<pre><code># Cat SPI bus
+ls /sys/bus/spi/devices/
+# Check the information about SPI in the startup log.
+dmesg | grep -i spi
+</code></pre>
+<p>If you see initialization messages like rockchip-spi or spi_master, the driver is loaded.</p>
+<h3 id="43-references">4.3 References</h3>
+<p>Refer to debugging documentation Please refer to:
+    RKDocs/common/SPI/Rockchip_Developer_Guide_Linux_SPI_CN.pdf</p>
+<h2 id="5-pwm-configuration-and-debugging"><strong>5 PWM configuration and debugging</strong></h2>
+<p>The SIM8666 module offers up to 16 PWM interfaces. SIM8666 PWM interface and other functions multiplex pin, please refer to UART/SPI/I2C/I2S interface multiplexing function table, according to the actual situation to turn off/enable the corresponding function.</p>
+<h3 id="51-pwm-configuration">5.1 PWM Configuration</h3>
+<p>PWM DTS is configured in the number of devices as follows, and the path of the related device tree is: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/rk3568.dtsi</p>
+<pre><code>pwm4: pwm@fe6e0000 {
+    compatible = &quot;rockchip,rk3568-pwm&quot;, &quot;rockchip,rk3328-pwm&quot;;
+    reg = &lt;0x0 0xfe6e0000 0x0 0x10&gt;;
+    #pwm-cells = &lt;3&gt;;
+    pinctrl-names = &quot;active&quot;;
+    pinctrl-0 = &lt;&amp;pwm4_pins&gt;;
+    clocks = &lt;&amp;cru CLK_PWM1&gt;, &lt;&amp;cru PCLK_PWM1&gt;;
+    clock-names = &quot;pwm&quot;, &quot;pclk&quot;;
+    status = &quot;disabled&quot;;
+};
+</code></pre>
+<p>Main driver files:</p>
+<pre><code>RK356X_A11/kernel/drivers/pwm/pwm-rockchip.c
+</code></pre>
+<h3 id="52-pwm-debugging">5.2 PWM debugging</h3>
+<p>Enable PWM in dts, the relevant device tree file path: RK356X_A11/sunsearch/project_sunsearch/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<pre><code>&amp;pwm4 {
+    status = &quot;okay&quot;;
+};
+</code></pre>
+<p>Recompile the kernel to generate boot.img, burn boot.img to the device, and query pwm-related information through shell commands after the device is started.</p>
+<pre><code>cd /sys/class/pwm/
+ls
+pwmchip0  pwmchip1
+cd pwmchip0
+/sys/devices/platform/fe6e0000.pwm/pwm/pwmchip0
+</code></pre>
+<p>It can be seen that there are two pwm, the number starts from 0, pwm0 corresponds to the lowest number of all enabled pwm channels, which can also be confirmed by the peripheral address, for example, the peripheral address of pwm4 is fe 6e0000.</p>
+<p>PWM provides the interface of user layer. Under/sys/class/pwm/node, after PWM driver is successfully loaded, pwmchip0 directory will be generated under/sys/class/pwm/directory; writing 0 to export file means turning on pwm timer 0, which will generate pwm0 directory. Conversely, writing 0 to unexport will turn off pwm timer, and pwm0 directory will be deleted. There are several files in this directory:
+    enable: Write 1 to enable pwm, write 0 to turn pwm off;
+    polarity: normal or inverted two parameters to select, indicating that the output pin level flip;
+    duty_cycle: in normal mode, indicates the duration of high level in one cycle (unit: nanosecond); in reversed mode, indicates the duration of low level in one cycle (unit: nanosecond);
+    period: indicates the period of pwm wave (unit: nanosecond);
+The following is an example of pwmchip0, set pwm0 output frequency 100K, duty cycle 50%, polarity is positive polarity:</p>
+<pre><code>cd /sys/class/pwm/pwmchip0/
+echo 0 &gt; export
+cd pwm0
+echo 10000 &gt; period
+echo 5000 &gt; duty_cycle
+echo normal &gt; polarity
+echo 1 &gt; enable
+</code></pre>
+<h3 id="53-references">5.3 References</h3>
+<p>Refer to debugging documentation Please refer to:
+    RKDocs/common/PWM/Rockchip_Developer_Guide_Linux_PWM_CN.pdf     </p>
+<p>​   RKDocs/common/PWM/Rockchip_Developer_Guide_PWM_IR_CN.pdf</p>
+<h2 id="6-gpio-configuration-and-debugging">6 GPIO configuration and debugging</h2>
+<p>GPIO (General-Purpose Input/Output) is a general-purpose pin that can be dynamically configured and controlled during software operation. All GPIOs are in input mode after power-on, which can be set to pull-up or pull-down by software, and can also be set to interrupt pins. The drive strength is programmable.</p>
+<h3 id="61-gpio-number-calculation">6.1 GPIO Number Calculation</h3>
+<p>SIM8666 has 5 GPIO banks: GPIO0~GPIO4, each group is divided by A0~ A7, B0~B7, C0~ C7, D0~D7 as the number, the following formula is commonly used to calculate the pins:</p>
+<pre><code>GPIO pin calculation formula: pin = bank * 32 + number
+GPIO group number calculation formula: number = group * 8 + X
+</code></pre>
+<p>Here is how to calculate GPIO4_A6 pin:</p>
+<p>bank = 4;      //GPIO4_A6 =&gt; 4, bank ∈ [0,4]</p>
+<p>group = 0;      //GPIO4_A6 =&gt; 3, group ∈ {(A=0), (B=1), (C=2), (D=3)}</p>
+<p>X =6;       //GPIO4_A6 =&gt; 6, X ∈ [0,7]</p>
+<p>number = group * 8 + X = 0 * 8 + 6 = 6</p>
+<p>pin = bank*32 + number= 4 * 32 + 6 = 134</p>
+<h3 id="62-controlling-io-using-gpio-sysfs-interface">6.2 Controlling I/O Using GPIO sysfs Interface</h3>
+<p>GPIO4_A6 may be occupied by other functions, the following are examples only. When the pin is not multiplexed by other peripherals, we can export the pin for use by exporting</p>
+<pre><code>:/ # ls /sys/class/gpio/
+export     gpiochip128  gpiochip32   gpiochip64  unexport
+gpiochip0  gpiochip255  gpiochip500  gpiochip96
+:/ # echo 134 &gt; /sys/class/gpio/export
+:/ # ls /sys/class/gpio/
+export   gpiochip0    gpiochip255  gpiochip500  gpiochip96
+gpio134  gpiochip128  gpiochip32   gpiochip64   unexport
+:/ # ls /sys/class/gpio/gpio134
+active_low  device  direction  edge  power  subsystem  uevent  value
+:/ # cat /sys/class/gpio/gpio134/direction
+in
+:/ # cat /sys/class/gpio/gpio134/value
+0
+</code></pre>
+<h3 id="63-configure-and-use-gpio-and-irq-in-peripherals">6.3 Configure and use GPIO and IRQ in peripherals</h3>
+<p>Taking reset and irq GPIO of TP as examples, combined with TP driver, this paper introduces the configuration and use of GPIO driver.</p>
+<p>Configure GPIO resources in TP peripheral information of device tree. Path of device tree: RK356X_A11/kernel/arch/arm64/boot/dts/rockchip/simcom/tp_mipi.dtsi</p>
+<pre><code>&amp;gt1x {
+    status = &quot;disabled&quot;;
+};
+
+&amp;i2c1 {
+    gt9xx: gt9xx@5d {
+        status = &quot;disabled&quot;;
+        compatible = &quot;goodix,gt9xx&quot;;
+        reg = &lt;0x5d&gt;;
+        pinctrl-names = &quot;default&quot;;
+        pinctrl-0 = &lt;&amp;tp_gpio&gt;; /* 配置pin */
+        touch-gpio = &lt;&amp;gpio0 RK_PB5 GPIO_ACTIVE_HIGH&gt;;
+        reset-gpio = &lt;&amp;gpio0 RK_PB6 GPIO_ACTIVE_HIGH&gt;;/* bank 引脚编号 高有效 */
+        touchscreen-size-x = &lt;800&gt;;
+        touchscreen-size-y = &lt;1280&gt;;
+        ......
+    };
+};
+
+&amp;pinctrl {
+    tp {
+        tp_gpio: tp-gpio {
+            rockchip,pins =
+            /* bank 引脚编号 功能 电气属性-上拉 */
+                &lt;0 RK_PB6 RK_FUNC_GPIO &amp;pcfg_pull_up&gt;,
+                &lt;0 RK_PB5 RK_FUNC_GPIO &amp;pcfg_pull_up&gt;;
+        };
+    };
+};
+</code></pre>
+<p>In the TP driver file, get GPIO through Linux API, apply for and configure GPIO, driver file path: RK356X_A11/kernel/drivers/input/touchscreen/gt9xx/gt9xx.c</p>
+<p>GPIO/IRQ related APIs are used as follows:</p>
+<pre><code>......
+    /* Read the GPIO configuration numbers and flags of the touch-gpio and reset-gpio from the device tree. */
+    ts-&gt;irq_pin = of_get_named_gpio_flags(np, &quot;touch-gpio&quot;, 0, (enum of_gpio_flags *)(&amp;ts-&gt;irq_flags));
+    ts-&gt;rst_pin = of_get_named_gpio_flags(np, &quot;reset-gpio&quot;, 0, &amp;rst_flags);
+......
+    /* Apply for occupying this GPIO */
+    ret = gpio_request(ts-&gt;rst_pin, &quot;GTP_RST_PORT&quot;);
+    ret = gpio_request(ts-&gt;irq_pin, &quot;GTP_INT_IRQ&quot;);
+......
+    /* Set input mode */
+    gpio_direction_input(ts-&gt;rst_pin);
+    /* Set the output mode and output a low level. */
+    gpio_direction_output(ts-&gt;rst_pin, 0); 
+......
+    /*  The GPIO pin values are converted to the corresponding IRQ values. */
+    ts-&gt;irq=gpio_to_irq(ts-&gt;irq_pin); 
+    /*  The registration thread was interrupted. The upper part was set to NULL, and the lower part was set to goodix_ts_irq_handler with IRQF_ONESHOT. After the interrupt handling was completed, the interrupt line remained in a disabled state until the thread processing function was finished. Interrupt name */
+    ret = devm_request_threaded_irq(&amp;(ts-&gt;client-&gt;dev), ts-&gt;irq, NULL, 
+            goodix_ts_irq_handler, ts-&gt;irq_flags | IRQF_ONESHOT /*irq_table[ts-&gt;int_trigger_type]*/, ts-&gt;client-&gt;name, ts);
+......
+    /* Enable IRQ */
+    enable_irq(ts-&gt;client-&gt;irq);
+    /*  Disable IRQ */
+    disable_irq(ts-&gt;client-&gt;irq);
+......
+    /*  Read GPIO value */
+    gpio_get_value(ts-&gt;rst_pin);
+......
+    /*  Release GPIO */
+    gpio_free(ts-&gt;rst_pin);
+</code></pre>
+<h3 id="64-references">6.4 References</h3>
+<p>Refer to debugging documentation Please refer to:
+    RKDocs/common/IO-Domain/Rockchip_Developer_Guide_Linux_IO_DOMAIN_CN.pdf</p>
+<p>​   RKDocs/common/IO-Domain/Rockchip_PX30_Introduction_IO_Power_Domains_Configuration.pdf
+​   RKDocs/common/IOMMU/Rockchip_Developer_Guide_Linux_IOMMU_CN.pdf</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/" class="btn btn-neutral float-left" title="SIM866X_Firmware Burning Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_OTA Upgrade User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

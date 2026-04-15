@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_Customer Configuration Secureboot\\\u0026amp;AVB User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_Customer Configuration Secureboot\u0026AVB User Guide_V1.01.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#important-notes-must-pay-attention">️Important Notes (Must Pay Attention)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-preparation-must-be-confirmed">2 Preparation (must be confirmed)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-compilation-environment-validation">2.1 Compilation environment validation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-fallback-avblib-macro-configuration-to-default-state">2.2 Fallback AVBLIB Macro Configuration to Default State</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#23-check-the-initial-signature-status-of-the-device">2.3 Check the initial signature status of the device</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-secureboot-configuration">3 Secureboot Configuration&#x20;</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-code-modification">3.1 Code modification</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-generating-keys">3.2 Generating keys</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-compilation-scripts-for-modifying-signatures">3.3 Compilation scripts for modifying signatures</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-avb-signature-configuration">4 AVB Signature Configuration</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-compile-avbtool">4.1 Compile avbtool&#x20;</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#42-generating-atx_permanent_attributesbin">4.2 Generating atx_permanent_attributes.bin</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#43-code-modification">4.3 Code modification</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#44-avb-key-burning">4.4 AVB key burning</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-firmware-compilation">5 firmware compilation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-firmware-burning">6 firmware burning</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-start-verification">7 Start Verification</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#71-adb-validation">7.1 adb validation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#72-spl-uart-log-verification">7.2 SPL Uart Log Verification</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_customer-configuration-securebootavb-user-guide">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th><strong>versions</strong></th>
+<th><strong>date</strong></th>
+<th><strong>author</strong></th>
+<th><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.00</td>
+<td>2026.01.30</td>
+<td>Yang Huakun</td>
+<td>The first version</td>
+</tr>
+<tr>
+<td>1.01</td>
+<td>2026.03.24</td>
+<td>Yang Huakun</td>
+<td>second edition,modification point:<br/> Section 2.3.2 Replacement of AVB signature pre-log;<br/> Section 2.2 and Section 4.3.2 Modify Fallback AVB Macro Description<br/></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>This document is used to guide the configuration and verification process of custom<strong>Secure Boot (Secure Boot)</strong> and<strong>AVB (Android Verified Boot) signature mechanism</strong>on<strong>SIM866X_A11 (based on RK356X platform) intelligent module</strong>. Through this guide, users can implement a complete boot chain trust check from BootROM → SPL → U-Boot → Android system, thus ensuring the integrity and security of device firmware and preventing unauthorized code from being loaded or tampered with.</p>
+<p>In the safety system:</p>
+<ul>
+<li><strong>Secure Boot is</strong>mainly used to verify the underlying boot chain (such as SPL, U-Boot, TEE, etc.) to ensure that boot components are trusted to sign</li>
+<li><strong>AVB</strong>is used to verify Android system partitions (such as boot, system, vendor, etc.) to ensure that the system image has not been illegally modified.</li>
+<li>The combination of the two can achieve an end-to-end complete chain of trust</li>
+</ul>
+<p>This solution supports customer-defined keys and provides two AVB Key burning methods (built-in or tool burning) to meet the different needs of R &amp; D verification and mass production deployment.</p>
+<hr />
+<h3 id="important-notes-must-pay-attention">️Important Notes (Must Pay Attention)</h3>
+<ol>
+<li><strong>Rollback protection</strong></li>
+<li>Default can be disabled</li>
+<li>Once turned on, the device will<strong>not be able to refresh back to the old firmware version</strong></li>
+<li>Unified management in combination with rollback index</li>
+<li><strong>Fuse (eFuse) irreversible</strong></li>
+<li>Once the-<code>--burn-key-hash</code>executed, the device enters a safe state (fuse)</li>
+<li>After fuse:<ul>
+<li>❌ No longer allowed to burn in unsigned (unfused) firmware</li>
+<li>❌ Firmware that cannot be replaced with another key signature</li>
+<li>✅ Only allow the firmware with the same key and a valid signature to be booted.</li>
+</ul>
+</li>
+<li><strong>The key must be kept properly.</strong></li>
+<li>Secure Boot and AVB use private keys once lost:<ul>
+<li>It will no longer be possible to generate a bootable firmware.</li>
+<li>The equipment may be permanently unable to be upgraded.</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-preparation-must-be-confirmed">2 Preparation (must be confirmed)</h2>
+<h3 id="21-compilation-environment-validation">2.1 Compilation environment validation</h3>
+<p>Verify that the build server fdtput version is version 1.4.5.</p>
+<pre><code class="language-bash">$ fdtput --version
+#Version: DTC 1.4.5
+</code></pre>
+<p>If the fdtput version is less than 1.4.5, upgrade by executing the following command.</p>
+<pre><code class="language-bash">$ sudo apt-get install device-tree-compiler
+</code></pre>
+<h3 id="22-fallback-avblib-macro-configuration-to-default-state">2.2 Fallback AVBLIB Macro Configuration to Default State</h3>
+<p>AVB signature needs to open AVB_LIBAVB related macro, otherwise after setting "BOARD_AVB_ENABLE := true" in Section 4.3.1 below, AVB cannot be started normally due to incomplete AVB function configuration found during boot process, so the boot fails, and the automatic restart enters fastboot mode.</p>
+<p>Modifications:</p>
+<pre><code>sunsea/project_sunsea/SIM8666_&lt;YourProject&gt;/ProjectConfig.mk
+</code></pre>
+<p>Modify the content:</p>
+<pre><code class="language-diff">-UBOOT_CONFIG_ANDROID_AVB=n
++UBOOT_CONFIG_ANDROID_AVB=y
+
+-UBOOT_CONFIG_AVB_LIBAVB=n
+-UBOOT_CONFIG_AVB_LIBAVB_AB=n
+-UBOOT_CONFIG_AVB_LIBAVB_ATX=n
+-UBOOT_CONFIG_AVB_LIBAVB_USER=n
+-UBOOT_CONFIG_RK_AVB_LIBAVB_USER=n
+
++UBOOT_CONFIG_AVB_LIBAVB=y
++UBOOT_CONFIG_AVB_LIBAVB_AB=y
++UBOOT_CONFIG_AVB_LIBAVB_ATX=y
++UBOOT_CONFIG_AVB_LIBAVB_USER=y
++UBOOT_CONFIG_RK_AVB_LIBAVB_USER=y
+</code></pre>
+<p><strong>Note</strong>: if sunsea/project_sunsea/SIM8666_<YourProject>/ProjectConfig.mk does not exist above 6 macros, please ignore; if there is, you must change n to y.</p>
+<h3 id="23-check-the-initial-signature-status-of-the-device">2.3 Check the initial signature status of the device</h3>
+<p>Burn the unfused firmware first to ensure it can boot properly.</p>
+<h4 id="231-adb-view-mode">2.3.1 ADB View Mode</h4>
+<p>Read:</p>
+<ul>
+<li>
+<p>fuse.programmed=0 → Device not yet fused</p>
+</li>
+<li>
+<p>androidboot.verifiedbootstate=orange or other → AVB not signed</p>
+</li>
+</ul>
+<h4 id="232-spl-uart-log-view-mode">2.3.2 SPL UART Log View Mode</h4>
+<p>The default serial port board is connected to 3.3V and the baud rate is 1500000.</p>
+<p>Secureboot: Verify that verified-boot is 0.</p>
+<pre><code>## verified-boot:0 //固件签名但是芯片没有熔断(1表示有熔断),没有进行hash有效性验证，即编译的时候没有加--burn-key-hash
+sha256.rsa2048:dev+
+ro11back index:1&gt;=0(min)，OK //滚版本，即编译时加--ro1back-index-uboot
+//下面这些是uboot完整性的校验
+## checking atf-1 0x00040000   ... sha256+ 0K
+## checking uboot 0x00a00000   ... sha256+ 0K
+## Checking fdt 0x00b2a018   ... sha256+ 0K
+## checking atf-2 0xfdcc9000   ... sha256+ 0K
+## checking atf-3 0xfdcd0000   ... sha256+ 0K
+## checking optee 0x00200000   ... sha256+ 0K
+</code></pre>
+<p>AVB: Confirm vboot is 0.</p>
+<pre><code class="language-markdown">vboot=0, AvB images, AVB verify
+read is device unlocked( ops returned that device is UNLOCKED
+avb slot verify.c:762: ERROR: vbmeta: Error verifying vbmeta image: OK NOT SIGNED
+get image from preloaded partition...
+ANDROID: Hash OK
+</code></pre>
+<h2 id="3-secureboot-configuration">3 Secureboot Configuration&#x20;</h2>
+<h3 id="31-code-modification">3.1 Code modification</h3>
+<p>Enter the u-boot directory, open configs/rk3568_defconfig for the corresponding platform, and select the following configuration:</p>
+<pre><code class="language-makefile">$ vim u-boot/configs/rk3568_defconfig
+#Required
+CONFIG_FIT_SIGNATURE=y
+CONFIG_SPL_FIT_SIGNATURE=y
+CONFIG_AVB_VBMETA_PUBLIC_KEY_VALIDATE=y
+
+#Optional. Note: You can first default to not adding rollback protection for these two lines.
+CONFIG_FIT_ROLLBACK_PROTECT=y //boot.img prevents rollback
+CONFIG_SPL_FIT_ROLLBACK_PROTECT=y //uboot.img prevents rollback
+
+Notes: During compilation, the comments // should be removed or replaced with #; otherwise, the compilation will fail.
+</code></pre>
+<h3 id="32-generating-keys">3.2 Generating keys</h3>
+<pre><code class="language-bash">$ cd u-boot/
+$ mkdir -p keys
+$ ../rkbin/tools/rk_sign_tool kk --bits 2048 --out .
+$ cp private_key.pem keys/dev.key &amp;&amp; cp public_key.pem keys/dev.pubkey
+$ openssl req -batch -new -x509 -key keys/dev.key -out keys/dev.crt
+</code></pre>
+<p>Note: Perform this step once and save the keys properly.</p>
+<pre><code>u-boot/private_key.pem
+u-boot/public_key.pem
+u-boot/keys/    #Need backup
+├── dev.crt
+├── dev.key
+└── dev.pubkey
+</code></pre>
+<h3 id="33-compilation-scripts-for-modifying-signatures">3.3 Compilation scripts for modifying signatures</h3>
+<p>Secureboot to sign u-boot, need to compile u-boot, and compile u-boot in the root directory of the global compilation script build.sh has been defined, so add fuse parameters in the following command.</p>
+<pre><code class="language-makefile">chmod 0777 build.sh
+#Modify inside  build.sh from
+cd u-boot &amp;&amp; make clean &amp;&amp; make mrproper &amp;&amp; make distclean &amp;&amp; ./make.sh $UBOOT_DEFCONFIG &amp;&amp; cd -
+# to
+cd u-boot &amp;&amp; make clean &amp;&amp; make mrproper &amp;&amp; make distclean &amp;&amp; ./make.sh $UBOOT_DEFCONFIG --spl-new --burn-key-hash &amp;&amp; cd -
+</code></pre>
+<p>Parameter Description:
+--spl-new //repackage signed spl.
+--burn-key-hash //Add this compile option to cause chip fusing when booting after firmware burn.</p>
+<p>Additional parameters:
+--rollback-index-uboot<version number>//Set the version number. When anti-rollback is configured in the config in Section 3.1, this compilation option needs to be added, otherwise it is not needed [Note: You can leave it out for the first verification].</p>
+<h2 id="4-avb-signature-configuration">4 AVB Signature Configuration</h2>
+<h3 id="41-compile-avbtool">4.1 Compile avbtool&#x20;</h3>
+<pre><code class="language-bash">$ mmma external/avb/ -j16
+</code></pre>
+<p>The requested URL/host/linux-x86/bin/avbtool was not found on this server.
+Note: or directly use the source code external/avb/avbtool (this can be used first, the following command as an example).</p>
+<h3 id="42-generating-atx_permanent_attributesbin">4.2 Generating atx_permanent_attributes.bin</h3>
+<p>Modify Product ID:</p>
+<pre><code class="language-diff">$ cd external/avb/
+$ vim test/avb_atx_generate_test_data
+
+
+
+diff --git a/test/avb_atx_generate_test_data b/test/avb_atx_generate_test_data
+index 1b8bb2b..2220688 100755
+--- a/test/avb_atx_generate_test_data
++++ b/test/avb_atx_generate_test_data
+@@ -48,7 +48,7 @@ AVBTOOL=$(dirname &quot;$0&quot;)/../avbtool
+ echo AVBTOOL = ${AVBTOOL}
+
+ # Get a zero product ID.
+-echo 00000000000000000000000000000000 | xxd -r -p - atx_product_id.bin
++echo 00000000000000000000000000000123 | xxd -r -p - atx_product_id.bin
+
+ # Generate key pairs.
+ if [ ! -f testkey_atx_prk.pem ]; then
+</code></pre>
+<p>Note: The product ID has 16 digits, and the value can be defined by yourself; the avb_atx_generate_test_data command below will generate atx_permanent_attributes.bin.</p>
+<p>Note: The above example is 123.</p>
+<p>Execute the command to generate avb keys.</p>
+<pre><code class="language-bash">$ cd external/avb/test/data
+$ rm -rf testkey_atx*.pem
+$ ../avb_atx_generate_test_data
+</code></pre>
+<p>Note: The pem key needs to be regenerated only once, i.e. the script needs to be executed only once.</p>
+<pre><code class="language-bash">$ git status #查看生成效果 ，请备份好以下modified文件！只需要生成一次！！！
+        modified:   ../avb_atx_generate_test_data
+        modified:   atx_metadata.bin
+        modified:   atx_permanent_attributes.bin
+        modified:   atx_pik_certificate.bin
+        modified:   atx_product_id.bin
+        modified:   atx_psk_certificate.bin
+        modified:   atx_puk_certificate.bin
+        modified:   atx_unlock_challenge.bin
+        modified:   atx_unlock_credential.bin
+        modified:   testkey_atx_pik.pem
+        modified:   testkey_atx_prk.pem
+        modified:   testkey_atx_psk.pem
+        modified:   testkey_atx_puk.pem
+</code></pre>
+<h3 id="43-code-modification">4.3 Code modification</h3>
+<h4 id="431-amendment-1">4.3.1 Amendment 1&#x20;</h4>
+<p>\$ device/rockchip/rk356x/rk3566_r/BoardConfig.mk</p>
+<pre><code class="language-diff">@@ -37,3 +37,9 @@ ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
+   include device/rockchip/common/BoardConfig_AB.mk
+   TARGET_RECOVERY_FSTAB := device/rockchip/rk356x/rk3566_r/recovery.fstab_AB
+ endif
++
++BOARD_AVB_ENABLE := true
++BOARD_AVB_ALGORITHM := SHA256_RSA4096
++BOARD_AVB_KEY_PATH := external/avb/test/data/testkey_atx_psk.pem
++BOARD_AVB_METADATA_BIN_PATH := external/avb/test/data/atx_metadata.bin
++BOARD_AVB_ROLLBACK_INDEX := 0 
+</code></pre>
+<p>Macroanalysis:
+BOARD_AVB_ENABLE := true //Turn AVB on
+BOARD_AVB_ALGORITM:= SHA256_RSA4096 //Configure encryption algorithm
+BOARD_AVB_KEY_PATH := external/avb/test/data/testkey_atx_psk.pem //key storage path
+BOARD_AVB_METADATA_BIN_PATH := external/avb/test/data/atx_metadata. bin//Specify metadata file
+#BOARD_AVB_ROLLBACK_INDEX := 0 //Configure anti-version rollback, which is not enabled by default. It is enabled according to requirements and needs to be modified with uboot.</p>
+<h4 id="432-amendment-ii">4.3.2 Amendment II</h4>
+<p>sunsea/project_sunsea/SIM8666_\<YourProject>/ProjectConfig.mk
+Note: After compiling ProjectConfig.mk, UBOOT-related macros will be automatically summarized into u-boot/configs/rk3568_defconfig, so relevant macro configurations can be uniformly configured into sunsea/project_sunsea/SIM8666_\<YourProject>/ProjectConfig.mk.</p>
+<pre><code class="language-diff">@@ -41,13 +41,18 @@ UBOOT_CONFIG_PHY_ROCKCHIP_NANENG_COMBOPHY=n
+ UBOOT_CONFIG_PHY_ROCKCHIP_NANENG_EDP=n
+
+#Should the spl uart log be printed? This log also enables you to view the current fuse status. For detailed instructions, please refer to Section 7.
+-UBOOT_CONFIG_DISABLE_CONSOLE=y
++#UBOOT_CONFIG_DISABLE_CONSOLE=y
+
+#AVB Signature-related Macro Configuration
++UBOOT_CONFIG_FIT_SIGNATURE=y
++UBOOT_CONFIG_SPL_FIT_SIGNATURE=y
++UBOOT_CONFIG_RK_AVB_LIBAVB_ENABLE_ATH_UNLOCK=y
++UBOOT_CONFIG_AVB_VBMETA_PUBLIC_KEY_VALIDATE=y
++#UBOOT_CONFIG_ANDROID_AVB_ROLLBACK_INDEX=y
+ ####################################################################
+ # kernel
+ ###############
+</code></pre>
+<p>Macroanalysis:
+//Optional
++UBOOT_CONFIG_ANDROID_AVB_ROLLBACK_INDEX=y //The anti-rollback function is configured only if this function is required. It needs to be configured together with BOARD_AVB_ROLLBACK_INDEX on the lower surface of the device.</p>
+<p>Note: Add prefix "UBOOT_" to AVB macro in ProjectConfig.mk.</p>
+<h3 id="44-avb-key-burning">4.4 AVB key burning</h3>
+<h4 id="441-method-1-built-in-avb-key-in-code">4.4.1 Method 1: Built-in AVB key in code</h4>
+<p>AVB key is integrated into uboot code and burned into the machine together with firmware. There is no need to burn AVB key with AVB key tool. This way SDK does not support it by default. You need to patch it under uboot.&#x20;</p>
+<p>Patch path: RKDocs/common/security/patch/u-boot/0001-avb-add-embedded-key.patch</p>
+<pre><code class="language-bash">$ cd u-boot
+$ patch -p1 &lt; ../RKDocs/common/security/patch/u-boot/0001-avb-add-embedded-key.patch
+</code></pre>
+<p>Patch will modify the following two files,
+u-boot/common/android_bootloader.c
+u-boot/lib/avb/libavb_user/avb_ops_user.c
+Because before reorganization, the sunsea/project_sunsea/SIM8666_\<your\_project> file will be copied to the trunk code;</p>
+<p>So check if sunsea/project_sunsea/SIM8666_\<your\_project>/u-boot/common/android_bootloader.c file exists
+Then synchronously modify u-boot/common/android_bootloader.c to sunsea/project_sunsea/SIM8666_\<your\_project>/u-boot/common/android_bootloader.c.</p>
+<p><strong>public key extraction</strong></p>
+<pre><code class="language-bash">$ cd ../external/avb/
+$ avbtool extract_public_key --key ../../external/avb/test/data/testkey_atx_psk.pem --output avb_root_pub.bin
+$ xxd -i avb_root_pub.bin &gt; ../../external/avb/test/data/avb_root_pub.h
+$ cat test/data/avb_root_pub.h
+</code></pre>
+<p>Generate the following files:</p>
+<pre><code>avb_root_pub.bin
+test/data/avb_root_pub.h
+</code></pre>
+<p><strong>Replacement public key</strong>&#x20;</p>
+<p>The extracted public key (external/avb/test/data/avb_root_pub.h) replaces the avb_root_pub array in u-boot/lib/avb/libavb_user/avb_ops_user.c.</p>
+<p>Note:</p>
+<p>The array name in test/data/avb_root_pub.h is avb_root_pub_bin[], which needs to be changed to avb_root_pub[] consistent with the patch.</p>
+<pre><code class="language-bash">vim u-boot/lib/avb/libavb_user/avb_ops_user.c
+</code></pre>
+<pre><code class="language-c">avb_ops_user.c代码搜索示例：
+u-boot/lib/avb/libavb_user$ grep -rniC10 &quot;avb_root_pub&quot; avb_ops_user.c
+178-            blk_dread(dev_desc, part_info.start + offset_blk,
+179-                      blkcnt, buffer_temp);
+180-
+181-    memcpy(buffer_temp, buffer + (offset % 512), num_bytes);
+182-    blk_dwrite(dev_desc, part_info.start + offset_blk, blkcnt, buffer);
+183-    free(buffer_temp);
+184-
+185-    return AVB_IO_RESULT_OK;
+186-}
+187-
+188:unsigned char avb_root_pub[] = {
+189-  0x00, 0x00, 0x10, 0x00, 0x1f, 0x8e, 0x54, 0x9b, 0xb2, 0xda, 0x61, 0xf0,
+190-  0x8c, 0x2d, 0xf2, 0x94, 0x21, 0x45, 0x77, 0x33, 0x64, 0x64, 0xf2, 0x8e,
+191-  0x89, 0x9c, 0xeb, 0x52, 0x23, 0xda, 0xc1, 0xef, 0x0e, 0x15, 0xc4, 0xc9,
+192-  0x3b, 0x24, 0x8c, 0xbf, 0x4f, 0xcf, 0xe1, 0xf2, 0x0b, 0x0e, 0x26, 0x6e,
+193-  0x84, 0x2d, 0x55, 0x2f, 0x03, 0x07, 0xaa, 0xe4, 0x7a, 0x91, 0x08, 0x6f,
+194-  0xc8, 0xff, 0x5f, 0x7d, 0xe1, 0xe5, 0x5b, 0x72, 0x47, 0x96, 0x28, 0x88,
+195-  0x14, 0xe7, 0x12, 0xef, 0x56, 0xf1, 0x94, 0xed, 0x5a, 0xa9, 0x56, 0x05,
+196-  0xb7, 0x7a, 0x85, 0xf0, 0x0f, 0xea, 0x15, 0x5a, 0xee, 0x2e, 0x3a, 0x70,
+197-  0x87, 0x8e, 0xfe, 0x58, 0x43, 0xdf, 0x5a, 0x70, 0x84, 0x79, 0x7d, 0xa2,
+198-  0xf1, 0x11, 0xa9, 0x50, 0x58, 0x7f, 0xa1, 0xcd, 0x84, 0xcb, 0x50, 0xef,
+</code></pre>
+<h4 id="442-method-2-avb-key-programming-tool-programming">4.4.2 Method 2: AVB key programming tool programming</h4>
+<p>Note: For method 2, please burn the firmware after compiling the firmware in section 5; for example, burn update.img, and verify this step after the device can be booted normally, and write the Avb key to the firmware.</p>
+<p>Writing tool: AvbKeyWriter (RKTools/windows/AvbKeyWriter-v1.0.1.7z).</p>
+<p>Burn the source file: external/avb/test/data produced in Section 4.2 generates atx_permanent_attributes.bin.</p>
+<p>Burning mode: check at-perm-attr to import external/avb/test/data produced in section 4.2 to generate atx_permanent_attributes.bin and enter loader mode.</p>
+<p>Enter loader mode to add:</p>
+<pre><code class="language-bash">$ adb reboot loader
+</code></pre>
+<p>Click on "Power on button to burn."</p>
+<p><img alt="" src="../resource/%E5%9B%BE4-1%E5%BC%80%E6%9C%BA%E6%8C%89%E9%94%AE%E8%BF%9B%E8%A1%8C%E7%83%A7%E5%86%99.png" /></p>
+<h2 id="5-firmware-compilation">5 firmware compilation</h2>
+<pre><code class="language-bash">$ cd sunsea
+format:  ./make_build_ap.sh [PROJECT] [MODULE] [userdebug/user] [thread_number]
+example: ./make_build_ap.sh SIM8666_&lt;YourPorject&gt; all userdebug 16
+</code></pre>
+<p>build module:[all] [U] [CK] [A] [p] [o] [u] [d]
+No ARGS means use default build option
+all = -AUCKuo  build all
+U = build uboot   #Secureboot Signature Section
+C = build kernel with Clang
+K = build kernel
+A = build android
+p = will build packaging in IMAGE
+o = build OTA package
+u = build update.img
+cf = generate and copy all configuration files only.</p>
+<p>For example, compile rockdev/Image-rk3566_r/update.img</p>
+<h2 id="6-firmware-burning">6 firmware burning</h2>
+<p>During the development phase, AndroidTool is used to burn the compiled firmware.</p>
+<p><img alt="" src="../resource/%E5%9B%BE6-1%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%86%99.png" /></p>
+<p>In the mass production phase, the update.img compiled in Section 5 is written using the mass production tool.</p>
+<p><img alt="" src="../resource/%E5%9B%BE6-2%E5%9B%BA%E4%BB%B6%E9%87%8F%E4%BA%A7%E7%83%A7%E5%86%99.png" /></p>
+<h2 id="7-start-verification">7 Start Verification</h2>
+<h3 id="71-adb-validation">7.1 adb validation</h3>
+<p>If the fuse can be turned on normally,
+Reading fuse.programmed=1 means Secureboot has fused successfully,
+Read androidboot.verifiedbootstate=green for avb to take effect, orange or otherwise not.</p>
+<pre><code class="language-bash">$ adb root &amp;&amp; adb shell
+$ cat /proc/cmdline
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal androidboot.dtb_idx=0 androidboot.dtbo_idx=0 fuse.programmed=1 androidboot.vbmeta.device=PARTUUID=dd040000-0000-4029-8000-669c00003143 androidboot.vbmeta.avb_version=1.1 androidboot.vbmeta.device_state=locked androidboot.vbmeta.hash_alg=sha256 androidboot.vbmeta.size=8640 androidboot.vbmeta.digest=c37843bae8763be29fea10117dd4b3dbb83e820dd4c10a5753e2943ca2d4d243 androidboot.veritymode=enforcing androidboot.verifiedbootstate=green androidboot.serialno=71ad384dc0367574 loglevel=7 androidboot.wificountrycode=CN androidboot.hardware=rk30board androidboot.console=ttyFIQ0 firmware_class.path=/vendor/etc/firmware init=/init rootwait ro init=/init loop.max_part=7 buildvariant=userdebug console=ttyFIQ0 androidboot.boot_devices=fe310000.sdhci,fe330000.nandc
+</code></pre>
+<h3 id="72-spl-uart-log-verification">7.2 SPL Uart Log Verification</h3>
+<p>Prerequisite: SPL UART Log needs to be enabled before compiling.
+Specific steps:
+Confirm comments in sunsea/project_sunsea/SIM8666_\<YourProject>/ProjectConfig.mk,</p>
+<pre><code class="language-diff">-UBOOT_CONFIG_DISABLE_CONSOLE=y
++#UBOOT_CONFIG_DISABLE_CONSOLE=y
+</code></pre>
+<p>And make sure that the CONFIG_DISABLE_CONSOLE=y line is not in u-boot/configs/rk3568_defconfig.</p>
+<p>Success logs are as follows:</p>
+<p>Verified-boot: 1 #1 indicates fuse</p>
+<p>Vboot=1, SecureBoot enabled, AVB verify</p>
+<pre><code>···
+U-Boot SPL board init
+U-Boot SPL 2017.09-gf4c11e73cd-dirty #chenyubin (Jan 29 2026 - 10:37:52)
+Trying to boot from MMC2
+Card did not respond to voltage select!
+mmc_init: -95, time 10
+spl: mmc init failed with error: -95
+Trying to boot from MMC1
+SPL: A/B-slot: _a, successful: 0, tries-remain: 7
+Trying fit image at 0x4000 sector
+
+Verified-boot: 1  #1表示有熔断
+sha256,rsa2048:dev## Verified-boot: 1
++
+Checking atf-1 0x00040000 ... sha256(0d5225a4ab...) + OK
+Checking uboot 0x00a00000 ... sha256(ed07016bdd...) + OK
+Checking fdt 0x00b00ca0 ... sha256(19b435a15b...) + OK
+Checking atf-2 0xfdcc1000 ... sha256(3e94d16e6a...) + OK
+Checking atf-3 0x0006b000 ... sha256(fde0ef262b...) + OK
+Checking atf-4 0xfdcd0000 ... sha256(befba422b8...) + OK
+Checking atf-5 0xfdcce000 ... sha256(c9eb312bf2...) + OK
+Checking atf-6 0x00069000 ... sha256(6ede7a3b44...) + OK
+Checking optee 0x08400000 ... sha256(af414b9c9f...) + OK
+Jumping to U-Boot(0x00a00000) via ARM Trusted Firmware(0x00040000)
+Total: 140.963 ms
+INFO: Preloader serial: 2
+.....
+
+  aclk_perimid 300000 KHz
+  hclk_perimid 150000 KHz
+  pclk_pmu 100000 KHz
+Net:   eth1: ethernet@fe010000
+Hit key to stop autoboot('CTRL+C'):  0 
+ANDROID: reboot reason: "(none)"
+optee api revision: 2.0
+Vboot=1, SecureBoot enabled, AVB verify 
+read_is_device_unlocked() ops returned that device is LOCKED
+ANDROID: Hash OK
+custom_target_serialno: pInfo.serialno:, pInfo.loglevel:.
+custom sn isnot exist
+loglevel_value = 7.
+Booting IMAGE kernel at 0x00280000 with fdt at 0x0a100000...
+···
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/" class="btn btn-neutral float-left" title="SIM866X_Camera Driver Development Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/" class="btn btn-neutral float-right" title="SIM866X_Firmware Burning Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

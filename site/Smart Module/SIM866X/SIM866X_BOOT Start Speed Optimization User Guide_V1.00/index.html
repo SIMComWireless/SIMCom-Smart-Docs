@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X_BOOT Start Speed Optimization User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X_BOOT Start Speed Optimization User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X_BOOT Start Speed Optimization User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X_BOOT Start Speed Optimization User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-scope-of-application">1 Scope of application</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-presents">2 presents</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#21-purpose-of-this-article">2.1 Purpose of this article</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-system-application-clipping">3 System Application Clipping</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-system-application-clipping-framework">3.1 System Application Clipping Framework</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-system-language-tailoring">4 system language tailoring</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-languages_defaultmk-content-clipping">4.1 languages_default.mk content clipping</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#42-locale_configxml-content-clipping">4.2 Locale_config.xml Content Clipping</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-launcher-starts-early">5 Launcher starts early</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#51-opening-usap">5.1 Opening USAP</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#52-launcher-add-properties">5.2 Launcher Add Properties</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#53-bootanimation-closes-early">5.3 BootAnimation closes early</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-bootchart-installation-and-use">6 Bootchart installation and use</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#61-installation-of-bootchart-under-ubuntu">6.1 Installation of bootchart under Ubuntu</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#62-enable-bootchart">6.2 Enable bootchart</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#63-capture-bootchart">6.3 Capture Bootchart</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X_BOOT Start Speed Optimization User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x_boot-start-speed-optimization-user-guide">SIM866X_BOOT Start Speed Optimization User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.03.04</td>
+<td style="text-align: left;">Zhang Haifeng</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-scope-of-application">1 Scope of application</h2>
+<p>This document applies to Android11 version of SIMCom SIM866X series.</p>
+<h2 id="2-presents">2 presents</h2>
+<h3 id="21-purpose-of-this-article">2.1 Purpose of this article</h3>
+<p>This document provides SIM866X Android 11 platform startup optimization scheme and further optimization modification method.
+By referencing this application documentation, developers can quickly understand and develop related businesses.</p>
+<h2 id="3-system-application-clipping">3 System Application Clipping</h2>
+<p>In the Android Build System, a system application clipping framework has been added to clip redundant system applications in a unified location.</p>
+<h3 id="31-system-application-clipping-framework">3.1 System Application Clipping Framework</h3>
+<p>The requested URL/make/target/product/simcom_all_clean_product.mk was not found on this server.
+It reads as follows:</p>
+<p><img alt="1-cut" src="../resource/1-cut.png" /></p>
+<p>If a new app needs to be cropped, simply continue adding the NAME of the cropped app in the PRODUCT_SIMCOM_DEL_PKG field in simcom_all_clean_product.mk, as formatted.</p>
+<h2 id="4-system-language-tailoring">4 system language tailoring</h2>
+<p>The languages supported in the system are tailored, and the system language resources are distributed in two system files, Languages_default.mk and locale_config.xml.</p>
+<h3 id="41-languages_defaultmk-content-clipping">4.1 languages_default.mk content clipping</h3>
+<p>build/make/target/product/languages_default.mk</p>
+<p>Delete redundant language, leaving only needed language</p>
+<p><img src="resource/2-cut.png" alt="2-cut" style="zoom: 60%;" /></p>
+<h3 id="42-locale_configxml-content-clipping">4.2 Locale_config.xml Content Clipping</h3>
+<p>frameworks/base/core/res/res/values/locale_config.xml
+Delete redundant language, leaving only needed language</p>
+<p><img src="resource/3-cut.png" alt="2-cut" style="zoom: 53%;" /></p>
+<p>Full language information:
+Support for these 19 languages
+Chinese zh_CN
+    <item>zh-Hans-CN</item> <!-- Chinese (Simplified, China) -->
+    <item>zh-Hans-HK</item> <!-- Chinese (Simplified, Hong Kong) -->
+    <item>zh-Hans-MO</item> <!-- Chinese (Simplified, Macao) -->
+    <item>zh-Hans-SG</item> <!-- Chinese (Simplified, Singapore) -->
+Traditional Chinese zh_TW
+    <item>zh-Hant-HK</item> <!-- Chinese (Traditional, Hong Kong) -->
+    <item>zh-Hant-MO</item> <!-- Chinese (Traditional, Macao) -->
+    <item>zh-Hant-TW</item> <!-- Chinese (Traditional, Taiwan) -->
+English en_US
+    <item>en-US</item> <!-- English (United States) -->
+German de_DE
+    <item>de-AT</item> <!-- German (Austria) -->
+    <item>de-BE</item> <!-- German (Belgium) -->
+    <item>de-CH</item> <!-- German (Switzerland) -->
+    <item>de-DE</item> <!-- German (Germany) -->
+    <item>de-IT</item> <!-- German (Italy) -->
+    <item>de-LI</item> <!-- German (Liechtenstein) -->
+    <item>de-LU</item> <!-- German (Luxembourg) -->
+Spanish es_ES
+    <item>es-AR</item> <!-- Spanish (Argentina) -->
+    <item>es-BO</item> <!-- Spanish (Bolivia) -->
+    <item>es-BR</item> <!-- Spanish (Brazil) -->
+    <item>es-BZ</item> <!-- Spanish (Belize) -->
+    <item>es-CL</item> <!-- Spanish (Chile) -->
+    <item>es-CO</item> <!-- Spanish (Colombia) -->
+    <item>es-CR</item> <!-- Spanish (Costa Rica) -->
+    <item>es-CU</item> <!-- Spanish (Cuba) -->
+    <item>es-DO</item> <!-- Spanish (Dominican Republic) -->
+    <item>es-EA</item> <!-- Spanish (Ceuta & Melilla) -->
+    <item>es-EC</item> <!-- Spanish (Ecuador) -->
+    <item>es-ES</item> <!-- Spanish (Spain) -->
+    <item>es-GQ</item> <!-- Spanish (Equatorial Guinea) -->
+    <item>es-GT</item> <!-- Spanish (Guatemala) -->
+    <item>es-HN</item> <!-- Spanish (Honduras) -->
+    <item>es-IC</item> <!-- Spanish (Canary Islands) -->
+    <item>es-MX</item> <!-- Spanish (Mexico) -->
+    <item>es-NI</item> <!-- Spanish (Nicaragua) -->
+    <item>es-PA</item> <!-- Spanish (Panama) -->
+    <item>es-PE</item> <!-- Spanish (Peru) -->
+    <item>es-PH</item> <!-- Spanish (Philippines) -->
+    <item>es-PR</item> <!-- Spanish (Puerto Rico) -->
+    <item>es-PY</item> <!-- Spanish (Paraguay) -->
+    <item>es-SV</item> <!-- Spanish (El Salvador) -->
+    <item>es-US</item> <!-- Spanish (United States) -->
+    <item>es-UY</item> <!-- Spanish (Uruguay) -->
+    <item>es-VE</item> <!-- Spanish (Venezuela) -->
+Portugal pt_PT
+    <item>pt-AO</item> <!-- Portuguese (Angola) -->
+    <item>pt-BR</item> <!-- Portuguese (Brazil) -->
+    <item>pt-CH</item> <!-- Portuguese (Switzerland) -->
+    <item>pt-CV</item> <!-- Portuguese (Cape Verde) -->
+    <item>pt-GQ</item> <!-- Portuguese (Equatorial Guinea) -->
+    <item>pt-GW</item> <!-- Portuguese (Guinea-Bissau) -->
+    <item>pt-LU</item> <!-- Portuguese (Luxembourg) -->
+    <item>pt-MO</item> <!-- Portuguese (Macao) -->
+    <item>pt-MZ</item> <!-- Portuguese (Mozambique) -->
+    <item>pt-PT</item> <!-- Portuguese (Portugal) -->
+    <item>pt-ST</item> <!-- Portuguese (São Tomé & Príncipe) -->
+    <item>pt-TL</item> <!-- Portuguese (Timor-Leste) -->
+Korean ko_KR
+    <item>ko-KP</item> <!-- Korean (North Korea) -->
+    <item>ko-KR</item> <!-- Korean (South Korea) -->
+Italian it_IT
+    <item>it-CH</item> <!-- Italian (Switzerland) -->
+    <item>it-IT</item> <!-- Italian (Italy) -->
+    <item>it-SM</item> <!-- Italian (San Marino) -->
+    <item>it-VA</item> <!-- Italian (Vatican City) -->
+Dutch nl_NL
+    <item>nl-AW</item> <!-- Dutch (Aruba) -->
+    <item>nl-BE</item> <!-- Dutch (Belgium) -->
+    <item>nl-BQ</item> <!-- Dutch (Caribbean Netherlands) -->
+    <item>nl-CW</item> <!-- Dutch (Curaçao) -->
+    <item>nl-NL</item> <!-- Dutch (Netherlands) -->
+    <item>nl-SR</item> <!-- Dutch (Suriname) -->
+    <item>nl-SX</item> <!-- Dutch (Sint Maarten) -->
+Russian ru_RU
+    <item>ru-BY</item> <!-- Russian (Belarus) -->
+    <item>ru-KG</item> <!-- Russian (Kyrgyzstan) -->
+    <item>ru-KZ</item> <!-- Russian (Kazakhstan) -->
+    <item>ru-MD</item> <!-- Russian (Moldova) -->
+    <item>ru-RU</item> <!-- Russian (Russia) -->
+    <item>ru-UA</item> <!-- Russian (Ukraine) -->
+French        fr_CAfr_FR
+    <item>fr-BE</item> <!-- French (Belgium) -->
+    <item>fr-BF</item> <!-- French (Burkina Faso) -->
+    <item>fr-BI</item> <!-- French (Burundi) -->
+    <item>fr-BJ</item> <!-- French (Benin) -->
+    <item>fr-BL</item> <!-- French (St. Barthélemy) -->
+    <item>fr-CA</item> <!-- French (Canada) -->
+    <item>fr-CD</item> <!-- French (Congo - Kinshasa) -->
+    <item>fr-CF</item> <!-- French (Central African Republic) -->
+    <item>fr-CG</item> <!-- French (Congo - Brazzaville) -->
+    <item>fr-CH</item> <!-- French (Switzerland) -->
+    <item>fr-CI</item> <!-- French (Côte d’Ivoire) -->
+    <item>fr-CM</item> <!-- French (Cameroon) -->
+    <item>fr-DJ</item> <!-- French (Djibouti) -->
+    <item>fr-DZ</item> <!-- French (Algeria) -->
+    <item>fr-FR</item> <!-- French (France) -->
+    <item>fr-GA</item> <!-- French (Gabon) -->
+    <item>fr-GF</item> <!-- French (French Guiana) -->
+    <item>fr-GN</item> <!-- French (Guinea) -->
+    <item>fr-GP</item> <!-- French (Guadeloupe) -->
+    <item>fr-GQ</item> <!-- French (Equatorial Guinea) -->
+    <item>fr-HT</item> <!-- French (Haiti) -->
+    <item>fr-KM</item> <!-- French (Comoros) -->
+    <item>fr-LU</item> <!-- French (Luxembourg) -->
+    <item>fr-MA</item> <!-- French (Morocco) -->
+    <item>fr-MC</item> <!-- French (Monaco) -->
+    <item>fr-MF</item> <!-- French (St. Martin) -->
+    <item>fr-MG</item> <!-- French (Madagascar) -->
+    <item>fr-ML</item> <!-- French (Mali) -->
+    <item>fr-MQ</item> <!-- French (Martinique) -->
+    <item>fr-MR</item> <!-- French (Mauritania) -->
+    <item>fr-MU</item> <!-- French (Mauritius) -->
+    <item>fr-NC</item> <!-- French (New Caledonia) -->
+    <item>fr-NE</item> <!-- French (Niger) -->
+    <item>fr-PF</item> <!-- French (French Polynesia) -->
+    <item>fr-PM</item> <!-- French (St. Pierre & Miquelon) -->
+    <item>fr-RE</item> <!-- French (Réunion) -->
+    <item>fr-RW</item> <!-- French (Rwanda) -->
+    <item>fr-SC</item> <!-- French (Seychelles) -->
+    <item>fr-SN</item> <!-- French (Senegal) -->
+    <item>fr-SY</item> <!-- French (Syria) -->
+    <item>fr-TD</item> <!-- French (Chad) -->
+    <item>fr-TG</item> <!-- French (Togo) -->
+    <item>fr-TN</item> <!-- French (Tunisia) -->
+    <item>fr-VU</item> <!-- French (Vanuatu) -->
+    <item>fr-WF</item> <!-- French (Wallis & Futuna) -->
+    <item>fr-YT</item> <!-- French (Mayotte) -->
+Turkish tr_TR
+    <item>tr-CY</item> <!-- Turkish (Cyprus) -->
+    <item>tr-TR</item> <!-- Turkish (Turkey) -->
+Vietnam vi_VN
+    <item>vi-VN</item> <!-- Vietnamese (Vietnam) -->
+Polish pl_PL
+    <item>pl-PL</item> <!-- Polish (Poland) -->
+Arabic ar_EGar_XB
+    <item>ar-AE</item> <!-- Arabic (United Arab Emirates) -->
+    <item>ar-AE-u-nu-latn</item> <!-- Arabic (United Arab Emirates, Western Digits) -->
+    <item>ar-BH</item> <!-- Arabic (Bahrain) -->
+    <item>ar-BH-u-nu-latn</item> <!-- Arabic (Bahrain, Western Digits) -->
+    <item>ar-DJ</item> <!-- Arabic (Djibouti) -->
+    <item>ar-DJ-u-nu-latn</item> <!-- Arabic (Djibouti, Western Digits) -->
+    <item>ar-DZ</item> <!-- Arabic (Algeria) -->
+    <item>ar-DZ-u-nu-arab</item> <!-- Arabic (Algeria, Arabic-Indic Digits) -->
+    <item>ar-EG</item> <!-- Arabic (Egypt) -->
+    <item>ar-EG-u-nu-latn</item> <!-- Arabic (Egypt, Western Digits) -->
+    <item>ar-EH</item> <!-- Arabic (Western Sahara) -->
+    <item>ar-EH-u-nu-arab</item> <!-- Arabic (Western Sahara, Arabic-Indic Digits) -->
+    <item>ar-ER</item> <!-- Arabic (Eritrea) -->
+    <item>ar-ER-u-nu-latn</item> <!-- Arabic (Eritrea, Western Digits) -->
+    <item>ar-IL</item> <!-- Arabic (Israel) -->
+    <item>ar-IL-u-nu-latn</item> <!-- Arabic (Israel, Western Digits) -->
+    <item>ar-IQ</item> <!-- Arabic (Iraq) -->
+    <item>ar-IQ-u-nu-latn</item> <!-- Arabic (Iraq, Western Digits) -->
+    <item>ar-JO</item> <!-- Arabic (Jordan) -->
+    <item>ar-JO-u-nu-latn</item> <!-- Arabic (Jordan, Western Digits) -->
+    <item>ar-KM</item> <!-- Arabic (Comoros) -->
+    <item>ar-KM-u-nu-latn</item> <!-- Arabic (Comoros, Western Digits) -->
+    <item>ar-KW</item> <!-- Arabic (Kuwait) -->
+    <item>ar-KW-u-nu-latn</item> <!-- Arabic (Kuwait, Western Digits) -->
+    <item>ar-LB</item> <!-- Arabic (Lebanon) -->
+    <item>ar-LB-u-nu-latn</item> <!-- Arabic (Lebanon, Western Digits) -->
+    <item>ar-LY</item> <!-- Arabic (Libya) -->
+    <item>ar-LY-u-nu-arab</item> <!-- Arabic (Libya, Arabic-Indic Digits) -->
+    <item>ar-MA</item> <!-- Arabic (Morocco) -->
+    <item>ar-MA-u-nu-arab</item> <!-- Arabic (Morocco, Arabic-Indic Digits) -->
+    <item>ar-MR</item> <!-- Arabic (Mauritania) -->
+    <item>ar-MR-u-nu-latn</item> <!-- Arabic (Mauritania, Western Digits) -->
+    <item>ar-OM</item> <!-- Arabic (Oman) -->
+    <item>ar-OM-u-nu-latn</item> <!-- Arabic (Oman, Western Digits) -->
+    <item>ar-PS</item> <!-- Arabic (Palestine) -->
+    <item>ar-PS-u-nu-latn</item> <!-- Arabic (Palestine, Western Digits) -->
+    <item>ar-QA</item> <!-- Arabic (Qatar) -->
+    <item>ar-QA-u-nu-latn</item> <!-- Arabic (Qatar, Western Digits) -->
+    <item>ar-SA</item> <!-- Arabic (Saudi Arabia) -->
+    <item>ar-SA-u-nu-latn</item> <!-- Arabic (Saudi Arabia, Western Digits) -->
+    <item>ar-SD</item> <!-- Arabic (Sudan) -->
+    <item>ar-SD-u-nu-latn</item> <!-- Arabic (Sudan, Western Digits) -->
+    <item>ar-SO</item> <!-- Arabic (Somalia) -->
+    <item>ar-SO-u-nu-latn</item> <!-- Arabic (Somalia, Western Digits) -->
+    <item>ar-SS</item> <!-- Arabic (South Sudan) -->
+    <item>ar-SS-u-nu-latn</item> <!-- Arabic (South Sudan, Western Digits) -->
+    <item>ar-SY</item> <!-- Arabic (Syria) -->
+    <item>ar-SY-u-nu-latn</item> <!-- Arabic (Syria, Western Digits) -->
+    <item>ar-TD</item> <!-- Arabic (Chad) -->
+    <item>ar-TD-u-nu-latn</item> <!-- Arabic (Chad, Western Digits) -->
+    <item>ar-TN</item> <!-- Arabic (Tunisia) -->
+    <item>ar-TN-u-nu-arab</item> <!-- Arabic (Tunisia, Arabic-Indic Digits) -->
+    <item>ar-XB</item> <!-- Arabic (Pseudo-Bidi) -->
+    <item>ar-YE</item> <!-- Arabic (Yemen) -->
+    <item>ar-YE-u-nu-latn</item> <!-- Arabic (Yemen, Western Digits) -->
+Japanese ja_JP
+    <item>ja-JP</item> <!-- Japanese (Japan) -->
+Hebrew iw_IL
+    <item>iw-IL</item> <!-- Hebrew (Israel) -->
+Greek el_GR
+    <item>el-CY</item> <!-- Greek (Cyprus) -->
+    <item>el-GR</item> <!-- Greek (Greece) -->
+Thai th_TH
+    <item>th-TH</item> <!-- Thai (Thailand) --></p>
+<h2 id="5-launcher-starts-early">5 Launcher starts early</h2>
+<h3 id="51-opening-usap">5.1 Opening USAP</h3>
+<p>Starting with Android Q(10), Google introduced a new mechanism: USAP(Unspecialized App Process). A batch of processes are created in advance by prefork, and when an application is launched, the already created processes are directly assigned to it, thus eliminating the action of fork, so performance can be improved.</p>
+<p>The requested URL/make/target/product/simcom_all_clean_product.mk was not found on this server.</p>
+<p><img src="resource/4-cut.png" alt="2-cut" style="zoom: 75%;" /></p>
+<h3 id="52-launcher-add-properties">5.2 Launcher Add Properties</h3>
+<p>The application-level directBootAware attribute means that all components in the application are marked as crypto-aware.
+The defaultToDeviceProtectedStorage property is used to redirect the default app storage location to DE storage space instead of CE storage space.
+Without this attribute, the app will only launch after the user unlock state.</p>
+<p>Add to AndroidManifest.xml in Launcher app.
+<application
+android:directBootAware="true"
+android:defaultToDeviceProtectedStorage="true"></p>
+<h3 id="53-bootanimation-closes-early">5.3 BootAnimation closes early</h3>
+<p>Add SystemProperties.set("service.bootanim.exit", "1") to onWindowsDrawn method in ActivityRecord.java;
+If you need to delay the launcher display, you can add this code content after this process.
+The requested URL/system/default/system/images/base/default/jquery.jpg was not found on this server. ActivityRecord.java</p>
+<p><img src="resource/5-cut.png" alt="2-cut" style="zoom: 60%;" /></p>
+<h2 id="6-bootchart-installation-and-use">6 Bootchart installation and use</h2>
+<h3 id="61-installation-of-bootchart-under-ubuntu">6.1 Installation of bootchart under Ubuntu</h3>
+<p>There are two tools that need to be installed: bootchart and pybootchartgui.
+sudo apt-get install bootchart
+sudo apt-get install pybootchartgui</p>
+<h3 id="62-enable-bootchart">6.2 Enable bootchart</h3>
+<p>adb shell touch /data/bootchart/enabled</p>
+<h3 id="63-capture-bootchart">6.3 Capture Bootchart</h3>
+<p>Manually perform an adb reboot to restart the device
+After booting, you will find the following files generated in the/data/bootchart/directory:</p>
+<p>adb shell ls -l data/bootchart/
+total 4792
+-rw-rw-rw- 1 root root       0 2018-03-13 10:58 enabled
+-rw-rw-rw- 1 root root    1115 1970-02-02 00:32 header
+-rw-rw-rw- 1 root root  180357 2018-03-13 11:18 proc_diskstats.log
+-rw-rw-rw- 1 root root 4635657 2018-03-13 11:18 proc_ps.log
+-rw-rw-rw- 1 root root   80531 2018-03-13 11:18 proc_stat.log</p>
+<p>Execute scripts in android source code: ./ system/core/init/grab-bootchart.sh, which generates bootchart.png in the directory where the command was executed</p>
+<p>According to Bootchart, each histogram is a process, and the order in which the process starts at different times. CPU and IO resource usage of different processes and total CPU usage and IO usage.</p>
+<p><img src="resource/6-cut.png" alt="2-cut" style="zoom: 80%;" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/" class="btn btn-neutral float-left" title="SIM866X_AP_Screen Rotation Application User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/" class="btn btn-neutral float-right" title="SIM866X_Boot Animation Modification User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

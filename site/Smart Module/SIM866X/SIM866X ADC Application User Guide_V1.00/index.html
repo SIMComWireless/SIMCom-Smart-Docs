@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>SIM866X ADC Application User Guide - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "SIM866X ADC Application User Guide";
+        var mkdocs_page_input_path = "Smart Module\\SIM866X\\SIM866X ADC Application User Guide_V1.00.md";
+        var mkdocs_page_url = "/Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >OpenSDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >SIM866X</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">SIM866X ADC Application User Guide</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#version-history">Version History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#1-introduction">1 Introduction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-saradc-pin">2 SARADC pin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-device-tree-configuration">3 Device tree configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-makefile-configuration">4 Makefile configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-driver-configuration">5 Driver configuration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-saradc-debug">6 SARADC Debug</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Smart Module</li>
+          <li class="breadcrumb-item">SIM866X</li>
+      <li class="breadcrumb-item active">SIM866X ADC Application User Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="sim866x-adc-application-user-guide">SIM866X ADC Application User Guide</h1>
+<h2 id="version-history"><strong>Version History</strong></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>versions</strong></th>
+<th style="text-align: left;"><strong>date</strong></th>
+<th style="text-align: left;"><strong>author</strong></th>
+<th style="text-align: left;"><strong>remark</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.00</td>
+<td style="text-align: left;">2026.3.7</td>
+<td style="text-align: left;">Wu Wenxiang</td>
+<td style="text-align: left;">The first version</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-introduction">1 Introduction</h2>
+<p>Read this document for a quick overview of ADC configuration and debugging tips.</p>
+<h2 id="2-saradc-pin">2 SARADC pin</h2>
+<p>SARADC has 8 SARCADC_VIN(0~7) in total,If there is a demand, the corresponding channel can be configured.</p>
+<h2 id="3-device-tree-configuration">3 Device tree configuration</h2>
+<p>The file path of the related device tree is: RK356X_A11/sunsearch/project_sunsearch/SIM8666/kernel/arch/arm64/boot/dts/rockchip/simcom/simcom.dtsi</p>
+<pre><code class="language-c">/* For example, in the EVB, channels 1, 4, 5, 6 and 7 are not in use and can be utilized for other functions. */
+/{
+...
+    simcom_adc: simcom_adc {
+        compatible = &quot;simcom,simcom_adc&quot;;
+        io-channels = &lt;&amp;saradc 0x1&gt;,
+                        &lt;&amp;saradc 0x4&gt;,
+                        &lt;&amp;saradc 0x5&gt;,
+                        &lt;&amp;saradc 0x6&gt;,
+                        &lt;&amp;saradc 0x7&gt;;
+        io-channel-names = &quot;saradc1&quot;,&quot;saradc4&quot;,&quot;saradc5&quot;,&quot;saradc6&quot;,&quot;saradc7&quot;;
+    };
+};
+</code></pre>
+<p>One thing to note is the configuration of saradc reference voltage. Look at the hardware design. The reference voltage of SIM8666 is 1.8V. Use EVB default configuration.
+vref-supply = &lt;&amp;vccadc_ref&gt;;
+The reference voltage corresponding to the aradc value needs to be set according to the specific hardware environment. The maximum is 1.8V, and the corresponding saradc value is 1024. The voltage and adc value are linear.</p>
+<h2 id="4-makefile-configuration">4 Makefile configuration</h2>
+<p>Kernel macro configuration path: RK356X_A11/sunsea/project_sunsea/SIM8666/ProjectConfig.mk
+Just add the following macro:
+CONFIG_SIMCOM_ADC=y</p>
+<h2 id="5-driver-configuration">5 Driver configuration</h2>
+<p>Kernel driver path: kernel/drivers/iio/adc/simcom_adc.c
+Drive explanation:
+    1. Depending on the "iio" framework, you need to initialize struct iio_dev structure. For details, please see rockchip_saradc_probe function when
+    indio_dev in, and finally call iio_device_register(indio_dev) to register indio_dev , waiting for the "input" framework to use.</p>
+<pre><code>2. Take "adc-key" as an example, you need to initialize struct input_polled_dev. For details, see
+adc_keys_probe function in drivers/input/keyboard/adc-keys.c, call
+input_register_polled_device(poll_dev); Register poll_dev in the "input" frame.
+
+3. When using getevent test, assuming adc-key is event0, getevent -s /dev/input/event0 will
+adc_keys_poll -&gt; iio_read_channel_processed -&gt; iio_channel_read -&gt;
+&gt; chan-&gt;indio_dev -&gt;info-&gt;read_raw(rockchip_saradc_read_raw) -&gt;iio_convert_raw_to_processed_unlocked
+rockchip_saradc_read_raw is an important function, analyze it one by one:
+1. writel_relaxed(8, info-&gt;regs + SARADC_DLY_PU_SOC); Sets the interval between power up and start of sampling to 8 sclk cycles.
+2. writel(SARADC_CTRL_POWER_CTRL | (chan-&gt;channel &amp; SARADC_CTRL_CHN_MASK) | SARADC_CTRL_IRQ_ENABLE,info-&gt;regs + SARADC_CTRL); 
+    a) "power up saradc" 
+    b) Set sampling channel
+    c) Enable interrupt to start sampling
+3. wait_for_completion_timeout(&amp;info-&gt;completion, SARADC_TIMEOUT) Wait for saradc to complete sampling and generate an interrupt.
+
+4. *val = info-&gt;last_val; Store sampled data in val.
+5. Finally, iio_convert_raw_to_processed_unlocked is called to convert the sampled data to the corresponding voltage value.
+
+Interrupt handling process: rockchip_saradc_isr function:
+1. info-&gt;last_val = readl_relaxed(info-&gt;regs + SARADC_DATA); Save data for use in step 4 above.
+2. writel_relaxed(0, info-&gt; rees + SARADC_CTRL); clear interrupt, and "power down saradc", close saradc.
+
+A complete sampling process is rockchip_saradc_read_raw configure saradc, turn saradc on, start sampling, wait for interrupt, clear interrupt in interrupt function, turn saradc off.
+</code></pre>
+<p>The requested URL/iio/adc/simcom_adc.c was not found on this server.
+    saradc_vin1 --&gt;  proc/saradc1
+    saradc_vin4 --&gt;  proc/saradc4
+    saradc_vin5 --&gt;  proc/saradc5
+    saradc_vin6 --&gt;  proc/saradc6
+    saradc_vin7 --&gt;  proc/saradc7</p>
+<h2 id="6-saradc-debug">6 SARADC Debug</h2>
+<p>Results read:
+    cat proc/saradcx //Read the adc voltage value of the corresponding channel, the value range is 0~1800 (unit is mv)</p>
+<p>Refer to RKDocs/common/SARADC/Rockchip_Developer_Guide_Linux_SARADC_CN.pdf for debugging documentation</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/" class="btn btn-neutral float-left" title="ASR CAT1 OpenSDK User Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/" class="btn btn-neutral float-right" title="SIM866X_A11_Compilation User Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../../LTE/OpenSDK/ASR%20CAT1%20OpenSDK%20User%20Guide/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../SIM866X_A11_Compilation%20User%20Guide_V1.01/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
