@@ -1,7 +1,7 @@
 site_name: SIMCom Smart Docs
 theme:
   name: readthedocs
-favicon: assert/favicon.ico
+  favicon: assert/favicon.ico
 copyright: Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.
 site_author: SIMCom Wireless Solutions Limited.
 site_description: SIMCom Smart Docs is a comprehensive documentation platform for SIMCom's smart products, providing detailed information, guides, and resources to help users understand and utilize our products effectively.
