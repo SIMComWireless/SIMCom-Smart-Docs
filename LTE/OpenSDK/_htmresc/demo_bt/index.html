@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/_htmresc/demo_bt/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>demo_bt - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_bt";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\_htmresc\\demo_bt.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/_htmresc/demo_bt/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" > htmresc</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">demo_bt</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+          <li class="breadcrumb-item"> htmresc</li>
+      <li class="breadcrumb-item active">demo_bt</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_bt">demo_bt</h1>
+<p>Location: <code>SIMCOM_SDK_SET/sc_demo/V1/src/demo_bt.c</code></p>
+<h2 id="overview">Overview</h2>
+<p>This demo provides an interactive UART-driven menu for controlling the classic Bluetooth (BR/EDR) subsystem on the A7672 module. It demonstrates the legacy Bluetooth API (prefixed with <code>sAPI_BT*</code>) for device management, device discovery, pairing, and SPP (Serial Port Profile) data communication. The demo is conditionally compiled under the <code>BT_SUPPORT</code> preprocessor flag.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Bluetooth device open/close lifecycle management</li>
+<li>MAC address get/set operations</li>
+<li>Bluetooth device name get/set</li>
+<li>Device scanning (inquiry) with configurable duration and response count</li>
+<li>Device pairing and unpairing with automatic IO capability negotiation</li>
+<li>SPP connection, disconnection, and bidirectional data transfer</li>
+<li>RSSI reading of connected devices</li>
+<li>UART-interactive menu system for manual testing</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_bt.h</code> -- Legacy Bluetooth API header (not found as a standalone file in the SDK inc directory; likely provided through the older BT subsystem build chain). Provides <code>sAPI_BT*</code> function declarations and the old-style <code>struct sc_bt_*</code> types.</li>
+<li><code>simcom_os.h</code> -- RTOS primitives (<code>sAPI_TaskSleep</code>)</li>
+<li><code>simcom_common.h</code> -- Common type definitions (<code>UINT8</code>, <code>UINT32</code>)</li>
+<li><code>simcom_debug.h</code> -- Debug logging (<code>sAPI_Debug</code>)</li>
+<li><code>simcom_uart.h</code> -- UART I/O for interactive menu (<code>UartReadValue</code>, <code>UartReadLine</code>)</li>
+<li><code>uart_api.c</code> -- Additional UART helpers (<code>PrintfOptionMenu</code>, <code>PrintfResp</code>)</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_BTOpen()</code> -- Opens the Bluetooth device. Returns 0 on success.</li>
+<li><code>sAPI_BTClose()</code> -- Closes the Bluetooth device.</li>
+<li><code>sAPI_BTRegisterEventHandle(bt_event_handle_cb)</code> -- Registers the asynchronous event callback. Must be called before <code>sAPI_BTOpen()</code>.</li>
+<li><code>sAPI_BTSetIOCap(NO_DISPALY_AND_NO_KEYBOARD)</code> -- Sets the IO capability mode for pairing negotiation.</li>
+<li><code>sAPI_BTGetIOCap(&amp;local_io_capability)</code> -- Retrieves the current local IO capability.</li>
+<li><code>sAPI_BTSetAddress(addr)</code> -- Sets the BT MAC address (6-byte array). Must be set before open.</li>
+<li><code>sAPI_BTGetAddress(address.bytes)</code> -- Gets the current BT MAC address.</li>
+<li><code>sAPI_BTSetName(name, len)</code> -- Sets the device name.</li>
+<li><code>sAPI_BTGetName(name, &amp;nameLen)</code> -- Gets the device name and its length.</li>
+<li><code>sAPI_BTScanStart(scan_duration, scan_response_num)</code> -- Starts inquiry scan. Duration range: 1-48 (unit: 1.28s). Response count: &gt;0.</li>
+<li><code>sAPI_BTScanStop()</code> -- Stops an ongoing inquiry scan.</li>
+<li><code>sAPI_BTPairStart(addr)</code> -- Initiates pairing with a peer device.</li>
+<li><code>sAPI_BTPairAccept(pair_mode, addr, 0)</code> -- Accepts an incoming pairing request with a specified mode (JUST_WORK_MODE, NUMERIC_COMPARISON_MODE).</li>
+<li><code>sAPI_BTUnpair(addr)</code> -- Removes pairing with a specific device.</li>
+<li><code>sAPI_BTPaired(bt_device_record_array, &amp;num)</code> -- Gets the list of paired devices (array of <code>struct sc_bt_device_record</code>, max 10).</li>
+<li><code>sAPI_BTSPPConnect(addr)</code> -- Initiates an SPP connection to a paired device.</li>
+<li><code>sAPI_BTSPPDisconnect(port)</code> -- Disconnects an SPP connection by port number.</li>
+<li><code>sAPI_BTSPPSend(data, length, port)</code> -- Sends data over an SPP connection.</li>
+<li><code>sAPI_BTReadRssi()</code> -- Reads the RSSI of the current connection.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Build the project with <code>BT_SUPPORT</code> defined.</li>
+<li>Enter the BTDemo menu (usually via the main demo dispatcher).</li>
+<li><strong>Open</strong>: Select option 1 to register the event callback and open BT.</li>
+<li><strong>Set Address/Name</strong>: Optionally configure MAC address (option 3) and device name (option 5) before or after open.</li>
+<li><strong>Scan</strong>: Option 7 starts inquiry; discovered devices appear in the event callback as <code>SC_BTTASK_IND_INQUIRY_RESULT</code>.</li>
+<li><strong>Pair</strong>: Option 9 initiates pairing; the event callback handles <code>SC_BTTASK_IND_PAIRING_REQUEST</code> and auto-accepts based on IO capability matrix.</li>
+<li><strong>SPP Connect</strong>: Option 12 connects SPP to a paired device address.</li>
+<li><strong>SPP Send/Receive</strong>: Option 14 sends data; incoming data arrives as <code>SC_BTTASK_IND_SPP_DATA_IND</code>.</li>
+<li><strong>Close</strong>: Option 2 closes the BT subsystem.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li><strong>Event-driven architecture</strong>: All asynchronous operations (scan results, pairing, SPP events) flow through the single <code>bt_event_handle_cb</code> callback, dispatched by <code>msg-&gt;event_type</code> (SC_BTTASK_IND_TYPE_COMMON or SC_BTTASK_IND_TYPE_SPP).</li>
+<li><strong>Pairing mode matrix</strong>: A 5x5 lookup table (<code>g_bt_pairing_mode</code>) maps local IO capability x peer IO capability to the resulting pairing mode. JUST_WORK and NUMERIC_COMPARISON are auto-accepted; PASSKEY_ENTRY is not auto-handled in this demo.</li>
+<li><strong>SPP frame size limit</strong>: The constant <code>BT_SPP_MAX_FRAME_SIZE</code> is 200 bytes. Received data exceeding <code>min(bt_spp_max_frame_size, 200)</code> is discarded with a warning.</li>
+<li><strong>MAC address byte order</strong>: The demo reverses byte order when displaying addresses (bytes[5]..bytes[0] for display vs bytes[0]..bytes[5] for storage). Input addresses are parsed from hex string in MSB-first order and stored in reverse.</li>
+<li><strong>Port tracking</strong>: <code>bt_spp_port</code> and <code>bt_spp_max_frame_size</code> are tracked as static globals, updated on SPP connect/disconnect events, and reset to 0 on shutdown.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always register the event callback before calling <code>sAPI_BTOpen()</code>.</li>
+<li>Set the MAC address and device name before opening BT if a custom identity is needed.</li>
+<li>Check the SPP port and max frame size before sending data; do not exceed the frame size limit.</li>
+<li>Use <code>sAPI_TaskSleep</code> with a short delay (e.g., 200ms) before auto-accepting pairing to avoid race conditions.</li>
+<li>For production code, handle PASSKEY_ENTRY_MODE explicitly rather than relying on auto-accept.</li>
+<li>Always call <code>sAPI_BTClose()</code> on shutdown and wait for the <code>SC_BTTASK_IND_SHUTDOWN_COMPLETE</code> event before reinitializing.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_ble/" class="btn btn-neutral float-left" title="demo_ble"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_bt_stack/" class="btn btn-neutral float-right" title="demo_bt_stack">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_ble/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_bt_stack/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
