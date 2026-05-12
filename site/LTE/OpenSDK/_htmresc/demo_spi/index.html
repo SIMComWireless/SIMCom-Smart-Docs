@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/_htmresc/demo_spi/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>demo_spi - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_spi";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\_htmresc\\demo_spi.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/_htmresc/demo_spi/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" > htmresc</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">demo_spi</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+          <li class="breadcrumb-item"> htmresc</li>
+      <li class="breadcrumb-item active">demo_spi</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_spi">demo_spi</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_spi.c</p>
+<h2 id="overview">Overview</h2>
+<p>This demo provides three separate SPI test functions: <code>SpiDemo()</code> for basic SPI read/write operations using the new extended API, <code>SpiNorDemo()</code> for SPI NOR flash operations, and <code>SpiNandDemo()</code> for SPI NAND flash operations. The basic demo targets an XM25QU128B flash IC for device ID reading and status register manipulation.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>SPI bus initialization with configurable clock, mode, CS mode, and channel</li>
+<li>SPI flash device ID reading (both standard and DMA modes)</li>
+<li>SPI flash status register read/write</li>
+<li>SPI NOR flash init, read ID, sector erase, read, and write operations</li>
+<li>SPI NAND flash init, read ID, block erase, page read, page write, and YAFFS2 filesystem testing</li>
+<li>Support for both legacy (<code>sAPI_SPIConfigInit</code>) and new extended (<code>sAPI_SpiConfigInitEx</code>) initialization APIs</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>sc_spi.h</code> -- Defines <code>SC_SPI_DEV</code> struct, <code>SC_SPI_CLOCK</code> enums (with <code>SPIDRV_SUPPORT</code> variant providing finer granularity), <code>SC_SPI_MODE</code> (4 SPI modes), <code>CS_MODE</code> (SSP/GPIO/Custom), <code>SC_SPI_ReturnCode</code>, and all <code>sAPI_Spi*()</code> and <code>sAPI_ExtNorFlash*()</code> prototypes</li>
+<li><code>simcom_gpio.h</code> -- Used for custom CS pin control via <code>sAPI_GpioSetDirection()</code> and <code>sAPI_GpioSetValue()</code></li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_SpiConfigInitEx(&amp;spiDev)</code> -- Initialize SPI with extended configuration (clock, mode, CS mode, channel index)</li>
+<li><code>sAPI_SpiReadBytesEx(&amp;spiDev, sendBuff, sendSize, revBuff, revSize)</code> -- Send command bytes then read response bytes in a single transaction</li>
+<li><code>sAPI_SpiWriteBytesEx(&amp;spiDev, sendBuff, sendSize)</code> -- Send command and data bytes</li>
+<li><code>sAPI_SPIConfigInit(ssp_clk, ssp_mode)</code> -- Legacy SPI initialization (single call with clock and mode)</li>
+<li><code>sAPI_ExtSpiReadBytes(sendBuff, sendSize, revBuff, revSize)</code> -- Legacy extended SPI read</li>
+<li><code>sAPI_ExtNorFlashInit()</code> -- Initialize external NOR flash driver</li>
+<li><code>sAPI_ExtNorFlashReadID(id)</code> -- Read NOR flash manufacturer/device ID</li>
+<li><code>sAPI_ExtNorFlashSectorErase(offset, size)</code> -- Erase a sector of NOR flash</li>
+<li><code>sAPI_ExtNorFlashRead(offset, size, buffer)</code> -- Read data from NOR flash</li>
+<li><code>sAPI_ExtNorFlashWrite(offset, size, buffer)</code> -- Write data to NOR flash</li>
+<li><code>extSpiNandInit()</code> -- Initialize external NAND flash</li>
+<li><code>sAPI_SPINAND_Erase(offset, size, flashType)</code> -- Erase a NAND flash block</li>
+<li><code>sAPI_SPINAND_Read(offset, buffer, size, flashType)</code> -- Read a page from NAND flash</li>
+<li><code>sAPI_SPINAND_Write(offset, buffer, size, flashType)</code> -- Write a page to NAND flash</li>
+<li><code>sAPI_yaffs_II_test()</code> -- Run YAFFS2 filesystem test on NAND flash (conditional on <code>YAFFS2</code> define)</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Call <code>SpiDemo()</code>, <code>SpiNorDemo()</code>, or <code>SpiNandDemo()</code> from the application task.</li>
+<li>The SPI bus is automatically initialized at the start of <code>SpiDemo()</code> with channel 1, <code>SPI_MODE_PH0_PO0</code>, and <code>GPIO_MODE</code> CS.</li>
+<li>For <code>SpiDemo()</code>: select option 1 to read device ID (sends 0x9F command), option 2 to read/write status register, option 3 for DMA-based ID read.</li>
+<li>For <code>SpiNorDemo()</code>: first initialize (option 1), then read ID (option 2), erase a sector (option 3), write data (option 5), and read back (option 4).</li>
+<li>For <code>SpiNandDemo()</code>: initialize (option 1), erase a block (option 3), write a page (option 5), read it back (option 4), or run YAFFS2 test (option 6).</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>The demo uses <code>#define NEW_SPI_API</code> to select between the new <code>sAPI_SpiConfigInitEx</code>/<code>sAPI_SpiReadBytesEx</code> API and the legacy <code>sAPI_SPIConfigInit</code>/<code>sAPI_ExtSpiReadBytes</code> API.</li>
+<li>When <code>SPIDRV_SUPPORT</code> is defined, the clock enum provides fine-grained options from 100 KHz to 52 MHz. Otherwise, a simpler 7-option enum is used (812 KHz to 52 MHz).</li>
+<li><code>GPIO_MODE</code> CS keeps the chip-select low for the entire data stream, while <code>SSP_MODE</code> toggles CS per byte.</li>
+<li>The NOR flash demo uses a fixed <code>START_ADDR</code> of <code>4096*0</code> (sector 0). In production, choose a safe offset outside the firmware area.</li>
+<li>NOR flash read uses <code>sAPI_Malloc(256)</code> for the buffer, demonstrating dynamic allocation for flash operations.</li>
+<li>NAND flash operations use <code>BOOT_FLASH</code> as the flash type identifier.</li>
+<li>The NAND write demo performs erase-then-write-then-read-then-verify with <code>memcmp</code> comparison.</li>
+<li>SPI NOR flash functions are conditional on <code>SPINOR_SUPPORT</code> or <code>SC_DRIVER_NORFLASH</code> defines.</li>
+<li>NAND flash functions are conditional on <code>SIMCOM_SPINAND_FLASH_SUPPORT</code> define.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always initialize the SPI bus before any read/write operations.</li>
+<li>Use <code>GPIO_MODE</code> CS for most applications; use <code>SSP_MODE</code> only if the slave device requires CS toggling between bytes.</li>
+<li>Verify flash ID after initialization to confirm the correct flash chip is detected.</li>
+<li>Erase before writing to NOR flash -- flash memory can only be written after erasing (bits go from 1 to 0 on write, from 0 to 1 on erase).</li>
+<li>Use page-aligned buffers and sizes for NAND flash operations.</li>
+<li>Free dynamically allocated buffers after use to avoid memory leaks.</li>
+<li>For NOR flash, avoid writing to the boot area (first few sectors) unless you know what you are doing.</li>
+<li>Check return values of all SPI and flash API calls.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_sms/" class="btn btn-neutral float-left" title="demo_sms"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_ssl/" class="btn btn-neutral float-right" title="demo_ssl">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_sms/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_ssl/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

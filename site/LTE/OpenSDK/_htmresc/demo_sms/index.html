@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/_htmresc/demo_sms/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>demo_sms - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_sms";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\_htmresc\\demo_sms.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/_htmresc/demo_sms/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" > htmresc</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">demo_sms</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+          <li class="breadcrumb-item"> htmresc</li>
+      <li class="breadcrumb-item active">demo_sms</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_sms">demo_sms</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_sms.c</p>
+<h2 id="overview">Overview</h2>
+<p><code>demo_sms</code> provides a comprehensive interactive UART menu for SMS operations on the A7672 module. It supports both PDU and TEXT mode SMS, covering the full lifecycle: initialization, message writing to SIM, reading, sending (direct or from storage), long/multi-part message sending, deletion, new message indication configuration, character set management, PDU encode/decode, and format setting. The demo uses an asynchronous message queue pattern and a dedicated URC (Unsolicited Result Code) processing task.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Initialize/deinitialize SMS subsystem resources (message queues and URC processor task).</li>
+<li>Write SMS messages to SIM card in PDU or TEXT mode via <code>sAPI_SmsWriteMsg</code>.</li>
+<li>Read stored SMS messages by index via <code>sAPI_SmsReadMsg</code>.</li>
+<li>Send SMS messages directly in PDU or TEXT mode via <code>sAPI_SmsSendMsg</code>.</li>
+<li>Send stored (previously written) SMS messages by index via <code>sAPI_SmsSendStorageMsg</code>.</li>
+<li>Send long/multi-part SMS messages (up to 820 characters) via <code>sAPI_SmsSendLongMsg</code>.</li>
+<li>Delete all SMS messages from SIM via <code>sAPI_SmsDelAllMsg</code>.</li>
+<li>Delete a single SMS message by index via <code>sAPI_SmsDelOneMsg</code>.</li>
+<li>Configure new SMS indication mode (store to SIM, direct text report, or direct PDU report) via <code>sAPI_SmsSetNewMsgInd</code>.</li>
+<li>Get current new message indication settings via <code>sAPI_SmsGetNewMsgInd</code>.</li>
+<li>List stored SMS messages via <code>sAPI_SmsListMsg</code>.</li>
+<li>Get/set character set (GSM, IRA, UCS2) via <code>sAPI_SmsgetChset</code> / <code>sAPI_SmssetChset</code>.</li>
+<li>Decode PDU to text via <code>sAPI_SmsDecodePdu</code>.</li>
+<li>Encode text to PDU via <code>sAPI_SmsEncodePdu</code>.</li>
+<li>Get/set SMS format (PDU or TEXT mode) via <code>sAPI_SmsgetFormat</code> / <code>sAPI_SmsSetFormat</code>.</li>
+<li>URC processor task handles <code>SC_URC_NEW_MSG_IND</code> (new message stored with index) and <code>SC_URC_FLASH_MSG</code> (direct message content) events.</li>
+<li>Built-in simple test sequence that exercises write, send, and stored-send operations end-to-end.</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_sms.h</code> — SMS API prototypes, enums (<code>SC_SMSReturnCode</code>, <code>SC_SMS_CMD_TYPE</code>, <code>SC_SMS_Stroge</code>), constants (<code>SC_SMS_MAX_ADDRESS_LENGTH</code> = 40, <code>SC_SMS_MAX_CI_MSG_PDU_SIZE</code> = 400, <code>SC_SMS_MAX_MULTIPLE_MSG_LENGTH</code> = 820), type definitions (<code>SCsmsFormatMode</code>, <code>SCsmsPayload</code>, <code>SCsmsPduReadCnf</code>), and message primitive IDs.</li>
+<li><code>simcom_common.h</code> — Common types and the <code>SIM_MSG_T</code> message structure.</li>
+<li><code>simcom_os.h</code> — OS primitives: <code>sAPI_MsgQCreate</code>, <code>sAPI_MsgQRecv</code>, <code>sAPI_MsgQDelete</code>, <code>sAPI_TaskCreate</code>, <code>sAPI_Free</code>.</li>
+<li><code>simcom_debug.h</code> — Debug logging via <code>sAPI_Debug</code>.</li>
+<li><code>simcom_uart.h</code> — UART definitions and <code>sAPI_UartWriteString</code>.</li>
+<li><code>uart_api.h</code> — Interactive UART input: <code>UartReadValue</code>, <code>UartReadLine</code>, <code>UartRead</code>, <code>PrintfResp</code>, <code>PrintfOptionMenu</code>.</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_SmsWriteMsg(fmatmode, sms, smslen, srcAddr, stat, msgQ)</code> — Write SMS to SIM. <code>fmatmode</code>: 0 = PDU, 1 = TEXT. <code>stat</code>: 1 = unsent, 2 = sent. In PDU mode, <code>srcAddr</code> is NULL.</li>
+<li><code>sAPI_SmsSendMsg(fmatmode, sms, smslen, addr, msgQ)</code> — Send SMS directly. In PDU mode, the address is embedded in the PDU data, so <code>addr</code> can be NULL.</li>
+<li><code>sAPI_SmsSendLongMsg(sms, smslen, addr, msgQ)</code> — Send long/multi-part SMS in text mode. Max content length: <code>SC_SMS_MAX_MULTIPLE_MSG_LENGTH</code> (820 bytes).</li>
+<li><code>sAPI_SmsSendStorageMsg(msgIndex, addr, msgQ)</code> — Send a previously stored SMS by its SIM index.</li>
+<li><code>sAPI_SmsReadMsg(fmatmode, msgIndex, msgQ)</code> — Read a stored SMS. Response in <code>msg.arg3</code> contains the message content; must be freed with <code>sAPI_Free</code>.</li>
+<li><code>sAPI_SmsDelAllMsg(msgQ)</code> — Delete all SMS messages from SIM.</li>
+<li><code>sAPI_SmsDelOneMsg(msgIndex, msgQ)</code> — Delete a single SMS by index.</li>
+<li><code>sAPI_SmsSetNewMsgInd(fmatmode, mode, mt, bm, ds, bfr)</code> — Set new message indication mode. Valid combinations: <code>(1,2,1,0,0,0)</code> to store to SIM + report index via <code>SC_URC_NEW_MSG_IND</code>; <code>(1,1,2,0,0,0)</code> for direct text report via <code>SC_URC_FLASH_MSG</code>; <code>(0,1,2,0,0,0)</code> for direct PDU report.</li>
+<li><code>sAPI_SmsGetNewMsgInd(&amp;mode, &amp;mt, &amp;bm, &amp;ds, &amp;bfr)</code> — Get current new message indication parameters.</li>
+<li><code>sAPI_SmsListMsg(mode)</code> — List SMS messages with a specified mode.</li>
+<li><code>sAPI_SmsgetChset(&amp;format)</code> / <code>sAPI_SmssetChset(format)</code> — Get/set character set: 0 = GSM, 2 = IRA, 4 = UCS2.</li>
+<li><code>sAPI_SmsgetFormat(&amp;format)</code> / <code>sAPI_SmsSetFormat(format)</code> — Get/set SMS format: 0 = PDU mode, 1 = TEXT mode.</li>
+<li><code>sAPI_SmsDecodePdu(pduText, outAddr, outTextLen, outText)</code> — Decode PDU string to address and text content.</li>
+<li><code>sAPI_SmsEncodePdu(addrStr, contentText, contentLen, pduText, &amp;pduLen)</code> — Encode address and text content to PDU format.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Run <code>SMSDemo()</code> to display the interactive UART menu (16+ options).</li>
+<li>Select option 1 (Init) first to create message queues and start the URC processor task. All other operations require initialization.</li>
+<li>Option 2 (Write): enter format mode (0=PDU, 1=TEXT), message length, message data, source address, and storage status (1=unsent, 2=sent).</li>
+<li>Option 3 (Read): enter format mode and SIM index to read a stored message.</li>
+<li>Option 4 (Send): enter format mode, length, data, and destination address to send directly.</li>
+<li>Option 5 (Send stored): enter SIM index and optional destination address to send a previously written message.</li>
+<li>Option 6 (Send long msg): enter format mode, length, data (up to 820 bytes), and destination address for multi-part SMS.</li>
+<li>Option 7 (Delete all) and option 8 (Delete one) remove messages from SIM.</li>
+<li>Option 9 (Simple test) runs a built-in sequence: delete all, send text SMS, send PDU SMS, write text/PDU to SIM, and send stored PDU SMS.</li>
+<li>Option 10/11 set/get the new message indication mode.</li>
+<li>Option 13 sets/gets the character set (GSM/IRA/UCS2).</li>
+<li>Option 14/15 decode/encode PDU data.</li>
+<li>Option 16 gets/sets SMS format (PDU/TEXT).</li>
+<li>Option 99 (DeInit) cleans up resources and exits.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>The SMS demo requires explicit initialization (option 1) before any other operation. The <code>gSmsDemohasinited</code> flag prevents double-init and enforces this ordering.</li>
+<li>Three message queues are created: <code>g_sms_demo_msgQ</code> for API responses, <code>g_sms_demo_urc_process_msgQ</code> for incoming URC events, and <code>g_sms_demo_urc_rsp_msgQ</code> for URC-triggered read responses.</li>
+<li>A dedicated task (<code>sTask_SmsUrcProcessor</code>) runs at priority 90 on a 4 KB stack, blocking on <code>g_sms_demo_urc_process_msgQ</code> with <code>SC_SUSPEND</code> (infinite wait).</li>
+<li>The URC processor handles two event types: <code>SC_URC_NEW_MSG_IND</code> (triggers an automatic read of the new message at the reported index) and <code>SC_URC_FLASH_MSG</code> (directly displays the incoming text content).</li>
+<li>Memory allocated by the SDK for response strings (<code>msg.arg3</code>) must be explicitly freed with <code>sAPI_Free</code> after use to avoid leaks.</li>
+<li>The <code>inputDataProcessor</code> function handles multi-packet UART input, buffering data until a <code>\r\n</code> terminator is received. This is necessary because UART transports data in 32-byte chunks.</li>
+<li>The <code>SC_SMS_MAX_MULTIPLE_MSG_LENGTH</code> (820) buffer is used for long messages, while <code>SC_SMS_MAX_CI_MSG_PDU_SIZE</code> (400) is used for standard PDU messages.</li>
+<li>For certain module variants, the UART is redefined to <code>SC_UART4</code>.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always initialize SMS resources (option 1) before performing any SMS operation; attempting to use SMS APIs without initialization will fail.</li>
+<li>Always free the response string pointer (<code>msg.arg3</code>) with <code>sAPI_Free</code> after reading SMS responses to prevent memory leaks.</li>
+<li>Set new message indication mode at system boot using <code>sAPI_SmsSetNewMsgInd</code> to control how incoming messages are delivered.</li>
+<li>Use PDU mode (format=0) for international/multilingual SMS where precise encoding control is needed; use TEXT mode (format=1) for simpler ASCII text.</li>
+<li>For long messages, use <code>sAPI_SmsSendLongMsg</code> which handles multi-part segmentation automatically; do not manually split messages.</li>
+<li>Validate the SIM index before read/delete operations to avoid <code>SC_SMS_INVALID_INDEX</code> errors.</li>
+<li>In production, replace the URC processor's UART output with application-level event dispatching.</li>
+<li>Deinitialize (option 99) SMS resources when the SMS feature is no longer needed to free OS resources (message queues and task).</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_sm2/" class="btn btn-neutral float-left" title="demo_sm2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_spi/" class="btn btn-neutral float-right" title="demo_spi">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_sm2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_spi/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

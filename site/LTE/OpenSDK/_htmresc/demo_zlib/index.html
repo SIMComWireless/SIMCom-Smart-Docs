@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/_htmresc/demo_zlib/" />
+      <link rel="shortcut icon" href="../../../../img/favicon.ico" />
+    <title>demo_zlib - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_zlib";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\_htmresc\\demo_zlib.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/_htmresc/demo_zlib/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" > htmresc</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="#">demo_zlib</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+          <li class="breadcrumb-item"> htmresc</li>
+      <li class="breadcrumb-item active">demo_zlib</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_zlib">demo_zlib</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_zlib.c</p>
+<h2 id="overview">Overview</h2>
+<p>This demo demonstrates ZIP file compression and decompression on the ASR1603 module using the zlib and MiniZip libraries. It provides functionality to extract files from ZIP archives and create new ZIP archives from directory contents, operating on the module's file system.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Extract (unzip) a ZIP archive to a specified directory</li>
+<li>Create (zip) a new ZIP archive from all files in a directory</li>
+<li>Support for deflate compression with configurable compression level</li>
+<li>Handles both files and subdirectories within ZIP archives</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>zlib.h</code> -- Provides zlib compression constants and types: Z_DEFLATED, Z_BEST_COMPRESSION, Z_OK, z_stream, compress, uncompress, deflate, inflate</li>
+<li><code>zip.h</code> -- Provides MiniZip creation APIs: zipOpen, zipOpenNewFileInZip, zipWriteInFileInZip, zipCloseFileInZip, zipClose, zipFile, ZIP_OK, APPEND_STATUS_CREATE</li>
+<li><code>unzip.h</code> -- Provides MiniZip extraction APIs: unzOpen, unzClose, unzFile, do_extract (extern), do_open (extern), do_close (extern), UNZ_OK</li>
+<li><code>simcom_file.h</code> -- Provides sAPI_fopen, sAPI_fread, sAPI_fwrite, sAPI_fclose, sAPI_fsize, sAPI_opendir, sAPI_readdir, sAPI_closedir for file system access</li>
+<li><code>simcom_common.h</code> -- Provides common types</li>
+<li><code>simcom_debug.h</code> -- Provides sAPI_Debug</li>
+<li><code>uart_api.h</code> -- Provides UartReadValue, UartReadLine</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>zipOpen(pathname, append)</code> -- Create/open a ZIP file. <code>append</code> mode: 0 = create new, 1 = append after, 2 = add to existing. Returns a <code>zipFile</code> handle.</li>
+<li><code>zipOpenNewFileInZip(zf, filename, zipfi, extrafield, size, extrafield_global, size, comment, method, level)</code> -- Open a new file entry inside the ZIP. Method: Z_DEFLATED for deflate compression. Level: Z_BEST_COMPRESSION (9) for maximum compression.</li>
+<li><code>zipWriteInFileInZip(zf, buf, len)</code> -- Write data to the current file inside the ZIP.</li>
+<li><code>zipCloseFileInZip(zf)</code> -- Close the current file entry in the ZIP.</li>
+<li><code>zipClose(zf, comment)</code> -- Close the ZIP file and write the central directory.</li>
+<li><code>do_open(path)</code> -- Open a ZIP file for extraction (extern function, likely implemented in a separate minizip utility file).</li>
+<li><code>do_extract(uf, opt_extract_without_path, opt_overwrite, password)</code> -- Extract all files from the opened ZIP archive.</li>
+<li><code>do_close(uf)</code> -- Close the ZIP file after extraction.</li>
+<li><code>sAPI_fopen</code>, <code>sAPI_fread</code>, <code>sAPI_fclose</code>, <code>sAPI_fsize</code> -- File I/O for reading source files to compress.</li>
+<li><code>sAPI_opendir</code>, <code>sAPI_readdir</code>, <code>sAPI_closedir</code> -- Directory traversal for zip operation.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>The demo presents an interactive menu:</p>
+<ol>
+<li><strong>unzip</strong> (Option 1): Enter the path to a ZIP file. The demo opens the archive with <code>do_open</code>, extracts all files with <code>do_extract(uf, 0, 0, NULL)</code> (preserving paths, not overwriting, no password), then closes with <code>do_close</code>.</li>
+<li><strong>zip</strong> (Option 2): Enter the desired ZIP filename, the append mode (0-2), and the source directory path. The demo opens the directory, iterates through all entries, and for each file opens it via <code>sAPI_fopen</code>, reads in 2048-byte chunks, writes to the ZIP via <code>zipWriteInFileInZip</code>, and closes. Subdirectories are added as empty directory entries.</li>
+<li><strong>back</strong> (Option 99): Return to parent menu.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>The <code>zipwritefile</code> helper function handles the file-to-ZIP transfer: opens the source file, reads in 2048-byte chunks, writes each chunk to the ZIP, then closes both the file entry and source file.</li>
+<li>Directory entries in the ZIP are identified by <code>info_dir-&gt;type == 2</code> and have a trailing slash appended via <code>scAddSpritInPathTail</code>.</li>
+<li>File entries in the ZIP are identified by <code>info_dir-&gt;type == 1</code>.</li>
+<li>The <code>scStrcatHead</code> helper prepends the directory path to the file name, so the ZIP entry includes the relative path from the source directory.</li>
+<li>The filename passed to <code>zipOpenNewFileInZip</code> uses <code>&amp;info_dir-&gt;name[3]</code> or <code>&amp;filename[3]</code> to strip the drive letter prefix (e.g., "C:/") from the path, making the ZIP entry path relative.</li>
+<li>The extern functions <code>do_extract</code>, <code>do_open</code>, and <code>do_close</code> are declared but implemented in a separate source file (likely a minizip utility).</li>
+<li>The unzip operation uses <code>password = NULL</code>, meaning encrypted ZIPs are not supported.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Check the return value of <code>zipOpen</code> for NULL before proceeding with ZIP operations.</li>
+<li>Always close file entries (<code>zipCloseFileInZip</code>) before opening new ones or closing the ZIP.</li>
+<li>Always close the ZIP file (<code>zipClose</code>) to ensure the central directory is written correctly.</li>
+<li>Use appropriate buffer sizes (2048 bytes as shown) for file read operations to balance memory usage and I/O efficiency.</li>
+<li>Handle errors at each step: file open failures, read errors, and ZIP write errors should be caught and handled gracefully.</li>
+<li>For unzip operations, verify the ZIP file is valid by checking the return of <code>do_open</code> before calling <code>do_extract</code>.</li>
+<li>Be cautious with the <code>append</code> mode parameter: mode 2 (APPEND_STATUS_ADDINZIP) requires that the file already exists and is a valid ZIP.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_wtd/" class="btn btn-neutral float-left" title="demo_wtd"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../mqtt_OneNET/" class="btn btn-neutral float-right" title="mqtt_OneNET">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_wtd/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../mqtt_OneNET/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../../..";</script>
+    <script src="../../../../js/theme_extra.js"></script>
+    <script src="../../../../js/theme.js"></script>
+      <script src="../../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
