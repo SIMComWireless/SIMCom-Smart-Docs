@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/demo_tcpip/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>demo_tcpip - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_tcpip";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\demo_tcpip.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/demo_tcpip/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">demo_tcpip</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#simcom-tcpip-simcom_tcpiph">SIMCom TCP/IP (simcom_tcpip.h)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#bsd-sockets-scfw_socketh">BSD Sockets (scfw_socket.h)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#dns-scfw_netdbh">DNS (scfw_netdb.h)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ip-conversion-scfw_ineth">IP Conversion (scfw_inet.h)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#rtos-simcom_osh">RTOS (simcom_os.h)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">demo_tcpip</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_tcpip">demo_tcpip</h1>
+<p>Location: <code>SIMCOM_SDK_SET/sc_demo/V1/src/demo_tcpip.c</code></p>
+<h2 id="overview">Overview</h2>
+<p>This demo provides an interactive UART menu for TCP/IP networking on the A7672 module. It demonstrates PDP context activation, TCP client connect/send/receive, UDP client open/send/receive, and TCP server operations using standard BSD socket APIs (via <code>scfw_socket.h</code>) combined with SIMCom-specific PDP management APIs (from <code>simcom_tcpip.h</code>). The demo uses a multi-threaded architecture with dedicated message-queue-driven receive tasks for client and server sockets.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>PDP context activation/deactivation with IP address retrieval (IPv4 and IPv6)</li>
+<li>TCP client: DNS resolution, connect, send, receive (via select-based polling)</li>
+<li>UDP client: open socket, send to remote address, receive (via select-based polling)</li>
+<li>TCP server: socket creation, bind, listen, accept</li>
+<li>Multi-threaded receive handling with message queues</li>
+<li>Mutex-protected socket descriptor management</li>
+<li>Standard BSD socket API usage (socket, connect, send, sendto, recvfrom, close, select)</li>
+<li>DNS resolution via <code>getaddrinfo()</code></li>
+<li>Dual-stack IPv4/IPv6 support</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_tcpip.h</code> -- PDP management API: <code>sAPI_TcpipPdpActive()</code>, <code>sAPI_TcpipPdpDeactive()</code>, <code>sAPI_TcpipGetSocketPdpAddr()</code>, and <code>SCipInfo</code>/<code>SCnetType</code> types.</li>
+<li><code>simcom_tcpip_old.h</code> -- Legacy TCP/IP API (referenced but not read; likely backward compatibility).</li>
+<li><code>scfw_socket.h</code> -- BSD socket API declarations (socket, connect, send, sendto, recvfrom, close, select, bind, listen, accept, FD_SET/FD_ISSET/FD_ZERO macros).</li>
+<li><code>scfw_netdb.h</code> -- DNS resolution (getaddrinfo, freeaddrinfo).</li>
+<li><code>scfw_inet.h</code> -- IP address conversion (inet_ntoa, inet_ntop, inet_pton, ntohs, htons).</li>
+<li><code>simcom_os.h</code> -- RTOS primitives (sAPI_MsgQCreate, sAPI_MsgQSend, sAPI_MsgQRecv, sAPI_TaskCreate, sAPI_MutexCreate, sAPI_MutexLock, sAPI_MutexUnLock).</li>
+<li><code>simcom_common.h</code> -- Common types</li>
+<li><code>simcom_debug.h</code> -- Debug logging</li>
+<li><code>uart_api.c</code> -- UI helpers</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<h3 id="simcom-tcpip-simcom_tcpiph">SIMCom TCP/IP (simcom_tcpip.h)</h3>
+<ul>
+<li><code>sAPI_TcpipPdpActive(cid, channel)</code> -- Activates PDP context. Returns <code>SC_TCPIP_SUCCESS</code> (0) on success. Must be called before socket operations.</li>
+<li><code>sAPI_TcpipPdpDeactive(cid, channel)</code> -- Deactivates PDP context.</li>
+<li><code>sAPI_TcpipGetSocketPdpAddr(cid, channel, &amp;ipinfo)</code> -- Gets the local IP address for a CID. Returns <code>SCipInfo</code> with type (TCPIP_PDP_IPV4, TCPIP_PDP_IPV6, TCPIP_PDP_IPV4V6), ip4 (UINT32), and ip6 (UINT32[4]).</li>
+</ul>
+<h3 id="bsd-sockets-scfw_socketh">BSD Sockets (scfw_socket.h)</h3>
+<ul>
+<li><code>socket(family, type, protocol)</code> -- Creates a socket. Family: AF_INET or AF_INET6. Type: SOCK_STREAM (TCP) or SOCK_DGRAM (UDP).</li>
+<li><code>connect(fd, addr, len)</code> -- Connects a TCP socket.</li>
+<li><code>send(fd, data, len, flags)</code> -- Sends data on a connected TCP socket.</li>
+<li><code>sendto(fd, data, len, flags, dest, destlen)</code> -- Sends data to a specific address (UDP).</li>
+<li><code>recvfrom(fd, buf, len, flags, addr, &amp;addrlen)</code> -- Receives data and source address.</li>
+<li><code>select(fdmax, &amp;readfds, NULL, NULL, &amp;tv)</code> -- I/O multiplexing with timeout.</li>
+<li><code>close(fd)</code> -- Closes a socket.</li>
+<li><code>bind(fd, addr, len)</code> -- Binds a socket to a local address (server).</li>
+<li><code>listen(fd, backlog)</code> -- Listens for incoming connections.</li>
+<li><code>accept(fd, addr, &amp;len)</code> -- Accepts an incoming TCP connection.</li>
+<li><code>lwip_getsockerrno(fd)</code> -- Gets the last socket error code.</li>
+<li><code>FD_ZERO</code>, <code>FD_SET</code>, <code>FD_ISSET</code> -- File descriptor set operations.</li>
+</ul>
+<h3 id="dns-scfw_netdbh">DNS (scfw_netdb.h)</h3>
+<ul>
+<li><code>getaddrinfo(host, port, &amp;hints, &amp;addr_list)</code> -- Resolves hostname/IP to address list.</li>
+<li><code>freeaddrinfo(addr_list)</code> -- Frees address list.</li>
+</ul>
+<h3 id="ip-conversion-scfw_ineth">IP Conversion (scfw_inet.h)</h3>
+<ul>
+<li><code>inet_ntoa(addr)</code> -- Converts IPv4 address to string.</li>
+<li><code>inet_ntop(family, src, dst, size)</code> -- Converts binary address to string (IPv4/IPv6).</li>
+<li><code>ntohs(val)</code> -- Network to host byte order (16-bit).</li>
+</ul>
+<h3 id="rtos-simcom_osh">RTOS (simcom_os.h)</h3>
+<ul>
+<li><code>sAPI_MsgQCreate(&amp;q, name, msgSize, count, mode)</code> -- Creates a message queue.</li>
+<li><code>sAPI_MsgQSend(q, &amp;msg)</code> / <code>sAPI_MsgQRecv(q, &amp;msg, SC_SUSPEND)</code> -- Send/receive messages.</li>
+<li><code>sAPI_TaskCreate(&amp;task, stack, stackSize, priority, name, func, arg)</code> -- Creates a task/thread.</li>
+<li><code>sAPI_MutexCreate(&amp;mutex, mode)</code> -- Creates a mutex.</li>
+<li><code>sAPI_MutexLock(mutex, SC_SUSPEND)</code> / <code>sAPI_MutexUnLock(mutex)</code> -- Lock/unlock mutex.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Enter the TcpipDemo menu.</li>
+<li><strong>Init</strong>: Select option 1 to activate PDP context (cid=1) and retrieve the local IP address.</li>
+<li><strong>TCP Client</strong>:</li>
+<li>Option 2: Enter <code>host:port</code> (e.g., <code>123.45.67.89:8888</code> or <code>www.example.com:8888</code>). The demo resolves the hostname and connects.</li>
+<li>Option 3: Sends "hello" over the established TCP connection.</li>
+<li>Option 4: Closes the client socket.</li>
+<li><strong>UDP Client</strong>:</li>
+<li>Option 5: Opens a UDP socket.</li>
+<li>Option 6: Sends "hello" to a hardcoded remote address (47.108.134.223:8888). Modify the code for custom destinations.</li>
+<li>Option 7: Closes the UDP socket.</li>
+<li><strong>TCP Server</strong>:</li>
+<li>Option 8: Creates a TCP server socket on port 6666, binds, listens, and blocks on accept.</li>
+<li>Option 9: (Server close is not implemented in the demo.)</li>
+<li><strong>DeInit</strong>: Option 10 closes any open socket and deactivates the PDP context.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li><strong>Multi-threaded architecture</strong>: The demo creates two background tasks at initialization:</li>
+<li><code>clientProcesser</code>: Waits on <code>gClientMsgQueue</code>, receives the socket fd, and runs <code>tcp_udp_client_recv()</code>.</li>
+<li><code>serverProcesser</code>: Waits on <code>gServerMsgQueue</code>, receives the socket fd, and runs <code>server_recv()</code> (currently an empty infinite loop).</li>
+<li>Task stack: 4096 bytes, priority: 150.</li>
+<li><strong>Receive loop</strong>: <code>tcp_udp_client_recv()</code> uses <code>select()</code> with a 5-second timeout in an infinite loop. On data, it calls <code>recvfrom()</code> and prints the source IP, port, and data. On error (not EAGAIN), it closes the socket and exits.</li>
+<li><strong>Socket descriptor protection</strong>: <code>g_tcp_udp_client_sockfd</code> is protected by <code>sockMutexRef</code> mutex. The getter/setter functions <code>get_tcp_udp_client_sockfd()</code> and <code>set_tcp_udp_client_sockfd()</code> ensure thread-safe access.</li>
+<li><strong>Single client limitation</strong>: The demo only supports one TCP or UDP client at a time. The code comments note "the module itself can support 64-way tcp."</li>
+<li><strong>IPv4/IPv6 dual-stack</strong>: <code>get_ipaddr()</code> supports IPv4, IPv6, and IPv4V6 PDP types. <code>Connect()</code> uses <code>AF_UNSPEC</code> for <code>getaddrinfo()</code> to support both address families.</li>
+<li><strong>Helper functions</strong>:</li>
+<li><code>Inet_ntop()</code>: Converts a <code>struct sockaddr</code> to a string representation with port.</li>
+<li><code>Send()</code>: Wrapper that loops until all data is sent, supporting both TCP (send) and UDP (sendto).</li>
+<li><code>udp_send()</code>: Resolves the remote address and sends data via <code>sendto()</code>.</li>
+<li><code>ui_print()</code>: Formatted output helper wrapping <code>PrintfResp</code>.</li>
+<li><strong>Server implementation</strong>: The TCP server (option 8) does a blocking <code>accept()</code> on the UI thread, which will freeze the menu until a client connects. The server receive function (<code>server_recv</code>) is an empty loop.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always activate PDP (<code>sAPI_TcpipPdpActive</code>) before creating sockets, and deactivate it (<code>sAPI_TcpipPdpDeactive</code>) during shutdown.</li>
+<li>Use <code>getaddrinfo()</code> for DNS resolution instead of hardcoding IP addresses. It supports both IPv4 and IPv6.</li>
+<li>Use <code>select()</code> with a reasonable timeout to avoid blocking indefinitely on receive.</li>
+<li>Check <code>lwip_getsockerrno()</code> after send/receive failures to distinguish transient errors (EAGAIN) from fatal errors.</li>
+<li>Protect shared socket descriptors with mutexes in multi-threaded applications.</li>
+<li>For production applications, implement proper reconnection logic on connection loss.</li>
+<li>The demo's UDP send hardcodes the remote address; modify it to accept user input or configuration.</li>
+<li>The module supports up to 64 simultaneous TCP connections; the demo limits to 1 for simplicity but production code should manage multiple sockets.</li>
+<li>Close sockets and deactivate PDP on application exit to release resources.</li>
+<li>For server applications, move the <code>accept()</code> call to a background task to avoid blocking the UI thread.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_system/" class="btn btn-neutral float-left" title="demo_system"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_tts/" class="btn btn-neutral float-right" title="demo_tts">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_system/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_tts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

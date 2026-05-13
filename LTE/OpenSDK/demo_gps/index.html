@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/demo_gps/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>demo_gps - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_gps";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\demo_gps.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/demo_gps/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">demo_gps</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">demo_gps</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_gps">demo_gps</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_gps.c</p>
+<h2 id="overview">Overview</h2>
+<p>This demo provides a comprehensive interactive menu-driven interface for controlling GNSS (GPS/BDS/GLONASS/GALILEO) functionality on the SIMCom A7672 module. It covers power management, NMEA data output, constellation mode selection, AGPS operations, baud rate configuration, and advanced features like predicting ephemeris and PVT partition cleanup. The demo is conditionally compiled under <code>FEATURE_SIMCOM_GPS</code> or <code>JACANA_GPS_SUPPORT</code>.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>GNSS AP flash hot-start flag control (on/off/get)</li>
+<li>GNSS power on/off and status query</li>
+<li>NMEA data output control (via NMEA port or URC)</li>
+<li>GNSS start mode selection (hot/warm/cold start)</li>
+<li>Baud rate configuration (9600, 115200, 230400 depending on chip)</li>
+<li>Constellation mode set/get (GPS, BDS, GLONASS, GALILEO combinations)</li>
+<li>NMEA update rate configuration (1Hz, 2Hz, 5Hz)</li>
+<li>NMEA sentence type bitmask configuration</li>
+<li>GPS and GNSS information periodic reporting</li>
+<li>Direct NMEA command pass-through to GNSS chip</li>
+<li>AGPS data retrieval, local storage, injection, and validity checking</li>
+<li>Predicting ephemeris download and update</li>
+<li>PVT partition cleanup</li>
+<li>AGPS server parameter configuration</li>
+<li>GNSS dynamic load file type selection (conditional on <code>GPS_DY_LOAD</code>)</li>
+<li>GNSS navigation data information</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_gps.h</code> — Defines all GNSS enums, structs, and API function declarations for GNSS control</li>
+<li><code>simcom_simcard.h</code> — Provides <code>sAPI_SimcardPinGet()</code> for SIM card state checking before AGPS</li>
+<li><code>simcom_network.h</code> — Provides <code>sAPI_NetworkInit()</code> and <code>sAPI_NetworkGetCgreg()</code> for network registration checks</li>
+<li><code>simcom_os.h</code> — OS abstraction layer (tasks, sleep, message queues)</li>
+<li><code>simcom_common.h</code> — Common type definitions</li>
+<li><code>simcom_debug.h</code> — Debug logging via <code>sAPI_Debug()</code></li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_GnssPowerStatusSet(power)</code> — Set GNSS power on/off</li>
+<li><code>sAPI_GnssPowerStatusGet()</code> — Get current GNSS power status</li>
+<li><code>sAPI_GnssApFlashSet(ctl)</code> — Set AP flash hot-start flag on/off</li>
+<li><code>sAPI_GnssApFlashGet()</code> — Get AP flash hot-start flag status</li>
+<li><code>sAPI_GnssApFlashDataGet()</code> — Retrieve data from AP flash and store in module NVM</li>
+<li><code>sAPI_GnssNmeaDataGet(ctl, mode)</code> — Start/stop NMEA data output (by port or URC)</li>
+<li><code>sAPI_GnssStartMode(mode)</code> — Set GNSS start mode (hot/warm/cold)</li>
+<li><code>sAPI_GnssBaudRateSet(baudrate)</code> — Set GNSS baud rate</li>
+<li><code>sAPI_GnssBaudRateGet()</code> — Get current GNSS baud rate</li>
+<li><code>sAPI_GnssModeSet(mode)</code> — Set constellation mode</li>
+<li><code>sAPI_GnssModeGet()</code> — Get current constellation mode</li>
+<li><code>sAPI_GnssNmeaRateSet(rate)</code> — Set NMEA update rate</li>
+<li><code>sAPI_GnssNmeaRateGet()</code> — Get current NMEA update rate</li>
+<li><code>sAPI_GnssNmeaSentenceSet(mask)</code> — Set NMEA sentence bitmask</li>
+<li><code>sAPI_GnssNmeaSentenceGet()</code> — Get NMEA sentence bitmask array</li>
+<li><code>sAPI_GpsInfoGet(period)</code> — Set GPS information reporting cycle (0 to stop)</li>
+<li><code>sAPI_GnssInfoGet(period)</code> — Set GNSS information reporting cycle (0 to stop)</li>
+<li><code>sAPI_SendCmd2Gnss(string)</code> — Send raw NMEA command to GNSS chip</li>
+<li><code>sAPI_GnssAgpsSeviceOpen()</code> — Download AGPS data from server to GPS chip</li>
+<li><code>sAPI_GnssAgpsDataSavetoLocal(method)</code> — Save AGPS data locally (RAM/Flash/delete)</li>
+<li><code>sAPI_GnssAgpsDatatoGpsChip(opt)</code> — Inject locally stored AGPS data to GPS chip with optional time/position aid</li>
+<li><code>sAPI_GnssAgpsDataCheck()</code> — Verify AGPS data injection validity</li>
+<li><code>sAPI_GnssNavdataGet()</code> — Get pointer to GNSS navigation data structure</li>
+<li><code>sAPI_GnssDynamicLoadFileTypeSet(type)</code> — Set GNSS dynamic load file type</li>
+<li><code>sAPI_GnssDynamicLoadFileTypeGet()</code> — Get GNSS dynamic load file type</li>
+<li><code>sAPI_GnssPreEphDataLoadAndUpdate(opt)</code> — Download/update predicted ephemeris</li>
+<li><code>sAPI_GnssPvtClean()</code> — Clean jacana_pvt partition</li>
+<li><code>sAPI_GnssAgpsParSet(config)</code> — Set AGPS server parameters</li>
+<li><code>sAPI_GnssAgpsParGet()</code> — Get AGPS server parameters</li>
+<li><code>sAPI_SimcardPinGet(&amp;cpin)</code> — Get SIM card PIN state</li>
+<li><code>sAPI_NetworkInit()</code> — Initialize network module</li>
+<li><code>sAPI_NetworkGetCgreg(&amp;pGreg)</code> — Get network GPRS registration status</li>
+<li><code>sAPI_Debug(fmt, ...)</code> — Debug log output</li>
+<li><code>sAPI_TaskSleep(ticks)</code> — Sleep current task</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Ensure the module has <code>FEATURE_SIMCOM_GPS</code> or <code>JACANA_GPS_SUPPORT</code> defined at build time.</li>
+<li>Call <code>GNSSDemo()</code> to enter the interactive menu.</li>
+<li>Power on GNSS first (option 2 -&gt; power on) before performing any GNSS operations.</li>
+<li>Select menu options to configure constellation mode, baud rate, NMEA rate, and sentence types.</li>
+<li>Use the NMEA output option (option 3) to start/stop receiving NMEA data via port or URC.</li>
+<li>For AGPS operations, ensure the SIM card is inserted, PIN is ready, and the network is registered (CGREG=1). The demo automatically checks these conditions.</li>
+<li>GPS and GNSS information reporting uses a 0-255 second period; set to 0 to stop.</li>
+<li>The "send command" option (option 11) allows sending raw NMEA strings directly to the GNSS chip.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>The demo uses <code>#ifdef</code> guards extensively to support multiple GNSS chip families: JACANA (Jacana), UNICORECOMM (UC6228), CC1161W, CC1167Q, CC1177W, AG3352, and ZKW. Each chip has different supported modes, baud rates, and NMEA rate options.</li>
+<li>The <code>networkIsNormal()</code> helper function verifies SIM card readiness and network registration before AGPS operations, with a retry loop (10 attempts with 600ms intervals).</li>
+<li>The <code>powerOn()</code> helper returns 1 if GNSS is powered on, 0 otherwise. Most operations require GNSS to be powered on and will redirect back if it is not.</li>
+<li>Menu navigation uses <code>goto</code> labels for sub-menu loops, returning to the main menu on option 99.</li>
+<li>NMEA sentence bitmask bits vary by chip: JACANA uses 9 bits (RMC, VTG, GGA, GSA, GSV, GLL, ZDA, GST, TXT); UNICORECOMM uses 8 bits (GGA, GLL, GSA, GSV, RMC, VTG, ZDA, GST).</li>
+<li>The <code>SC_GNSSINFO</code> struct provides comprehensive satellite info including per-constellation satellite counts and SV arrays.</li>
+<li>AGPS data injection supports optional auxiliary time (format: "year,month,day,hour,minute,second,milliseconds") and auxiliary position (format: "latitude_ddmm.mmmmm,longitude_dddmm.mmmmmm").</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always power on GNSS before configuring modes, rates, or retrieving data.</li>
+<li>Verify SIM card state and network registration before initiating AGPS downloads.</li>
+<li>Use appropriate constellation modes for the target region (e.g., GPS+GLONASS for Russia, GPS+BDS+QZSS for China/Japan).</li>
+<li>When using AGPS, select the correct server version (2 or 3) based on the AGNSS server URL.</li>
+<li>For assisted time/position injection accuracy: time error must be within 1ms, position error within 5KM. Invalid values slow down positioning.</li>
+<li>Set NMEA reporting period to 0 to stop periodic reporting and reduce power consumption.</li>
+<li>Use AP flash hot-start for faster TTFF after power cycle if GNSS data is stored in flash.</li>
+<li>Clean the PVT partition only when troubleshooting positioning issues; it clears historical data.</li>
+<li>Monitor the <code>SC_Gnss_User_CallBack</code> state events (via <code>sAPI_GnssStateBindCB</code>) in production to handle initialization/download failures gracefully.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_gpio/" class="btn btn-neutral float-left" title="demo_gpio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_helloworld/" class="btn btn-neutral float-right" title="demo_helloworld">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_gpio/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_helloworld/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
