@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/demo_system/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>demo_system - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_system";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\demo_system.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/demo_system/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">demo_system</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">demo_system</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_system">demo_system</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_system.c</p>
+<h2 id="overview">Overview</h2>
+<p>This demo demonstrates system-level operations on the ASR1603 module, specifically the ability to query task stack usage information. It provides a way to monitor stack memory consumption of running tasks, which is essential for debugging memory issues and optimizing stack allocation in production applications.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Query stack size, in-use amount, and peak usage for registered tasks</li>
+<li>Display task name alongside stack statistics</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_debug.h</code> -- Provides <code>sAPI_Debug()</code> for debug logging</li>
+<li><code>simcom_os.h</code> -- Provides OS types (sTaskRef, UINT32) and <code>sAPI_GetTaskStackInfo</code>, <code>sAPI_TaskSleep</code></li>
+<li><code>simcom_common.h</code> -- Provides common types and definitions</li>
+<li><code>uart_api.h</code> -- Provides UartReadValue for menu input</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_GetTaskStackInfo(taskRef, &amp;taskName, &amp;stackSize, &amp;stackInuse, &amp;stackPeak)</code> -- Retrieves stack usage information for a given task reference. Outputs the task name string, total stack size, currently in-use stack bytes, and peak stack usage.</li>
+<li><code>sAPI_TaskSleep(ms)</code> -- Sleeps the current task for the specified number of milliseconds (used to pace output).</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>The demo is conditionally compiled under <code>SIMCOM_GET_TASKSTACK_INFO</code>. If the macro is not defined, the demo prints a message indicating the feature is not available and returns.</p>
+<p>When enabled, the demo presents a menu:</p>
+<ol>
+<li><strong>GetTaskStackInfo</strong> (Option 1): Iterates through a predefined list of task references (<code>helloWorldProcesser</code> and <code>simcomUIProcesser</code>), calls <code>sAPI_GetTaskStackInfo</code> for each, and displays the results in the format: <code>taskName_stack(S:size U:inuse P:peak)</code>.</li>
+<li><strong>Back</strong> (Option 99): Return to parent menu.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>The demo requires the <code>SIMCOM_GET_TASKSTACK_INFO</code> compile-time macro to be defined. Without it, the feature is completely excluded from the build.</li>
+<li>The task reference list is defined as a local array of <code>sTaskRef</code> containing <code>helloWorldProcesser</code> and <code>simcomUIProcesser</code>. These are declared as <code>extern</code> from other source files.</li>
+<li>The <code>gUrcProcessTask</code> reference is commented out in the task list.</li>
+<li>The demo uses a <code>for</code> loop to iterate through the <code>taskRefList</code> array, calling <code>sAPI_GetTaskStackInfo</code> for each task and formatting the output with <code>snprintf</code>.</li>
+<li>A <code>sAPI_TaskSleep(200*2)</code> call (400ms delay) between each task query prevents flooding the output.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Use <code>sAPI_GetTaskStackInfo</code> during development and testing to determine optimal stack sizes for each task. Allocate stack based on peak usage plus a safety margin (typically 20-30% extra).</li>
+<li>Monitor stack usage in production if the <code>SIMCOM_GET_TASK_STACK_INFO</code> feature is enabled. Peak usage approaching the allocated size indicates potential stack overflow risk.</li>
+<li>Keep the task reference list up to date. Add all application-created tasks to the monitoring list for comprehensive stack profiling.</li>
+<li>Call stack info queries periodically rather than in tight loops to avoid performance overhead.</li>
+<li>Use the peak usage metric (<code>stackPeak</code>) rather than the current in-use metric (<code>stackInuse</code>) for stack size decisions, as peak represents the worst-case scenario.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_ssl_test/" class="btn btn-neutral float-left" title="demo_ssl_test"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_tcpip/" class="btn btn-neutral float-right" title="demo_tcpip">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_ssl_test/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_tcpip/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

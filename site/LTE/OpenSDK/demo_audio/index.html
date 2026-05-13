@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/demo_audio/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>demo_audio - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_audio";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\demo_audio.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/demo_audio/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">demo_audio</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">demo_audio</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_audio">demo_audio</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_audio.c</p>
+<h2 id="overview">Overview</h2>
+<p><code>demo_audio</code> provides a comprehensive interactive UART menu for exercising all audio playback and recording capabilities of the A7672 module via the SIMCom OpenSDK. It covers file-based playback (WAV, MP3, AMR), PCM/MP3/AMR stream playback, audio recording to file, PCM stream recording, volume/mic-gain control, PA (power amplifier) GPIO configuration, and echo suppression parameter tuning.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Set audio sample rate (8 kHz or 16 kHz) via <code>sAPI_AudioPlaySampleRate</code>.</li>
+<li>Play audio files (WAV, MP3, AMR) with options for direct playback, single/repeat mode, and local/remote playback path via <code>sAPI_AudioPlay</code>.</li>
+<li>Stop file playback via <code>sAPI_AudioStop</code>.</li>
+<li>Record audio to AMR files with timed duration and callback notification via <code>sAPI_AudioRecord</code> and <code>sAPI_AudRec</code>.</li>
+<li>Play raw PCM data from a WAV file (skipping 44-byte header) via <code>sAPI_AudioPcmPlay</code>; stop with <code>sAPI_AudioPcmStop</code>.</li>
+<li>Stream-play MP3 data from a buffer loaded via <code>sAPI_AudioMp3StreamPlay</code>; stop with <code>sAPI_AudioMp3StreamStop</code>.</li>
+<li>Continuous MP3 playback with frame control via <code>sAPI_AudioPlayMp3Cont</code>.</li>
+<li>Stream-play AMR data from a buffer via <code>sAPI_AudioAmrStreamPlay</code>; stop with <code>sAPI_AudioAmrStreamStop</code>.</li>
+<li>Continuous AMR playback via <code>sAPI_AudioPlayAmrCont</code>.</li>
+<li>AMR stream recording with frame-level callback via <code>sAPI_AmrStreamRecord</code>.</li>
+<li>Set AMR encoder rate level (0-7) via <code>sAPI_AudioSetAmrRateLevel</code>.</li>
+<li>WAV high-sampling-rate file playback via <code>sAPI_AudioWavFilePlay</code>.</li>
+<li>Continuous WAV playback via <code>sAPI_AudioPlayWavCont</code>.</li>
+<li>Set and get audio volume (0-11) via <code>sAPI_AudioSetVolume</code> / <code>sAPI_AudioGetVolume</code>.</li>
+<li>Set and get microphone gain (0-7, or 0-23 when POC feature is enabled) via <code>sAPI_AudioSetMicGain</code> / <code>sAPI_AudioGetMicGain</code>.</li>
+<li>PA (power amplifier) control GPIO configuration via <code>sAPI_AudioSetPaCtrlConfig</code>.</li>
+<li>PCM stream recording with file write callback via <code>sAPI_PCMStreamRec</code> / <code>sAPI_PCMStopStreamRec</code>.</li>
+<li>Echo suppression parameter configuration (compiled out by default, guarded by <code>#if 0</code> blocks) via <code>sAPI_EchoSuppression_PARA</code> and <code>sAPI_EchoParaModeSet</code>.</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_audio.h</code> — All audio API prototypes, enums (<code>AUD_SampleRate</code>, <code>AUD_Volume</code>, <code>AUD_RecordSrcPath</code>, <code>AudioFileType_t</code>), callback typedefs (<code>AudRecCallback</code>, <code>sAPI_GetAmrFrameCB</code>, <code>sAPI_GetPCMFrameCB</code>), and the <code>SC_Dspconfiguration</code> struct.</li>
+<li><code>sc_dspgain.h</code> — Echo suppression DSP configuration (conditionally included, currently guarded out).</li>
+<li><code>simcom_os.h</code> — OS primitives: <code>sAPI_Malloc</code>, <code>sAPI_TaskSleep</code>.</li>
+<li><code>simcom_file.h</code> — File I/O APIs: <code>sAPI_fopen</code>, <code>sAPI_fread</code>, <code>sAPI_fclose</code>.</li>
+<li><code>simcom_gpio.h</code> — GPIO return codes used by PA config.</li>
+<li><code>uart_api.h</code> — Interactive UART input: <code>UartReadValue</code>, <code>UartReadLine</code>, <code>PrintfResp</code>, <code>PrintfOptionMenu</code>.</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_AudioPlaySampleRate(rate)</code> — Set playback sample rate (0 = 8 kHz, 1 = 16 kHz).</li>
+<li><code>sAPI_AudioPlay(file, direct, isSingle)</code> — Play an audio file; <code>direct</code> starts immediately, <code>isSingle</code> for single-file mode.</li>
+<li><code>sAPI_AudioStop()</code> — Stop current file playback.</li>
+<li><code>sAPI_AudioRecord(enable, path, file)</code> — Start (enable=1) or stop (enable=0) recording to file.</li>
+<li><code>sAPI_AudRec(oper, file, duration, callback)</code> — Timed recording with completion callback; AMR 1-180s, WAV/PCM 1-15s.</li>
+<li><code>sAPI_AudioPcmPlay(buffer, len, direct)</code> — Play raw PCM data from buffer (WAV header must be stripped).</li>
+<li><code>sAPI_AudioPcmStop()</code> — Stop PCM playback.</li>
+<li><code>sAPI_AudioMp3StreamPlay(buffer, len, direct)</code> — Stream-play MP3 data from a memory buffer.</li>
+<li><code>sAPI_AudioMp3StreamStop()</code> — Stop MP3 stream playback.</li>
+<li><code>sAPI_AudioPlayMp3Cont(file, startplay, frame)</code> — Load MP3 file for continuous playback; <code>startplay=1</code> begins playback; <code>frame</code> controls frame mode (0-2).</li>
+<li><code>sAPI_AudioAmrStreamPlay(buffer, len, direct)</code> — Stream-play AMR data from a memory buffer.</li>
+<li><code>sAPI_AudioAmrStreamStop()</code> — Stop AMR stream playback.</li>
+<li><code>sAPI_AudioPlayAmrCont(file, startplay)</code> — Continuous AMR file playback.</li>
+<li><code>sAPI_AmrStreamRecord(callback)</code> — Start AMR stream recording with per-frame callback.</li>
+<li><code>sAPI_AmrStopStreamRecord()</code> — Stop AMR stream recording.</li>
+<li><code>sAPI_AudioSetAmrRateLevel(level)</code> — Set AMR encoder rate (0-7).</li>
+<li><code>sAPI_AudioWavFilePlay(file, direct)</code> — Play WAV file with high sampling rate support.</li>
+<li><code>sAPI_AudioPlayWavCont(file, startplay)</code> — Continuous WAV file playback.</li>
+<li><code>sAPI_AudioSetVolume(volume)</code> / <code>sAPI_AudioGetVolume()</code> — Set/get volume level (0-11).</li>
+<li><code>sAPI_AudioSetMicGain(micgain)</code> / <code>sAPI_AudioGetMicGain()</code> — Set/get microphone gain.</li>
+<li><code>sAPI_AudioSetPlayPath(path)</code> — Set playback path: 0 = local, 1 = remote.</li>
+<li><code>sAPI_AudioStatus()</code> — Get current audio status (0 = idle, 1 = busy).</li>
+<li><code>sAPI_AudioSetPaCtrlConfig(gpioNum, activeLevel)</code> — Configure PA control GPIO pin and active level.</li>
+<li><code>sAPI_PCMStreamRec(callback)</code> / <code>sAPI_PCMStopStreamRec()</code> — Start/stop PCM stream recording with data callback.</li>
+<li><code>sAPI_EchoSuppression_PARA(dspconfig)</code> — Apply echo suppression DSP parameters (conditional).</li>
+<li><code>sAPI_EchoParaModeSet(SaveMode, Level)</code> — Set echo suppression mode (conditional).</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Run <code>AudioDemo()</code> to display the interactive UART menu with 28+ options.</li>
+<li>Select option 1 to set the audio sample rate (8 kHz or 16 kHz).</li>
+<li>Select option 8 to set the volume level (0-11), or option 9 to read the current volume.</li>
+<li>Select option 12 to set microphone gain, or option 13 to read it.</li>
+<li>For file playback: select option 2 (play file), enter the filename (e.g., <code>c:/test.wav</code>), choose direct playback mode and single/repeat mode, then select the playback path (local or remote). Stop with option 3.</li>
+<li>For PCM playback: select option 6, enter the WAV filename, the system reads the file into a buffer, skips the 44-byte WAV header, and plays the raw PCM. Stop with option 7.</li>
+<li>For streaming playback (MP3/AMR buffer): select option 14 or 17, enter the filename, and the file is loaded into a 100 KB buffer for streaming.</li>
+<li>For recording: select option 4, enter a filename, recording starts. Stop with option 5. Or use option 10 (<code>sAPI_AudRec</code>) for timed recording with a callback.</li>
+<li>Option 16 configures the PA GPIO pin number and active level for external audio amplifiers.</li>
+<li>Options 27/28 start/stop PCM stream recording where raw PCM data is received via a callback and can be written to a file.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>The demo allocates a 100 KB buffer (<code>sAPI_Malloc(100 * 1024)</code>) at startup for file I/O operations across multiple playback modes.</li>
+<li>WAV file playback via PCM mode skips the first 44 bytes (standard WAV header) to extract raw PCM samples.</li>
+<li>Continuous playback modes (MP3/AMR/WAV cont) use a <code>do...while</code> loop to allow loading multiple file segments before triggering playback with <code>startplay=1</code>.</li>
+<li>The <code>recordCallBac_Test</code> callback is a simple stub that prints the status value; production code should implement meaningful post-recording logic.</li>
+<li>The <code>GetPCMRec</code> callback receives PCM frames and can optionally write them to a file via <code>sAPI_fwrite</code> (commented out in the demo).</li>
+<li>Echo suppression features are conditionally compiled with <code>#if 0</code> guards and require the <code>sc_dspgain.h</code> header.</li>
+<li>AMR buffer/continuous playback options are conditionally compiled unless <code>CUS_CY</code> is defined.</li>
+<li>After each operation, the demo queries <code>sAPI_AudioStatus()</code> to verify the audio subsystem state.</li>
+<li>The <code>sAPI_AudioSetPlayPath</code> call before playback controls whether audio routes to the local speaker or to a remote party (e.g., during a call).</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always check the return value of audio APIs and verify <code>sAPI_AudioStatus()</code> after operations to ensure the audio subsystem is in the expected state.</li>
+<li>Use <code>sAPI_AudioStop()</code> or the appropriate stop function before starting a new playback to avoid conflicts.</li>
+<li>For large files, prefer streaming APIs (<code>sAPI_AudioMp3StreamPlay</code>, <code>sAPI_AudioAmrStreamPlay</code>) over loading the entire file into memory.</li>
+<li>When recording, validate the file path and ensure sufficient storage space before starting.</li>
+<li>In production, avoid hardcoding GPIO pin numbers for PA control; retrieve them from a configuration store.</li>
+<li>Set the sample rate before playing audio to match the content's encoding rate.</li>
+<li>For voice call scenarios, use <code>sAPI_AudioSetPlayPath(1)</code> (remote path) so audio routes through the call channel.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_app_updater/" class="btn btn-neutral float-left" title="demo_app_updater"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_auto_mqtt/" class="btn btn-neutral float-right" title="demo_auto_mqtt">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_app_updater/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_auto_mqtt/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

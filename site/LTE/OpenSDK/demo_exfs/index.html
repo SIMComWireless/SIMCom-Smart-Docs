@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/demo_exfs/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>demo_exfs - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_exfs";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\demo_exfs.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/demo_exfs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">demo_exfs</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">demo_exfs</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_exfs">demo_exfs</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_exfs.c</p>
+<h2 id="overview">Overview</h2>
+<p>This demo shows how to mount external flash storage as a file system on the ASR1603 module. It supports mounting external NOR flash using the LittleFS (LFS) file system and external NAND flash using the YAFFS file system. The mounting operations are performed in dedicated tasks to avoid blocking the main execution.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Mount external NOR flash with LittleFS file system</li>
+<li>Mount external NAND flash with YAFFS file system</li>
+<li>Query the current external flash mount status</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_exfsmount.h</code> -- Provides external flash mount APIs: sAPI_NorFlashMountLfs, sAPI_NandFlashMountYaffs, sAPI_ExFlashMountState, and types SC_ExFsMount_ReturnCode, SC_ExFsMount_State</li>
+<li><code>sc_spi.h</code> -- Provides SPI interface definitions (used for external flash communication)</li>
+<li><code>simcom_os.h</code> -- Provides OS primitives: sAPI_TaskCreate, sAPI_Malloc, sAPI_Debug</li>
+<li><code>simcom_debug.h</code> -- Provides sAPI_Debug for debug logging</li>
+<li><code>uart_api.h</code> -- Provides UartReadValue for menu input</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_NorFlashMountLfs()</code> -- Mounts the external NOR flash using the LittleFS file system. Returns SC_ExFsMount_ReturnCode indicating success or failure.</li>
+<li><code>sAPI_NandFlashMountYaffs()</code> -- Mounts the external NAND flash using the YAFFS file system. Returns SC_ExFsMount_ReturnCode.</li>
+<li><code>sAPI_ExFlashMountState()</code> -- Returns the current mount state as SC_ExFsMount_State.</li>
+<li><code>sAPI_TaskCreate(ref, stack, stackSize, priority, name, func, arg)</code> -- Creates a task to run the mount operation asynchronously.</li>
+<li><code>sAPI_Malloc(size)</code> -- Allocates stack memory for the mount task.</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>The demo presents an interactive menu:</p>
+<ol>
+<li><strong>Extern NorFlash mount LFS</strong> (Option 1): Allocates a 60KB stack, creates a task (<code>norflashmountlfsProcesser</code>) that calls <code>sAPI_NorFlashMountLfs()</code>. The task runs at priority 101.</li>
+<li><strong>Extern NandFlash mount YAFFS</strong> (Option 2): Allocates a 60KB stack, creates a task (<code>nandflashmountlfsProcesser</code>) that calls <code>sAPI_NandFlashMountYaffs()</code>.</li>
+<li><strong>Obtain current mount status</strong> (Option 3): Calls <code>sAPI_ExFlashMountState()</code> and displays the result.</li>
+<li><strong>Back</strong> (Option 99): Return to parent menu.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>Mount operations are performed in separate tasks (not inline) because they may take significant time and should not block the main UI task.</li>
+<li>Each mount task is allocated a 60KB stack via <code>sAPI_Malloc(60 * 1024)</code>. This is a substantial allocation to accommodate the file system driver's memory requirements.</li>
+<li>The task priority is set to 101, which is relatively low, meaning these tasks will run with lower scheduling priority.</li>
+<li>The task references (<code>norflashmountlfsProcesser</code>, <code>nandflashmountlfsProcesser</code>) are declared as global static variables.</li>
+<li>The menu option string for option 3 has a missing comma between the string and the next item (line 126), which would cause a compile-time string concatenation. This is a minor bug in the source.</li>
+<li>The YAFFS mount option has a commented-out message suggesting it was previously considered not fully developed.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Mount external flash only once during initialization or when explicitly requested. Repeated mounting without unmounting can cause issues.</li>
+<li>Allocate sufficient stack space for mount tasks (60KB as shown). Under-allocation can cause stack overflow and system crashes.</li>
+<li>Check the return code of <code>sAPI_NorFlashMountLfs()</code> and <code>sAPI_NandFlashMountYaffs()</code> before proceeding to use the mounted file system.</li>
+<li>After successful mounting, use the standard file system APIs (<code>sAPI_fopen</code>, <code>sAPI_fread</code>, <code>sAPI_fwrite</code>, etc.) to access files on the external flash, using the appropriate drive path.</li>
+<li>Query mount status with <code>sAPI_ExFlashMountState()</code> before performing file operations on external storage to ensure it is properly mounted.</li>
+<li>External flash operations are slower than internal flash; account for this in timing-critical applications.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_crypto/" class="btn btn-neutral float-left" title="demo_crypto"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_file_system/" class="btn btn-neutral float-right" title="demo_file_system">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_crypto/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_file_system/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

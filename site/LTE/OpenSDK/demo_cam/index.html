@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/demo_cam/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>demo_cam - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_cam";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\demo_cam.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/demo_cam/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">demo_cam</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_rtc/">demo_rtc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">demo_cam</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_cam">demo_cam</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_cam.c</p>
+<h2 id="overview">Overview</h2>
+<p>This demo provides an interactive menu for camera operations on SIMCom modules, including taking pictures, displaying live preview on LCD, showing saved images, barcode scanning (single and repeated), camera parameter adjustment (effect, contrast, exposure, mirror), and optional barcode decoding via the tiny_scanner library. It supports GC032A, BF30A2, and GC6153 camera sensors.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Take a picture and save as NV12 file to the filesystem</li>
+<li>Live camera preview on LCD</li>
+<li>Display previously saved pictures (NV12 to RGB565 conversion)</li>
+<li>Set camera parameters: effect, contrast, exposure</li>
+<li>Set camera output image size</li>
+<li>Set camera mirror mode (horizontal, vertical, both, normal)</li>
+<li>Single barcode scan with result display on LCD</li>
+<li>Repeated barcode scan with live preview</li>
+<li>Optional decode-without-LCD mode (tiny_scanner integration)</li>
+<li>Optional decode-with-LCD mode</li>
+<li>Support for custom camera drivers via <code>sAPI_CamOpenEx()</code></li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_cam.h</code> -- Provides camera sensor data structures, <code>sAPI_CamOpen()</code>, <code>sAPI_CamClose()</code>, <code>sAPI_StartShowLCD()</code>, <code>sAPI_StopShowLCD()</code>, <code>sAPI_GetCamBuf()</code>, <code>sAPI_CamParaSet()</code>, <code>sAPI_CamScanBarcode()</code>, <code>sAPI_YUVtoRGBZoomOut()</code>, <code>sAPI_CamOpenEx()</code> prototypes</li>
+<li><code>simcom_cam_common.h</code> -- Defines frame size enums (96x96 to 1600x1200), <code>framesize_info_t</code> struct, effect enums (<code>HAL_EFFECT_*</code>), contrast enums (<code>CAM_CONTRAST_*</code>), exposure enums (<code>CAM_EV_*</code>), mirror enums (<code>HAL_MIRROR_*</code>)</li>
+<li><code>demo_lcd.h</code> -- Provides LCD functions and font data used for displaying decode results</li>
+<li><code>simcom_lcd.h</code> -- LCD API for preview display</li>
+<li><code>simcom_file.h</code> -- File I/O (<code>sAPI_fopen</code>, <code>sAPI_fwrite</code>, <code>sAPI_fread</code>, <code>sAPI_fclose</code>, <code>sAPI_fsize</code>)</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_CamOpen()</code> -- Open the default camera sensor</li>
+<li><code>sAPI_CamClose()</code> -- Close the camera</li>
+<li><code>sAPI_CamOpenEx(&amp;cam_data)</code> -- Open camera with a custom sensor driver (e.g., <code>CAM_GC032a_spi</code>)</li>
+<li><code>sAPI_StartShowLCD()</code> -- Start live camera preview on the connected LCD</li>
+<li><code>sAPI_StopShowLCD()</code> -- Stop live camera preview</li>
+<li><code>sAPI_GetCamBuf(func, callback)</code> -- Capture a camera frame; <code>func=0</code> for single capture, <code>func=1</code> for decode mode; callback receives the image buffer pointer</li>
+<li><code>sAPI_YUVtoRGBZoomOut(rgbBuf, rgbW, rgbH, yuvBuf, yuvW, yuvH)</code> -- Convert YUV422/NV12 camera data to RGB565 with scaling to fit the LCD</li>
+<li><code>sAPI_CamParaSet(param_mode, pValue)</code> -- Set camera parameters: mode 1=effect, 2=contrast, 3=exposure, 4=image size, 5=mirror</li>
+<li><code>sAPI_CamScanBarcode(mode, preview_cb, result_cb)</code> -- Scan barcode; <code>mode=0</code> for single scan, <code>mode=1</code> for repeated scan; preview callback for rendering, result callback for decoded string</li>
+<li><code>sAPI_LcdOpen()</code>, <code>sAPI_LcdClose()</code>, <code>sAPI_LcdWrite()</code>, <code>sAPI_LcdSetBLPWM()</code> -- LCD operations for preview display</li>
+<li><code>sAPI_fopen()</code>, <code>sAPI_fwrite()</code>, <code>sAPI_fread()</code>, <code>sAPI_fclose()</code>, <code>sAPI_fsize()</code> -- File operations for saving/loading NV12 images</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Call <code>CamDemo()</code> from the application task.</li>
+<li>First select the LCD type (1-4) and camera sensor type (1=GC032A, 2=BF30A2, 3=GC6153).</li>
+<li>Choose from the menu:</li>
+<li>Option 1: Take a picture -- opens camera, captures one frame via callback <code>save_picture()</code>, saves to <code>c:/image.nv12</code>, closes camera.</li>
+<li>Option 2: Live preview -- opens both camera and LCD, runs preview for 2 seconds, then stops.</li>
+<li>Option 3: Show saved picture -- reads <code>c:/image.nv12</code>, converts YUV to RGB565, displays on LCD.</li>
+<li>Option 6: Set parameters -- cycles through effect, contrast, exposure settings while previewing.</li>
+<li>Option 7: Set image size -- opens camera at different resolutions.</li>
+<li>Option 8: Set mirror -- cycles through H, V, HV, normal mirror modes.</li>
+<li>Option 9: Single barcode scan -- scans once, displays result on LCD via <code>show_font_16x16()</code>.</li>
+<li>Option 10: Repeated barcode scan -- continuous preview with barcode detection.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>Image data is stored in NV12 format (Y plane followed by interleaved UV plane), with size <code>width * height * 3/2</code> bytes.</li>
+<li>Camera sensor parameters are pre-defined in <code>gc032a_set_para[9][2]</code>, <code>gc6153_set_para[9][2]</code>, and <code>bf30a2_set_para[9][2]</code> arrays, where each row is <code>{param_mode, value}</code>.</li>
+<li>The <code>zbar_decode_test()</code> callback converts YUV to RGB565 and writes directly to the LCD for live preview.</li>
+<li>The <code>recv_decode_result()</code> callback displays the decoded barcode string using <code>show_font_16x16()</code> with text wrapping.</li>
+<li>Barcode decode requires 120KB heap allocation for the <code>tiny_scanner</code> library.</li>
+<li>When <code>USER_CAM_DRIVER</code> is defined, <code>sAPI_CamOpenEx(&amp;CAM_GC032a_spi)</code> is used instead of <code>sAPI_CamOpen()</code> to load a custom camera driver.</li>
+<li>The entire demo is wrapped in <code>#ifdef SIMCOM_CAMERA_SUPPORT</code>.</li>
+<li>The API reference table at the bottom of the file (lines 651-737) documents all camera parameter modes and values.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always pair <code>sAPI_CamOpen()</code> with <code>sAPI_CamClose()</code> to release camera resources.</li>
+<li>Set camera parameters (size, effect) BEFORE calling <code>sAPI_CamOpen()</code> for image size changes, as noted in the API docs.</li>
+<li>Free all dynamically allocated buffers (<code>cam_buf</code>, <code>lcd_buf</code>) after use.</li>
+<li>For barcode scanning, allocate the decode heap once and reuse it.</li>
+<li>Use <code>sAPI_YUVtoRGBZoomOut()</code> for format conversion -- do not attempt manual YUV-to-RGB conversion.</li>
+<li>Ensure the LCD is opened before starting <code>sAPI_StartShowLCD()</code>.</li>
+<li>The NV12 file size is <code>cam_w * cam_h * 3/2</code> -- verify sufficient filesystem space before writing.</li>
+<li>For repeated barcode scanning, the preview callback should be lightweight to maintain frame rate.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_call/" class="btn btn-neutral float-left" title="demo_call"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_cam_dirver/" class="btn btn-neutral float-right" title="demo_cam_dirver">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_call/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_cam_dirver/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

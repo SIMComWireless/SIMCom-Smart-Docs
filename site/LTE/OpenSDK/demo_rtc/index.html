@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="SIMCom Wireless Solutions Limited." /><link rel="canonical" href="https://en.simcom.com/LTE/OpenSDK/demo_rtc/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>demo_rtc - SIMCom Smart Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "demo_rtc";
+        var mkdocs_page_input_path = "LTE\\OpenSDK\\demo_rtc.md";
+        var mkdocs_page_url = "/LTE/OpenSDK/demo_rtc/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SIMCom Smart Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">LTE</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" >OpenSDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ASR%20CAT1%20OpenSDK%20User%20Guide/">ASR CAT1 OpenSDK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_urc/">cus_urc (URC Processing Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cus_usb_vcom/">cus_usb_vcom (USB Virtual COM Port)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_download/">demo_app_download</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_app_updater/">demo_app_updater</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_audio/">demo_audio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_auto_mqtt/">demo_auto_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ble/">demo_ble</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt/">demo_bt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_bt_stack/">demo_bt_stack</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_call/">demo_call</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam/">demo_cam</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cam_dirver/">demo_cam_dirver</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_cjson/">demo_cjson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_crypto/">demo_crypto</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_exfs/">demo_exfs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_file_system/">demo_file_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_flash/">demo_flash</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_fota/">demo_fota</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps/">demo_ftps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ftps_test/">demo_ftps_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gpio/">demo_gpio</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_gps/">demo_gps</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_helloworld/">demo_helloworld</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_htp/">demo_htp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_https/">demo_https</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_i2c/">demo_i2c</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_lcd/">demo_lcd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc/">demo_loc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_loc_test/">demo_loc_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mbedtls/">demo_mbedtls</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_mqtt/">demo_mqtt</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_network/">demo_network</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ntp/">demo_ntp</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_onewire/">demo_onewire</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ping/">demo_ping</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pm/">demo_pm</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_poc/">demo_poc</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pppd/">demo_pppd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_pwm/">demo_pwm</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">demo_rtc</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-features">Main Features</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-header-dependencies">Key Header Dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sdk-apis-observed">SDK APIs Observed</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-notes">Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_simcard/">demo_simcard</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sjdr/">demo_sjdr</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sm2/">demo_sm2</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_sms/">demo_sms</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_spi/">demo_spi</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl/">demo_ssl</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_ssl_test/">demo_ssl_test</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_system/">demo_system</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tcpip/">demo_tcpip</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_tts/">demo_tts</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_txrx_power/">demo_txrx_power</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_uart/">demo_uart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifi_ap/">demo_wifi_ap</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wifiscan/">demo_wifiscan</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_wtd/">demo_wtd</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../demo_zlib/">demo_zlib</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_OneNET/">mqtt_OneNET</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mqtt_tencent/">mqtt_tencent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../simcom_demo/">simcom_demo (Demo Task Manager and UI Framework)</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../uart_api/">uart_api (UART Helper and Data Cache Framework)</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Smart Module</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >SIM866X</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X%20ADC%20Application%20User%20Guide_V1.00/">SIM866X ADC Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_A11_Compilation%20User%20Guide_V1.01/">SIM866X_A11_Compilation User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_LOG%20Grab%20User%20Guide_V1.00/">SIM866X_AP_LOG Grab User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_AP_Screen%20Rotation%20Application%20User%20Guide_V1.00/">SIM866X_AP_Screen Rotation Application User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_BOOT%20Start%20Speed%20Optimization%20User%20Guide_V1.00/">SIM866X_BOOT Start Speed Optimization User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20Animation%20Modification%20User%20Guide_V1.00/">SIM866X_Boot Animation Modification User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Boot%20logo%20User%20Guide_V1.00/">SIM866X_Boot logo User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Camera%20Driver%20Development%20User%20Guide_V1.01/">SIM866X_Camera Driver Development Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Customer%20Configuration%20Secureboot%26AVB%20User%20Guide_V1.01/">SIM866X_Customer Configuration Secureboot\&amp;AVB User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Firmware%20Burning%20User%20Guide_V1.01/">SIM866X_Firmware Burning Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Low%20Speed%20Peripheral%20%28I2C%20%26%20UART%20%26%20SPI%20%26%20PWM%20%26%20GPIO%29%20Development%20User%20Guide_V1.00/">SIM866X_Low Speed Peripheral (I2C &amp; UART &amp; SPI &amp; PWM &amp; GPIO) Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_OTA%20Upgrade%20User%20Guide_V1.00/">SIM866X_OTA Upgrade User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PANEL%20Migration%20User%20Guide_V1.00/">SIM866X_PANEL Migration User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_PCIE_SATA_RGMII%20Development%20User%20Guide_V1.00/">SIM866X_PCIE_SATA_RGMII Development User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Preset%20APK%20User%20Guide_V1.00/">SIM866X_Preset APK User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SDK%20Download%20User%20Guide_V1.01/">SIM866X_SDK download instructions</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_SENSOR%20Porting%20User%20Guide_V1.00/">SIM866X_SENSOR Migration Documentation</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_Thermal%20Introduction%20and%20Debug%20User%20Guide_V1.00/">SIM866X_Thermal Introduction and Debug User Guide</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Smart%20Module/SIM866X/SIM866X_USB%20Development%20User%20Guide_V1.00/">SIM866X_USB Development User Guide</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SIMCom Smart Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">LTE</li>
+          <li class="breadcrumb-item">OpenSDK</li>
+      <li class="breadcrumb-item active">demo_rtc</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="demo_rtc">demo_rtc</h1>
+<p>Location: SIMCOM_SDK_SET/sc_demo/V1/src/demo_rtc.c</p>
+<h2 id="overview">Overview</h2>
+<p>This demo provides an interactive menu-driven interface for Real-Time Clock (RTC) and alarm management on the SIMCom A7672 module. It supports setting/getting the RTC time, configuring alarms, enabling/disabling alarms, registering alarm callbacks, and includes an alarm test mode that triggers periodic system resets. The demo also supports GPIO toggling on alarm events and UTC time retrieval.</p>
+<h2 id="main-features">Main Features</h2>
+<ul>
+<li>Set RTC time (format: YY/MM/DD,HH:MM:SS)</li>
+<li>Get current RTC time</li>
+<li>Set alarm time</li>
+<li>Get current alarm time</li>
+<li>Enable/disable alarm</li>
+<li>Register alarm callback function</li>
+<li>RTC alarm test with periodic resets</li>
+<li>Get UTC time</li>
+<li>GPIO toggling on alarm callback (conditional on <code>RTC_GPIO_TEST</code>)</li>
+</ul>
+<h2 id="key-header-dependencies">Key Header Dependencies</h2>
+<ul>
+<li><code>simcom_rtc.h</code> — Defines <code>t_rtc</code> time struct, alarm callback typedef (<code>AlCallback</code>), and all RTC API declarations</li>
+<li><code>simcom_gpio.h</code> — GPIO configuration and control APIs (<code>sAPI_GpioConfig()</code>, <code>sAPI_GpioSetValue()</code>)</li>
+<li><code>sc_power.h</code> — Power management functions (<code>sAPI_SysPowerOff()</code>, <code>sAPI_SysReset()</code>)</li>
+<li><code>simcom_os.h</code> — OS abstraction layer</li>
+<li><code>simcom_common.h</code> — Common type definitions</li>
+<li><code>simcom_debug.h</code> — Debug logging via <code>sAPI_Debug()</code></li>
+<li>Board-specific GPIO headers (e.g., <code>A7670C_MANS_LANS_GPIO.h</code>) — GPIO pin definitions per hardware variant</li>
+</ul>
+<h2 id="sdk-apis-observed">SDK APIs Observed</h2>
+<ul>
+<li><code>sAPI_SetRealTimeClock(&amp;timeval)</code> — Set the RTC time; returns 0 on success, negative on failure. Year range: 1970-2069.</li>
+<li><code>sAPI_GetRealTimeClock(&amp;timeval)</code> — Get the current RTC time into <code>t_rtc</code> struct</li>
+<li><code>sAPI_RtcSetAlarm(&amp;alarmval)</code> — Set the alarm time</li>
+<li><code>sAPI_RtcGetAlarm(&amp;alarmval)</code> — Get the current alarm time</li>
+<li><code>sAPI_RtcEnableAlarm(onoff)</code> — Enable (1) or disable (0) the alarm</li>
+<li><code>sAPI_RtcRegisterCB(callback)</code> — Register a callback function to be invoked when the alarm fires</li>
+<li><code>sAPI_GetUtcTime(&amp;timeval)</code> — Get UTC time into <code>t_rtc</code> struct</li>
+<li><code>sAPI_SysPowerOff()</code> — Power off the module (used in alarm test to enter deep sleep)</li>
+<li><code>sAPI_SysReset()</code> — Software reset the module (used in alarm test)</li>
+<li><code>sAPI_GpioConfig(pin, config)</code> — Configure GPIO pin (direction, pull, ISR)</li>
+<li><code>sAPI_GpioSetValue(pin, value)</code> — Set GPIO output level (0 or 1)</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<ol>
+<li>Call <code>RTCDemo()</code> to enter the interactive menu.</li>
+<li>If <code>RTC_GPIO_TEST</code> is defined, GPIO_02 is configured as an output with pull-up during initialization.</li>
+<li>Select option 1 ("Set time"): input time in format <code>YY/MM/DD,HH:MM:SS</code> (e.g., <code>21/03/08,09:36:00</code>). The year is converted: &gt;=70 maps to 1900s, &lt;70 maps to 2000s.</li>
+<li>Select option 2 ("Get time"): displays current RTC time.</li>
+<li>Select option 3 ("Set alarm"): input alarm time in the same format.</li>
+<li>Select option 4 ("Get alarm"): displays current alarm time.</li>
+<li>Select option 5 ("Enable alarm"): input 1 to enable or 0 to disable the alarm.</li>
+<li>Select option 6 ("Register alarm cb"): registers the <code>cbfunc</code> callback which toggles GPIO_02 on each alarm event.</li>
+<li>Select option 7 ("Alarm test"): input alarm interval in minutes. Sets the alarm to current time + 1 minute, registers <code>alarmTest</code> as the callback, enables the alarm, then calls <code>sAPI_SysPowerOff()</code> to enter deep sleep. The module wakes on alarm, the callback prints the RTC/alarm times, then calls <code>sAPI_SysReset()</code>.</li>
+<li>Select option 8 ("Get UTC time"): retrieves and displays UTC time.</li>
+<li>Option 99 returns to the previous menu.</li>
+</ol>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<ul>
+<li>The <code>t_rtc</code> struct contains: <code>tm_sec</code> (0-59), <code>tm_min</code> (0-59), <code>tm_hour</code> (0-23), <code>tm_mday</code> (1-31), <code>tm_mon</code> (1-12), <code>tm_year</code> (since 1970, displayed as full year), <code>tm_wday</code> (0=Sunday).</li>
+<li>The <code>setAlarmMin()</code> helper calculates alarm time by adding minutes to the current time with carry-over to hours, days, and months.</li>
+<li>The alarm test (option 7) is a terminal operation: it sets the alarm, enters deep sleep via <code>sAPI_SysPowerOff()</code>, wakes on alarm, resets via <code>sAPI_SysReset()</code>, and the <code>alarmTest</code> callback runs on each alarm interval.</li>
+<li>The <code>cbfunc</code> callback toggles GPIO_02 using a static counter (even=high, odd=low). This is useful for visual/alarm indicator testing.</li>
+<li>The <code>RTC_GPIO_TEST</code> conditional compiles GPIO initialization: configures GPIO_02 as output, pull-up, no edge detection. The GPIO header varies by board variant.</li>
+<li>The demo validates the input time carefully: checks leap year, month-day boundaries, hour/minute/second ranges, and timezone bounds (though timezone is always 0 in the input).</li>
+<li>UTC time retrieval uses a separate API (<code>sAPI_GetUtcTime</code>) that is distinct from the local RTC time functions.</li>
+</ul>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Always validate user input for date/time before calling <code>sAPI_SetRealTimeClock()</code> to avoid setting invalid times.</li>
+<li>Use alarm callbacks for lightweight operations only; heavy processing in an interrupt context can cause system instability.</li>
+<li>The alarm test mode (option 7) is a destructive test that causes repeated resets. Use it only for validation, not in production.</li>
+<li>Register the alarm callback before enabling the alarm to ensure the callback is ready when the alarm fires.</li>
+<li>For production alarm-based wakeup, use <code>sAPI_RtcEnableAlarm(1)</code> combined with <code>sAPI_SystemSleepSet(SC_SYSTEM_SLEEP_ENABLE)</code> to enter sleep mode and wake on alarm.</li>
+<li>GPIO toggling in the alarm callback provides a visual indicator; use it for debugging alarm timing accuracy.</li>
+<li>The RTC time persists across module resets but may lose accuracy over extended periods. Consider periodic NTP synchronization for time-critical applications.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../demo_pwm/" class="btn btn-neutral float-left" title="demo_pwm"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../demo_simcard/" class="btn btn-neutral float-right" title="demo_simcard">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright © 2018-2026 SIMCom Wireless Solutions Limited All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../demo_pwm/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../demo_simcard/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
