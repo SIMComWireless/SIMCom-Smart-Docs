@@ -5,6 +5,7 @@
 
 A76XX OpenSDK solution is based on A76XX CAT-1 module which allows customer to run application code inside module for smart IoT applications. All A76XX CAT-1 modules could support OpenSDK, you can get module list from [SIMCom Website](https://en.simcom.com/module/4g.html). For more technical support you can contact with [SIMCom support team](https://en.simcom.com/service_cat-20.html).
 
+![opensdk_stucture](resource/opensdk_stucture.png)
 
 [OpenSDK Supported Features](#opensdk-supported-features)<br>
 [OpenSDK Hardware Design Manual](#opensdk-hardware-design-manual)<br>
